@@ -1,0 +1,251 @@
+:root {
+  --accent: #ff7a00;
+  --divider: #e9e9e9;
+  --text: #111;
+  --bg: #fafafa;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.sticky-nav {
+  background-color: #f8f8f8;
+  position: sticky;
+  top: 0; /* stick when reaches top */
+  z-index: 1000; /* keep above other content */
+}
+
+/* base menu list */
+.nav-list {
+  list-style: none;
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+}
+.nav-list li a {
+  display: block;
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  /* border-bottom:1px solid var(--divider); */
+}
+.nav-list li:last-child a {
+  border-bottom: 0;
+}
+.nav-list li a.active {
+  color: var(--accent);
+}
+.stylenurserycontent {
+  font-size: 20px;
+}
+.stylenurserycontent1{
+  font-size: 18px !important;
+}
+/* desktop style */
+@media (min-width: 900px) {
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    /* border-bottom: 1px solid var(--divider); */
+  }
+  .nav-list li {
+    flex: 0 0 auto;
+    position: relative;
+  }
+  .nav-list li a {
+    border: 0;
+    padding: 20px 36px;
+    font-size: 25px;
+    font-weight: 700;
+    border-right: 1px solid black;
+  }
+  .nav-list li:last-child a {
+    border-right: 0;
+  }
+  .nav-list li a.active {
+    position: relative;
+    color: var(--text);
+  }
+  .nav-list li a.active::after {
+    content: "";
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    bottom: 6px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+}
+
+@media screen and (max-width: 429px) {
+  .bgnurseryprogrambanner {
+    position: relative;
+    height: 400px;
+    background-image: url("../img/nurserytab.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .nurseryherocontent {
+    text-align: center;
+    position: absolute;
+    padding: 30px;
+    top: 10%;
+  }
+  .nurseryherocontent p {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 430px) and (max-width: 768px) {
+  .bgnurseryprogrambanner {
+    height: 800px;
+    background-image: url("../img/nurserytab.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .nurseryherocontent {
+    margin: auto;
+    max-width: 330px;
+    padding-top: 80px;
+    text-align: center;
+    /* position: absolute; */
+    top: 25%;
+  }
+  .nurseryherocontent h3 {
+    font-size: 32px;
+    padding-bottom: 20px;
+  }
+  .nurseryherocontent p {
+    font-size: 25px;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 769px) {
+  .bgnurseryprogrambanner {
+    height: 400px;
+    background-image: url("../img/nurserydesktop.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .nurseryherocontent {
+    max-width: 330px;
+    text-align: start;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+  }
+  .nurseryherocontent p {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .nurseryherocontent {
+    max-width: 400px;
+    text-align: start;
+    position: absolute;
+    top: 29%;
+    left: 49%;
+  }
+  .nurseryherocontent h3 {
+    font-size: 35px;
+  }
+  .nurseryherocontent p {
+    font-size: 24px;
+  }
+}
+
+.academics-section {
+  padding: 80px 12px;
+}
+.academics-section .academics-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+.academics-section .academics-row {
+  align-items: center;
+  justify-content: space-between;
+}
+.academics-section .academics-image {
+  width: 100%;
+  max-width: 650px;
+  display: block;
+}
+.academics-section .acc-wrapper {
+  max-width: 720px;
+  margin: auto;
+}
+.academics-section .acc-item {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 18px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.academics-section .acc-left {
+  flex: 1 1 auto;
+  cursor: pointer;
+}
+.academics-section .acc-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+.academics-section .acc-body {
+  color: #333;
+  line-height: 1.7;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.25s ease;
+  padding: 0;
+}
+.academics-section .acc-body.open {
+  padding-top: 6px;
+  max-height: 500px;
+}
+.academics-section .acc-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  border: 2px solid #111;
+  background: #fff;
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+  flex: 0 0 40px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  transition: background 0.18s ease;
+}
+.academics-section .acc-toggle.open {
+  background: transparent;
+}
+@media (max-width: 991px) {
+  .academics-section .academics-title {
+    font-size: 28px;
+    text-align: center;
+  }
+  .academics-section .academics-row {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .academics-section .acc-wrapper {
+    margin-top: 18px;
+  }
+  .academics-section .acc-left {
+    text-align: left;
+  }
+}
+.styleresourcecontent {
+  font-size: 50px !important;
+}

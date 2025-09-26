@@ -1,0 +1,206 @@
+
+@media screen and (max-width:424px) {
+.hero{
+        background-image: url("../img/contacthero.webp");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+.stylecontactherocontent{
+    position: absolute;
+    max-width: 400px;
+    top:20%;
+}
+} 
+@media screen and (min-width:425px) and (max-width:426px) {
+.hero{
+        background-image: url("../img/connectbannermob.webp");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 550px;
+}
+.stylecontactherocontent{
+    position: absolute;
+    max-width: 400px;
+    top:20%;
+}
+} 
+@media screen and (min-width:427px) and (max-width:768px) {
+.hero{
+        background-image: url("../img/connectbannermob.webp");
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 750px;
+}
+.stylecontactherocontent{
+    position: absolute;
+    max-width: 400px;
+    left: 25%;
+    top:20%;
+}
+} 
+@media screen and (min-width: 769px) {
+  .hero {
+    background-image: url("../img/connectbannerdesktop.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40vh;
+  }
+  .stylecontactherocontent {
+    position: absolute;
+    right: 5%;
+    top: 25%;
+    max-width: 300px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width:2000px) {
+  .hero {
+    background-image: url("../img/connectbannerdesktop.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+  }
+  .stylecontactherocontent {
+    position: absolute;
+    right: 6%;
+    top: 35%;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width:768px) {
+    .setmap iframe{
+        height: 400px;
+        width: 300px;
+    }
+    
+}
+    .setmap iframe{
+        height: 500px;
+        width: 100%;
+    }
+    
+.setborder{
+    border-bottom: 1px solid red;
+    /* max-width:max-content; */
+}
+  .form-section{
+    max-width: 1200px;
+    margin: 40px auto;
+    /* padding: 80px 40px; */
+    box-sizing: border-box;
+  }
+
+  .form-card{
+    background: #fff;
+    /* padding: 50px 40px; */
+    box-sizing: border-box;
+    border-radius: 2px;
+    box-shadow: none;
+  }
+
+  .form-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 36px;
+    align-items: start;
+  }
+
+  label{
+    display:block;
+    font-size:19px;
+    color:#6d6d6d;
+    margin-bottom:18px;
+    font-weight:500;
+  }
+
+  /* Underline style inputs */
+  .underline-input{
+    display:block;
+    width:100%;
+    border:0;
+    border-bottom:1px solid #cfcfcf;
+    padding:10px 8px;
+    font-size:16px;
+    outline:none;
+    transition: border-color .15s, box-shadow .15s;
+    background:transparent;
+  }
+  .underline-input:focus{
+    border-bottom-color: #013378;
+  }
+
+  /* Message textarea spans two columns on desktop */
+  .message-row{
+    margin-top:28px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:36px;
+  }
+  .message-field{
+    grid-column: 2 / 4; /* occupies middle + right column visually like screenshot */
+  }
+
+  select.underline-input{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    /* background-color: #013378; */
+background-image: 
+  linear-gradient(45deg, transparent 50%, #013378 50%),
+  linear-gradient(135deg, #013378 50%, transparent 50%);
+background-position: 
+  calc(100% - 16px) calc(1em + 2px),
+  calc(100% - 11px) calc(1em + 2px);
+background-size: 8px 8px, 8px 8px;
+background-repeat: no-repeat;
+padding-right: 34px;
+
+  }
+
+  /* Divider slashes in the screenshot (optional visual) */
+  .slash{
+    text-align:center;
+    color:#cfcfcf;
+    font-weight:600;
+    padding-top:8px;
+  }
+
+  /* Submit button */
+  .submit-wrap{
+    text-align:center;
+    margin-top:48px;
+  }
+  .btn{
+    display:inline-block;
+    padding:12px 34px;
+    border-radius:30px;
+    border:2px solid #013378;
+    background:transparent;
+    color: #013378;
+    font-weight:500;
+    cursor:pointer;
+    text-decoration:none;
+    font-size:15px;
+  }
+  .btn:hover{ background: rgba(1,51,120,0.06); }
+
+  /* Responsive */
+  @media (max-width: 980px){
+    .form-grid{ grid-template-columns: 1fr; }
+    .message-row{ grid-template-columns: 1fr; }
+    .message-field{ grid-column: auto; }
+    /* .form-section{ padding:40px 20px; } */
+  }
+
+  /* larger screens - increase whitespace like the screenshot */
+  /* @media (min-width:1200px){
+    :root{ --container-pad:100px; }
+  } */

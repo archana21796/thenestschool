@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Nest School Header</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <!-- Add to <head> once -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/standard.css">
+    <link rel="stylesheet" href="./assets/css/usdp.css">
+
+</head>
+<body>
+
+  <header class="top-header">
+    <div class="row justify-content-between w-100">
+    <!-- Left Logo -->
+    <div class="d-flex align-items-center col-10  col-lg-2  justify-content-center">
+      <a href="./"><img class="nestlogo" src="./assets/img/thenestschoollogo.webp" alt="The Nest School Logo"></a>
+    </div>
+
+    <div class=" col-2 col-lg-10 row ">
+    <!-- Middle Text + Logos -->
+    <div class="col-12 d-flex justify-content-end border-bottom d-none d-lg-inline-block">
+    <div class="social-icons d-flex justify-content-end mb-2">
+        <a href="#"><i class="bi bi-facebook btn p-1 sizeoficon btn-outline-danger"></i></a>
+        <a href="#"><i class="bi bi-instagram btn p-1 sizeoficon btn-outline-danger mx-0"></i></a>
+        <a href="#"><i class="bi bi-youtube btn p-1 sizeoficon btn-outline-danger mx-0"></i></a>
+         <a href="#"><i class="bi bi-twitter-x btn p-1 sizeoficon btn-outline-danger"></i></a>
+    </div>
+    </div>
+
+    <div class="row justify-content-between  col-12 pt-2">
+        <div class="col-10 d-flex d-none d-lg-flex">
+      <div class="programmes border-1 border-black border-end pe-4 ">
+        Programmes Offered <br><span>Pre-KG to Grade 12</span>
+      </div>
+      <img style="height: 60px;" class="border-end pt-1 border-black px-5" src="./assets/img/ib logo.webp" alt="IB Logo">
+      <img  class="pt-1 ps-5" src="./assets/img/cambridge logo.webp" alt="Cambridge Logo">
+        </div>
+        <!-- Right Section -->
+        <div class="d-flex justify-content-end p-0 col-12 col-lg-1 ">
+            <div class="menu-toggle mt-3" id="menuToggle">
+                <div class="hamburger">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <span class="menu-text d-none d-lg-block">MENU</span>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    </div>
+
+  </header>
+  <main>
+    <section class="py-5">
+        <h1 class="text-center styleusdpheadercontent" style="color: #013378;">Empowering Global Minds at The Nest School:<br/>
+US High School Diploma Programme</h1>
+    </section>
+    <section class="container-fluid px-5" >
+        <div class="mx-md-5" style="background-color: #fff4f4;">
+        <div class="row p-2 p-md-5">
+            <div class="col-lg-8">
+                <h2 class="my-2">
+                    Looking to enroll in the programme or have any queries about the programme?
+                </h2>
+                <h5 class="my-5">
+                    Fill in the form with your correct details.
+                </h5>
+                <h5 class="mb-5">
+                    Our team will get back to you once we receive your information.
+                </h5>
+                <div>
+                    <img  class="img-fluid usdp1" src="./assets/img/usdp1.webp" alt="">
+                </div>
+            </div>
+
+            <div class="col-lg-4 bg-white ">
+                  <h2 class="text-center" id="enquireHeading">Enquire Now</h2>
+
+    <!-- change action to your endpoint (Forminator/ backend ) -->
+    <form class="p-2 p-xl-5" id="enquireForm" action="#" method="post" novalidate>
+
+      <div class="field">
+        <label class="text-black" for="parentName">Parent's Name <span class="required-star" aria-hidden="true">*</span></label>
+        <input class="border border-black" id="parentName" name="parentName" type="text" required aria-required="true" />
+        <div class="error" id="err-parentName" aria-live="polite"></div>
+      </div>
+
+      <div class="field">
+        <label class="text-black" for="email">Email Address <span class="required-star" aria-hidden="true">*</span></label>
+        <input class="border border-black" id="email" name="email" type="email" required aria-required="true" />
+        <div class="error" id="err-email" aria-live="polite"></div>
+      </div>
+
+      <div class="field">
+        <label class="text-black" for="phone">Phone Number <span class="required-star" aria-hidden="true">*</span></label>
+        <input class="border border-black" id="phone" name="phone" type="text" inputmode="tel" required aria-required="true" />
+        <div class="error" id="err-phone" aria-live="polite"></div>
+      </div>
+
+      <div class="field">
+        <label class="text-black" for="studentName">Student's Name <span class="required-star" aria-hidden="true">*</span></label>
+        <input class="border border-black" id="studentName" name="studentName" type="text" required aria-required="true" />
+        <div class="error" id="err-studentName" aria-live="polite"></div>
+      </div>
+
+      <div class="field">
+        <label class="text-black" for="grade">Grade Enquiring For <span class="required-star" aria-hidden="true">*</span></label>
+        <input class="border border-black" id="grade" name="grade" type="text" placeholder="e.g., Grade 9 / IBDP Year 1" required aria-required="true" />
+        <div class="error" id="err-grade" aria-live="polite"></div>
+      </div>
+
+      <div class="field">
+        <!-- Replace YOUR_SITE_KEY with your reCAPTCHA v2 site key -->
+        <div id="recap-wrapper" class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+        <div class="error" id="err-recap" aria-live="polite"></div>
+      </div>
+
+      <div class="btn-row text-center my-4">
+        <button class="btn btn-primary border-0 rounded-0" type="submit" id="submitBtn">Submit</button>
+      </div>
+
+      <div class="success" id="successBox" role="status" aria-live="polite">
+        Thank you — your enquiry has been submitted. We will contact you shortly.
+      </div>
+    </form>
+            </div>
+        </div>
+        </div>
+
+    </section>
+    <section class="container">
+        <div class="row p-md-3 p-xl-5">
+            <div class="col-lg-6">
+                <h3 class="my-5">How We Give Your Child a Competitive Edge</h3>
+                <p class="my-3 textalignjustify">At The Nest School, we empower your child with the US High School Diploma 
+                    Programme, designed to foster a global perspective and adaptability. Our programme
+                     offers a flexible, credit-based system that allows students to explore a wide 
+                     range of subjects, including Advanced Placement (AP) courses and dual enrolment
+                      opportunities. This not only enhances their academic profile but
+                     also prepares them for seamless transitions into top international universities.</p>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid usdp1" src="./assets/img/usdp2.webp" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid p-3 px-lg-5 text-center" style="background-color: #fff4f4;">
+        <h3 style="color: #013378;" class="my-3 fs-2">What is The Nest School’s US High School Diploma Programme?</h3>
+        <p style="color: #ffa500;" class="my-5 fs-5">A Comprehensive US Education Experience: Flexible, Accredited, and Globally Recognized”</p>
+        <div class="row align-items-center justify-content-center px-md-3 px-lg-5">
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <i style="color: #013378;font-size: 50px;" class="fontawesome-icon fa-star fas" style="--awb-iconcolor:#12366d; --awb-font-size:60px;"></i>
+                <h5 class="fw-bold my-3">Flexible Credit-Based System</h5>
+                <p class="textalignjustify" style="font-size: 19px;">Explore a broad curriculum with a wide range of courses, electives, AP courses,
+                   and dual enrolment opportunities. This flexibility allows you to tailor your
+                    educational 
+                  journey to your interests and strengths, ensuring a well-rounded academic profile.</p>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                    <!-- Graduation Cap -->
+                    <i style="color:#013378; font-size:50px;" class="fas fa-graduation-cap"></i>
+                <h5 class="fw-bold pt-3 mb-2">Equivalent to a US High School Experience </h5>
+                <p class="textalignjustify" style="font-size: 19px;">Study in a programme that mirrors a US high school
+                   experience, enabling direct applications to universities
+                   in the US and worldwide without TOEFL. Enjoy seamless transitions into international higher education.</p>
+
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                    <!-- Checklist / Clipboard -->
+                    <i style="color:#013378; font-size:50px;" class="fas fa-clipboard-list"></i>  
+                                  <h5 class="fw-bold mt-4 mb-4">Formative Assessments and Reduced Exam Pressure</h5>
+                <p class="textalignjustify" style="font-size: 19px;">Focus on continuous learning with formative 
+                  assessments based on classwork and assignments.
+                   This approach emphasizes overall performance, reducing the stress of poor summative results.</p>
+
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                  <!-- Tick Mark (Check Circle) -->
+                  <i style="color:#013378; font-size:50px;" class="fas fa-check-circle "></i>
+                <h5 class="fw-bold my-4">Accredited Excellence</h5>
+                <p class="textalignjustify" style="font-size: 19px;">Backed by accreditations from Middle States 
+                  Association (MSA) and Western 
+                  Association of Schools and Colleges (WASC), ensuring rigorous standards of quality and excellence.</p>
+
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 my-lg-3">
+                  <!-- Book -->
+                  <i style="color:#013378; font-size:50px;" class="fas fa-book-open"></i>  
+                                <h5 class="fw-bold my-3">Hybrid Learning Model</h5>
+                <p class="textalignjustify" style="font-size: 19px;">Learn at your own pace with online resources 
+                  and a hybrid model, perfect for self-directed learning or balancing academic responsibilities.</p>
+
+            </div> 
+            <div class="col-md-6 col-lg-4 col-xl-3 my-lg-3">
+                      <!-- Teacher / Chalkboard -->
+                      <i style="color:#013378; font-size:50px;" class="fas fa-chalkboard-teacher"></i>  
+                                    <h5 class="fw-bold my-3">Faculty Independence</h5>
+                <p class="textalignjustify" style="font-size: 19px;">Consistent and reliable educational resources ensure 
+                  stability, regardless of faculty changes.</p>
+
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3 my-lg-3">
+                      <!-- Globe -->
+                      <i style="color:#013378; font-size:50px;" class="fas fa-globe"></i> 
+                                     <h5 class="fw-bold my-3">Diverse Opportunities</h5>
+                <p class="textalignjustify" style="font-size: 19px;">Catering to diverse interests
+                   and talents, offering a variety of courses and electives across arts, sciences, and humanities.</p>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="container text-center py-4">
+        <h3 style="color: #013378;" class="my-3 fs-2">Why Choose The Nest School’s US High School Diploma Programme?</h3>
+        <p style="color: #ffa500;" class="my-5 fs-4">“Unlock Your Potential with Flexibility, Global Recognition, and Academic Excellence”</p>
+        <div class="row justify-content-center">
+          <div class="col-xl-6 row">
+            <div class="col-md-6 text-center my-2">
+                  <i style="color:#013378; font-size:50px;" class="fas fa-expand-arrows-alt "></i>                                     
+                  <h5 class="fw-bold my-4">Flexibility and Breadth</h5>
+                <p class="textalignjustify" style="font-size: 19px;">Explore a wide range of courses, including electives, to
+                   tailor your educational journey to your interests and strengths across arts, sciences, and humanities</p>
+
+            </div>
+            <div class="col-md-6  text-center my-2">
+                      <i style="color:#013378; font-size:50px;" class="fas fa-globe-americas"></i>
+                                     <h5 class="fw-bold my-4">Global Recognition</h5>
+                <p class="textalignjustify" style="font-size: 19px;">Enjoy a widely recognized diploma that opens doors to top universities worldwide, often 
+                  without needing TOEFL, facilitating smoother transitions into international academic environments.</p>
+
+            </div>
+            <div class="col-md-6 text-center my-2">
+                    <i style="color:#013378; font-size:50px;" class="fas fa-award"></i>
+                                     <h5 class="fw-bold my-4">Early University Credits</h5>
+                <p class="textalignjustify" style="font-size: 19px;">Earn college credits through dual enrolment and AP courses, accelerating
+                   your academic career and potentially saving time and costs associated with degree completion.</p>
+
+            </div>
+            <div class="col-md-6 text-center my-3">
+                  <i style="color:#013378; font-size:50px;" class="fas fa-chart-line"></i>
+                                     <h5 class="fw-bold my-4">Continuous Assessment</h5>
+                <p class="textalignjustify" style="font-size: 19px;">Focus on continuous learning with formative assessments,
+                   developing critical thinking and problem-solving skills while receiving timely feedback and support.</p>
+
+            </div>
+            <div class="col-md-6 text-center my-3">
+                  <i style="color:#013378; font-size:50px;" class="fas fa-user-friends"></i>
+                                     <h5 class="fw-bold my-4">Mentorship and Support</h5>
+                <p class="textalignjustify" style="font-size: 19px;">Benefit from dedicated mentors who guide you 
+                  through your academic journey, providing personalized support to help you achieve your full potential.</p>
+
+            </div>
+            <div class="col-md-6 text-center my-3">
+                      <i style="color:#013378; font-size:50px;" class="fas fa-user-graduate"></i>
+                                     <h5 class="fw-bold my-4">Ideal for Ambitious Students</h5>
+                <p class="textalignjustify" style="font-size: 19px;">Perfect for those seeking flexibility, global 
+                  opportunities, and a comprehensive education that prepares them for success in an interconnected world.</p>
+
+            </div>
+
+          </div>
+          <div class="col-xl-6">
+              <img class="img-fluid" src="./assets/img/usdp3.webp" alt="">
+          </div>
+        </div>
+    </section>
+    <section class="container-fluid px-3">
+              <h3 style="color: #013378;" class="my-3 fs-2 text-center py-lg-5">Empowering Global Minds: Dual Diploma Programme at The Nest School</h3>
+              <div class="row">
+                <div class="col-xl-6 px-2 px-md-3 px-xl-5">
+                  <p class="my-3 fs-5">
+                    The Nest School offers a unique dual diploma programme that combines the strengths of the Cambridge 
+                    International Examinations (CIE) A-Level and the US High School Diploma Programme (USDP). This 
+                    innovative programme allows students to achieve both the AS/A-Level diploma and the US High School
+                     Diploma
+                     within the same four-year timeframe, providing a comprehensive and globally recognized education.
+                  </p>
+                  <h5 class="fw-bold">Key Features of the Dual Diploma Programme</h5>
+                  <div>
+                    <ul class="fs-5 px-md-5">
+                      <li class="my-2">Eligibility: Open to students who have completed Grade 8 with an aggregate score of at least
+                         80% and are proactive high achievers, initially focusing on the Science and Math stream in Grade 11.</li>
+                         <li class="my-2">
+                          Course Structure: Students must complete six specific courses with AGS between Grades 9-12,
+                           alongside their
+                           CIE pathway requirements. This includes IGCSE and AS/A-Level exams to complete the Cambridge pathway.
+                         </li>
+                         <li class="my-2">
+                          Flexibility and Support: The programme offers flexibility in learning, with students able to continue
+                           the CIE pathway even if they choose 
+                          to drop the USDP. Dedicated mentors provide support to ensure progress and help overcome challenges.
+                         </li>
+                         <li class="my-2">
+                          Advantages: Students can benefit from completing both diplomas within the same timeframe, 
+                          allowing them to take advantage of university-level courses for credit transfer to US universities. 
+                          This 
+                          dual diploma enhances their academic profile, providing a competitive edge in international admissions.
+                         </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-6 px-2 px-md-3 px-xl-5">
+                  <img class="img-fluid" src="./assets/img/usdp4.webp" alt="">
+                </div>
+                <h5 style="line-height: 35px;" class="p-4">By offering this dual diploma programme, The Nest School empowers students to achieve academic excellence, flexibility, 
+                  and global recognition, setting them up for success in an increasingly interconnected world.</h5>
+              </div>
+    </section>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer (Bootstrap 5) -->
+<footer class="site-footer pt-5 mt-3" style="background:#dff7f6;">
+  <div class="container-fluid">
+    <div class="row gy-4 align-items-start">
+      <!-- Column 1: Logo + Description + Socials -->
+      <div class="col-lg-3 ps-md-5">
+        <div class="mb-3">
+          <!-- replace src with your logo -->
+          <img src="./assets/img/thenestschoollogo.webp" alt="The NEST School" style="max-width:170px;">
+        </div>
+
+        <p class="lead" style="font-size:18px; line-height:1.7; color:black; font-weight: bold;">
+          The Nest School is the Best IB School in Chennai with 75 year Legacy in
+          Education in Kodambakkam. IB PYP &amp; CAIE Curriculum we offer nurtures
+          the young minds &amp; this Holistic Education makes us the Best International
+          School in Chennai.
+        </p>
+
+        <div class="d-flex align-items-center  gap-3 mt-3">
+          <!-- social icons: use fontawesome/bootstrap-icons as needed -->
+          <a class="social-circle d-inline-flex align-items-center justify-content-center" href="#" aria-label="facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a class="social-circle d-inline-flex align-items-center justify-content-center" href="#" aria-label="twitter">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a class="social-circle d-inline-flex align-items-center justify-content-center" href="#" aria-label="youtube">
+            <i class="bi bi-youtube"></i>
+          </a>
+          <a class="social-circle d-inline-flex align-items-center justify-content-center" href="#" aria-label="instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Center nav -->
+      <div class="col-lg-3 d-none d-lg-block majorlinks text-end">
+        <nav class="footer-nav text-center">
+          <ul class="list-unstyled mb-0 text-end pe-4" style="line-height:1.9; font-weight: 500;">
+            <li><a class="text-dark fs-5 text-decoration-none" href="#">Programmes</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="#">Admission</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="#">About</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="#">News and Events</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="careers.html">Careers</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="contactus.html">Contact</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="privacypolicy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Column 3: CTA heading + Map -->
+      <div class="col-lg-3">
+        <h3 class="h4 fs-3 fw-bold" style="color:black; font-weight: 400;">Visit The Best International<br>School In Chennai Today</h3>
+
+        <div class="map-card mt-3" style="max-width:260px; background:white; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.06);">
+          <!-- Replace the iframe src with your Google Maps embed -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.683484227926!2d80.22393577454787!3d13.055807913027596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f499eee457%3A0x4d3f7e677496e707!2sMeenakshi%20Sundararajan%20Engineering%20College!5e0!3m2!1sen!2sin!4v1758109569512!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <!-- Column 4: Contact info -->
+      <div class="col-lg-3">
+        <div class="contact-info ps-lg-3">
+          <h5 class="fw-bold fs-4" style="color:#164194;">The NEST School</h5>
+          <address class="text-muted fs-5" style="font-style:normal;">
+            363, Arcot Road (NSK Salai),<br>
+            Kodambakkam, Chennai,<br>
+            Tamil Nadu 600 024
+          </address>
+
+          <p class="mb-3 fs-4" style="color:#164194; font-weight:600;">For Admission Enquiries:</p>
+          <p class="mb-2 text-muted fs-5 fw-bold" >994-010-6378</p>
+
+          <p class="mb-2 fs-4" style="color:#164194; font-weight:600;">For Other Enquiries:</p>
+          <p class="text-muted fs-5 fw-bold">994-010-6358</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- brochure tab (vertical left) -->
+  <a class="brochure-tab d-flex align-items-center justify-content-center" href="#" role="button" aria-label="Brochure">Brochure</a>
+
+  <!-- floating orange quick-link circle bottom-right -->
+  <a class="floating-link d-flex align-items-center justify-content-center" href="#" aria-label="quick-link">
+    <i class="bi bi-link-45deg" style="font-size:1.1rem;"></i>
+  </a>
+
+  <!-- Copyright bar -->
+  <div class="copyright-bar mt-4" style="border-top:1px solid rgba(0,0,0,0.12); background:transparent;">
+    <div class="container py-3 d-flex justify-content-between align-items-center">
+      <div style="color:#0a3a3a;">Copyright © 2025 The NEST School. All rights reserved</div>
+      <div><a href="#" class="text-decoration-underline" style="color:#0a3a3a;">Fee Payment - T &amp; C</a></div>
+    </div>
+  </div>
+</footer>
+
+<nav id="customMenu" aria-hidden="true" aria-label="Main navigation">
+  <button class="close-btn" id="menuClose" aria-label="Close menu">
+    <!-- simple X -->
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+
+  <ul class="mt-5 fs-5 fw-bold">
+    <li><a class="top-link fs-5 fw-bold" href="#">Home</a></li>
+
+    <li class="has-sub">
+      <div class="top-link" role="button" tabindex="0" aria-expanded="false">
+        <span>Programmes</span>
+        <span class="chev" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </div>
+      <div class="submenu" aria-hidden="true">
+        <a href="nurseryprograms.html">Nursery</a>
+        <a href="primaryprograms.html">Primary</a>
+        <a href="lowersecondary.html">Lower Secondary</a>
+        <a href="programegrade9-10.html">Grade 9-10</a>
+        <a href="programmegrade11&12.html">Grade 11-12</a>
+        <a href="usdp.html">USDP</a>
+
+
+      </div>
+    </li>
+
+    <li><a class="top-link fs-5 fw-bold" href="#">Admission</a></li>
+
+    <li class="has-sub">
+      <div class="top-link" role="button" tabindex="0" aria-expanded="false">
+        <span>About</span>
+        <span class="chev" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </div>
+      <div class="submenu" aria-hidden="true">
+        <a href="#">Mission & Vision</a>
+        <a href="#">Leadership</a>
+        <a href="#">History</a>
+      </div>
+    </li>
+
+    <li><a class="top-link fs-5 fw-bold" href="#">Parent Testimonials</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="#">News And Events</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="careers.html">Careers</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="contactus.html">Contact Us</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="privacypolicy.html">Privacy Policy</a></li>
+  </ul>
+</nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> </body>
+  <!-- Custom JS for Menu -->
+<script>
+  // Elements
+  const menuToggle = document.getElementById("menuToggle");
+  const customMenu = document.getElementById("customMenu");
+  const menuClose = document.getElementById("menuClose");
+
+  // Open/close helpers
+  function openMenu(){
+    customMenu.classList.add("active");
+    customMenu.setAttribute("aria-hidden","false");
+    menuToggle.setAttribute("aria-expanded","true");
+    // move focus into menu for accessibility
+    const firstFocusable = customMenu.querySelector('.top-link, .has-sub .top-link');
+    if(firstFocusable) firstFocusable.focus();
+  }
+  function closeMenu(){
+    customMenu.classList.remove("active");
+    customMenu.setAttribute("aria-hidden","true");
+    menuToggle.setAttribute("aria-expanded","false");
+    menuToggle.focus();
+  }
+
+  menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if(customMenu.classList.contains("active")) closeMenu(); else openMenu();
+  });
+  menuClose.addEventListener("click", (e) => { e.stopPropagation(); closeMenu(); });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!customMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+      if(customMenu.classList.contains("active")) closeMenu();
+    }
+  });
+
+  // Keyboard: ESC closes
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape" && customMenu.classList.contains("active")) {
+      closeMenu();
+    }
+  });
+
+  // Handle submenu toggles — supports click & keyboard
+  const subParents = Array.from(document.querySelectorAll("#customMenu .has-sub"));
+  subParents.forEach(parent => {
+    const trigger = parent.querySelector(".top-link");
+    const submenu = parent.querySelector(".submenu");
+
+    function openSub(){
+      parent.classList.add("open");
+      submenu.classList.add("open");
+      trigger.setAttribute("aria-expanded","true");
+      submenu.setAttribute("aria-hidden","false");
+    }
+    function closeSub(){
+      parent.classList.remove("open");
+      submenu.classList.remove("open");
+      trigger.setAttribute("aria-expanded","false");
+      submenu.setAttribute("aria-hidden","true");
+    }
+    function toggleSub(){
+      if(parent.classList.contains("open")) closeSub(); else openSub();
+    }
+
+    // click
+    trigger.addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      toggleSub();
+    });
+
+    // keyboard: Enter/Space toggles
+    trigger.addEventListener("keydown", (ev) => {
+      if(ev.key === "Enter" || ev.key === " ") {
+        ev.preventDefault();
+        toggleSub();
+      }
+      if(ev.key === "ArrowDown"){
+        // focus first submenu item when open
+        if(!parent.classList.contains("open")) openSub();
+        const first = submenu.querySelector("a");
+        if(first) first.focus();
+      }
+    });
+  });
+
+  // Make sure clicking any internal link in menu closes (optional behavior)
+  customMenu.addEventListener("click", (e) => {
+    // if it's a plain link (not submenu toggle), close menu for mobile-like UX
+    const a = e.target.closest("a");
+    if(a && a.getAttribute("href") && a.getAttribute("href").startsWith("#") === false){
+      // external link — keep menu open. If you want close on link, uncomment:
+      // closeMenu();
+    }
+  });
+</script>
+</body>
+</html>
