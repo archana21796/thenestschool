@@ -22,11 +22,47 @@
     <!-- Middle Text + Logos -->
     <div class="col-12 d-flex justify-content-end border-bottom d-none d-lg-inline-block">
     <div class="social-icons d-flex justify-content-end mb-2">
-        <a href="#"><i class="bi bi-facebook btn p-1 sizeoficon btn-outline-danger"></i></a>
-        <a href="#"><i class="bi bi-instagram btn p-1 sizeoficon btn-outline-danger mx-0"></i></a>
-        <a href="#"><i class="bi bi-youtube btn p-1 sizeoficon btn-outline-danger mx-0"></i></a>
-         <a href="#"><i class="bi bi-twitter-x btn p-1 sizeoficon btn-outline-danger"></i></a>
+      <!-- Facebook -->
+      <a 
+        href="https://www.facebook.com/TheNESTSchoolChennai/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Facebook - The NEST School Chennai"
+      >
+        <i class="bi bi-facebook btn p-1 sizeoficon btn-outline-danger"></i>
+      </a>
+
+      <!-- Instagram -->
+      <a 
+        href="https://www.instagram.com/the_nest_school/?hl=en" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Instagram - The NEST School Chennai"
+      >
+        <i class="bi bi-instagram btn p-1 sizeoficon btn-outline-danger mx-0"></i>
+      </a>
+
+      <!-- YouTube -->
+      <a 
+        href="https://www.youtube.com/@TheNESTSchoolChennai" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="YouTube - The NEST School Chennai"
+      >
+        <i class="bi bi-youtube btn p-1 sizeoficon btn-outline-danger mx-0"></i>
+      </a>
+
+      <!-- Twitter / X -->
+      <a 
+        href="https://x.com/The_NEST_School?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="X (Twitter) - The NEST School Chennai"
+      >
+        <i class="bi bi-twitter-x btn p-1 sizeoficon btn-outline-danger"></i>
+      </a>
     </div>
+
     </div>
 
     <div class="row justify-content-between  col-12 pt-2">
@@ -66,19 +102,38 @@
   <!-- Carousel Indicators -->
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#schoolCarousel" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#schoolCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#schoolCarousel" data-bs-slide-to="1" ></button>
     <button type="button" data-bs-target="#schoolCarousel" data-bs-slide-to="2"></button>
     <button type="button" data-bs-target="#schoolCarousel" data-bs-slide-to="3"></button>
     <button type="button" data-bs-target="#schoolCarousel" data-bs-slide-to="4"></button>
     <button type="button" data-bs-target="#schoolCarousel" data-bs-slide-to="5"></button>
+    <button type="button" data-bs-target="#schoolCarousel" data-bs-slide-to="6"></button>
 
   </div>
 
   <!-- Carousel Inner -->
   <div class="carousel-inner">
 
-<!-- Slide 1 -->
+    <!-- Slide new -->
 <div class="carousel-item active">
+  <picture>
+    <!-- For screens 1000px and above -->
+    <source media="(min-width: 450px)" srcset="./assets/img/desktop-director.webp">
+    <!-- For screens below 1000px -->
+    <img src="./assets/img/mob-director.webp" class="d-block w-100" alt="Slide 1">
+  </picture>
+  <div class="carousel-caption-custom carousel-caption-custom1 text-center text-warning">
+    <p class="text-warning mb-0">The NEST School
+ <br/>Welcomes Our New Director</p>
+      <h5 class="mb-0">Mr.Richard Hillebrand</h5>
+      <p class="mb-0">Director, The NEST School</p>
+      <p>30+ years of IB Leadership <br/>
+Experience across the Globe</p>
+
+  </div>
+</div>
+<!-- Slide 1 -->
+<div class="carousel-item">
   <picture>
     <!-- For screens 1000px and above -->
     <source media="(min-width: 450px)" srcset="./assets/img/homedesk1.webp">
@@ -87,7 +142,7 @@
   </picture>
   <div class="carousel-caption-custom text-center">
     <h2>Leading a New Learning <br/>Paradigm for K - 12</h2>
-    <a href="#" class="btn">Enquire for Admissions</a>
+    <a href="/admission-enquiry.html" class="btn">Enquire for Admissions</a>
   </div>
 </div>
 
@@ -130,7 +185,7 @@
   <div class="carousel-caption-custom styleflight text-center">
     <h2>Taking Flight with <br/>The NEST School</h2>
     <h3 class="fs-4 my-3">The NEST School is now an <br/>IB World School offering the IB PYP</h3>
-    <a href="#" class="btn" style="font-size: 12px;">Learn more about The NEST School</a>
+    <a href="/about.html" class="btn" style="font-size: 12px;">Learn more about The NEST School</a>
   </div>
 </div>
 <!-- Slide 6 -->
@@ -142,7 +197,9 @@
   <div class=" carousel-caption-custom carousel-caption-custom2 text-center">
     <h2>When Choices are limitless <br/> so is the imagination!</h2>
         <h3 class="fs-4 my-3">A social experiment by <br/>The NEST School</h3>
-    <a href="#" class="btn">View Results</a>
+<a href="https://www.youtube.com/watch?v=KpopvYtGULQ" class="btn" target="_blank" rel="noopener noreferrer">
+  View Results
+</a>
   </div>
 </div>
 
@@ -163,7 +220,11 @@
         <p class="ptagsize pt-3">Excited to Begin Your Child’s Journey With The NEST School?</p>
         <p class="ptagsize">Join the Best IB School in Chennai.</p>
         <small class="d-block my-4 fs-5">Contact us for more information and join the best international school in Chennai.</small>
-        <button class="btn btn-outline-dark border-2 px-4 py-2 mb-4 rounded-5 fw-bold fs-5">Enquire for Admissions</button>
+          <a 
+            href="admission.html" 
+            class="btn btn-outline-dark border-2 px-4 py-2 mb-4 rounded-5 fw-bold fs-5">
+            Enquire for Admissions
+          </a>
     </section>
     <section class="mb-4">
       <div class="container-fluid px-lg-5">
@@ -283,7 +344,11 @@
               Education isn’t just about knowledge transfer – it is about evoking a sense of inquiry and equipping <br/> learners with tools 
               to find those answers – no matter how old they are, no matter where they go.
             </p>
-            <button class="btn text-white rounded-5 px-4 border-2 border-white py-2">Read More</button>
+              <a 
+                href="about.html" 
+                class="btn text-white rounded-5 px-4 border-2 border-white py-2">
+                Read More
+              </a>
           </div>
         </div>
       </div>
@@ -293,7 +358,12 @@
               <h3 class="styleheadercontent fs-1 fw-bold ">Admission Procedure</h3>
       <p class="my-4">At The NEST School, give your child an experience that is inspired by the IB curriculum in an environment that
          centres around their individual needs. Kickstart your child’s journey here.</p>
-         <p class="mt-4 fw-bold fs-xl-5">Enquire for Admissions <span class="ps-3 mt-2" style="font-size:24px; color:gold;">&#x276F;</span></p>
+          <a href="admission.html" class="text-decoration-none text-dark">
+            <p class="mt-4 fw-bold fs-xl-5 text-white">
+              Enquire for Admissions 
+              <span class="ps-3 mt-2" style="font-size:24px; color:gold;">&#x276F;</span>
+            </p>
+          </a>
 
       </div>
     </section>
@@ -318,57 +388,68 @@
                                     <!-- Card 5 -->
                   <article class="grade-card">
                     <h4 class="mb-3 fs-3">Nursery</h4>
-                    <div class="card-image" style="background-image:url('https://picsum.photos/800/450?image=1044')"></div>
+                    <div class="card-image" style="background-image:url('./assets/img/prekg.webp')"></div>
                     <div class="card-body">
                       <h3 class="card-title fs-3">Pre-KG, LKG, UKG</h3>
                       <p class="card-desc">Bringing the best of Reggio Emilia, Montessori, Waldorf methods, and IB PYP curricula
                          to help young learners engage in play and inquiry-based learning</p>
-                      <span class="card-chevron">&#x276F;</span>
+                      <a href="nurseryprograms.html" class="text-decoration-none text-dark">
+                        <span class="card-chevron" style="cursor:pointer;">&#x276F;</span>
+                      </a>
+
                     </div>
                   </article>
                   <!-- Card 1 -->
                   <article class="grade-card">
                     <h4 class="mb-3 fs-3">Primary</h4>
-                    <div class="card-image" style="background-image:url('https://picsum.photos/800/450?image=1015')"></div>
+                    <div class="card-image" style="background-image:url('./assets/img/grade1to5.jpg')"></div>
                     <div class="card-body">
                       <h3 class="card-title fs-3">Grade 1 - 5</h3>
                       <p class="card-desc">Bridging budding learners of The NEST School to 21st century skills through a curriculum that is authentic, relevant and inquiry-based.</p>
-                      <span class="card-chevron">&#x276F;</span>
+                      <a href="primaryprograms.html" class="text-decoration-none text-dark">
+                        <span class="card-chevron" style="cursor:pointer;">&#x276F;</span>
+                      </a>
                     </div>
                   </article>
 
                   <!-- Card 2 -->
                   <article class="grade-card mx-md-5">
                   <h4 class="mb-3 fs-3">Lower Secondary</h4>
-                    <div class="card-image" style="background-image:url('https://picsum.photos/800/450?image=1005')"></div>
+                    <div class="card-image" style="background-image:url('./assets/img/grade6to8.jpg')"></div>
                     <div class="card-body">
                       <h3 class="card-title fs-3">Grade 6 - 8</h3>
                       <p class="card-desc">Empowering developing learners to prepare for life with informed curiosity, your child discovers
                          a challenging, culturally-sensitive yet international curricula</p>
-                      <span class="card-chevron">&#x276F;</span>
+                       <a href="lowersecondary.html" class="text-decoration-none text-dark">
+                        <span class="card-chevron" style="cursor:pointer;">&#x276F;</span>
+                      </a>
                     </div>
                   </article>
 
                   <!-- Card 3 -->
                   <article class="grade-card">
                     <h4 class="mb-3 fs-3">Grade 9 & 10</h4>
-                    <div class="card-image" style="background-image:url('https://picsum.photos/800/450?image=1027')"></div>
+                    <div class="card-image" style="background-image:url('./assets/img/grade9to10.jpg')"></div>
                     <div class="card-body">
                       <h3 class="card-title fs-3">Grade 9 - 10</h3>
                       <p class="card-desc">Wherever your child dreams of going and whichever career they wish to pursue, The NEST School is
                          dedicated to helping them get there with the globally respected Cambridge IGCSE.</p>
-                      <span class="card-chevron">&#x276F;</span>
+                       <a href="programegrade9-10.html" class="text-decoration-none text-dark">
+                        <span class="card-chevron" style="cursor:pointer;">&#x276F;</span>
+                      </a>
                     </div>
                   </article>
 
                   <!-- Card 4 -->
                   <article class="grade-card mx-md-5">
                     <h4 class="mb-3 fs-3">Grade 11 & 12</h4>
-                    <div class="card-image" style="background-image:url('https://picsum.photos/800/450?image=1035')"></div>
+                    <div class="card-image" style="background-image:url('./assets/img/grade11.webp')"></div>
                     <div class="card-body">
                       <h3 class="card-title fs-3">Grade 11 & 12</h3>
                       <p class="card-desc">Coming soon</p>
-                      <span class="card-chevron">&#x276F;</span>
+                      <a href="programmegrade11&12.html" class="text-decoration-none text-dark">
+                        <span class="card-chevron" style="cursor:pointer;">&#x276F;</span>
+                      </a>
                     </div>
                   </article>
 
@@ -406,7 +487,7 @@
         <div class="events-track my-5">
           <!-- repeat .event-card for each item -->
           <article class="event-card mx-md-5">
-            <img class="event-img" src="https://picsum.photos/360/220?image=1050" alt="2nd Annual Sports Day">
+            <img class="event-img" src="./assets/img/home1.webp" alt="2nd Annual Sports Day">
             <div class="event-meta">School Events</div>
             <h3 class="event-heading">2nd Annual Sports Day at The NEST</h3>
             <hr class="event-sep">
@@ -414,7 +495,7 @@
           </article>
 
           <article class="event-card mx-md-5">
-            <img class="event-img" src="https://picsum.photos/360/220?image=1020" alt="IB PYP Authorized">
+            <img class="event-img" src="./assets/img/home2.webp" alt="IB PYP Authorized">
             <div class="event-meta">School News</div>
             <h3 class="event-heading">The NEST School is Officially Authorized as ...</h3>
             <hr class="event-sep">
@@ -422,7 +503,7 @@
           </article>
 
           <article class="event-card mx-md-5">
-            <img class="event-img" src="https://picsum.photos/360/220?image=1013" alt="Pongal Celebration">
+            <img class="event-img" src="./assets/img/home3.webp" alt="Pongal Celebration">
             <div class="event-meta">School Events</div>
             <h3 class="event-heading">Pongal Celebration</h3>
             <hr class="event-sep">
@@ -430,7 +511,7 @@
           </article>
 
           <article class="event-card mx-md-5">
-            <img class="event-img" src="https://picsum.photos/360/220?image=1009" alt="How an IB school">
+            <img class="event-img" src="./assets/img/home4.webp" alt="How an IB school">
             <div class="event-meta">School Events</div>
             <h3 class="event-heading">How an IB school in Chennai, Kodambakka...</h3>
             <hr class="event-sep">
@@ -438,35 +519,35 @@
           </article>
 
           <article class="event-card mx-md-5">
-            <img class="event-img" src="https://picsum.photos/360/220?image=1036" alt="Children's Day">
+            <img class="event-img" src="./assets/img/home5.webp" alt="Children's Day">
             <div class="event-meta">School Events</div>
             <h3 class="event-heading">Children's Day</h3>
             <hr class="event-sep">
             <div class="event-date">Nov 14, 2023</div>
           </article>
                     <article class="event-card mx-md-5">
-            <img class="event-img" src="https://picsum.photos/360/220?image=1036" alt="Children's Day">
+            <img class="event-img" src="./assets/img/home6.webp" alt="Children's Day">
             <div class="event-meta">School Events</div>
             <h3 class="event-heading">Children's Day</h3>
             <hr class="event-sep">
             <div class="event-date">Nov 14, 2023</div>
           </article>
                     <article class="event-card mx-md-5">
-            <img class="event-img" src="https://picsum.photos/360/220?image=1036" alt="Children's Day">
+            <img class="event-img" src="./assets/img/home7.webp" alt="Children's Day">
             <div class="event-meta">School Events</div>
             <h3 class="event-heading">Children's Day</h3>
             <hr class="event-sep">
             <div class="event-date">Nov 14, 2023</div>
           </article>
                     <article class="event-card mx-md-5">
-            <img class="event-img" src="https://picsum.photos/360/220?image=1036" alt="Children's Day">
+            <img class="event-img" src="./assets/img/home8.webp" alt="Children's Day">
             <div class="event-meta">School Events</div>
             <h3 class="event-heading">Children's Day</h3>
             <hr class="event-sep">
             <div class="event-date">Nov 14, 2023</div>
           </article>
                     <article class="event-card mx-md-5">
-            <img class="event-img" src="https://picsum.photos/360/220?image=1036" alt="Children's Day">
+            <img class="event-img" src="./assets/img/home9.webp" alt="Children's Day">
             <div class="event-meta">School Events</div>
             <h3 class="event-heading">Children's Day</h3>
             <hr class="event-sep">
@@ -788,7 +869,7 @@ We expect learners to choose one language from the above stated list and the lea
             long to write a review. They are not good. They are amazingly best. When
             my son was 2 years...
           </p>
-          <a href="#" class="fw-bold text-dark text-decoration-none">
+          <a href="testimonial.html" class="fw-bold text-dark text-decoration-none">
             Read More <i class="bi bi-arrow-right ms-1"></i>
           </a>
         </div>
@@ -804,7 +885,7 @@ We expect learners to choose one language from the above stated list and the lea
             and having playing area for children's. the school is located in prime
             area. My child is...
           </p>
-          <a href="#" class="fw-bold  text-dark text-decoration-none">
+          <a href="testimonial.html" class="fw-bold  text-dark text-decoration-none">
             Read More <i class="bi bi-arrow-right ms-1"></i>
           </a>
         </div>
@@ -820,7 +901,7 @@ We expect learners to choose one language from the above stated list and the lea
             their own Intelligence. They are enjoying in the school and doing lot of
             activities in depth...
           </p>
-          <a href="#" class="fw-bold text-dark text-decoration-none">
+          <a href="testimonial.html" class="fw-bold text-dark text-decoration-none">
             Read More <i class="bi bi-arrow-right ms-1"></i>
           </a>
         </div>
@@ -829,7 +910,7 @@ We expect learners to choose one language from the above stated list and the lea
 
     <!-- View all button -->
     <div class="text-center mt-5">
-      <a href="#" class="btn btn-outline-dark fs-5 border-2 rounded-pill px-4 py-2">View all</a>
+      <a href="testimonial.html" class="btn btn-outline-dark fs-5 border-2 rounded-pill px-4 py-2">View all</a>
     </div>
   </div>
 </section>
@@ -843,7 +924,12 @@ We expect learners to choose one language from the above stated list and the lea
   fulfilling career at the forefront of international education, where innovation meets impact. 
   Discover open positions and be the difference at NEST.
 </p>
-<h5 class="px-md-4 px-2 text-white pt-3 pb-5">See Openings  <span class="ps-3 mt-2" style="font-size:24px; color:gold;">&#x276F;</span></h5>
+<a href="careers.html" class="text-decoration-none">
+  <h5 class="px-md-4 px-2 text-white pt-3 pb-5 mb-0">
+    See Openings  
+    <span class="ps-3 mt-2" style="font-size:24px; color:gold;">&#x276F;</span>
+  </h5>
+</a>
 <div class="positionchild mt-5">
   <img class="img-fluid" src="./assets/img/homechildbanner.webp" alt="">
 </div>
@@ -855,7 +941,7 @@ We expect learners to choose one language from the above stated list and the lea
   <div class="container-fluid">
     <div class="row gy-4 align-items-start">
       <!-- Column 1: Logo + Description + Socials -->
-      <div class="col-lg-3 ps-md-5">
+      <div class="col-lg-4 col-xl-3 ps-md-5">
         <div class="mb-3">
           <!-- replace src with your logo -->
           <img src="./assets/img/thenestschoollogo.webp" alt="The NEST School" style="max-width:170px;">
@@ -870,29 +956,57 @@ We expect learners to choose one language from the above stated list and the lea
 
         <div class="d-flex align-items-center  gap-3 mt-3">
           <!-- social icons: use fontawesome/bootstrap-icons as needed -->
-          <a class="social-circle d-inline-flex align-items-center justify-content-center" href="#" aria-label="facebook">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a class="social-circle d-inline-flex align-items-center justify-content-center" href="#" aria-label="twitter">
-            <i class="bi bi-twitter"></i>
-          </a>
-          <a class="social-circle d-inline-flex align-items-center justify-content-center" href="#" aria-label="youtube">
-            <i class="bi bi-youtube"></i>
-          </a>
-          <a class="social-circle d-inline-flex align-items-center justify-content-center" href="#" aria-label="instagram">
-            <i class="bi bi-instagram"></i>
-          </a>
+            <a 
+              class="social-circle d-inline-flex align-items-center justify-content-center" 
+              href="https://www.facebook.com/TheNESTSchoolChennai/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Facebook - The NEST School Chennai"
+            >
+              <i class="bi bi-facebook"></i>
+            </a>
+
+            <a 
+              class="social-circle d-inline-flex align-items-center justify-content-center" 
+              href="https://x.com/The_NEST_School?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Twitter (X) - The NEST School"
+            >
+              <i class="bi bi-twitter"></i>
+            </a>
+
+            <a 
+              class="social-circle d-inline-flex align-items-center justify-content-center" 
+              href="https://www.youtube.com/@TheNESTSchoolChennai" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="YouTube - The NEST School Chennai"
+            >
+              <i class="bi bi-youtube"></i>
+            </a>
+
+            <a 
+              class="social-circle d-inline-flex align-items-center justify-content-center" 
+              href="https://www.instagram.com/the_nest_school/?hl=en" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Instagram - The NEST School Chennai"
+            >
+              <i class="bi bi-instagram"></i>
+            </a>
+
         </div>
       </div>
 
       <!-- Column 2: Center nav -->
-      <div class="col-lg-3 d-none d-lg-block majorlinks text-end">
+      <div class="col-lg-4 col-xl-3 d-none d-lg-block majorlinks text-end">
         <nav class="footer-nav text-center">
           <ul class="list-unstyled mb-0 text-end pe-4" style="line-height:1.9; font-weight: 500;">
-            <li><a class="text-dark fs-5 text-decoration-none" href="#">Programmes</a></li>
-            <li><a class="text-dark fs-5 text-decoration-none" href="#">Admission</a></li>
-            <li><a class="text-dark fs-5 text-decoration-none" href="#">About</a></li>
-            <li><a class="text-dark fs-5 text-decoration-none" href="#">News and Events</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="primaryprograms.html">Programmes</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="admission.html">Admission</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="about.html">About</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="news&events.html">News and Events</a></li>
             <li><a class="text-dark fs-5 text-decoration-none" href="careers.html">Careers</a></li>
             <li><a class="text-dark fs-5 text-decoration-none" href="contactus.html">Contact</a></li>
             <li><a class="text-dark fs-5 text-decoration-none" href="privacypolicy.html">Privacy Policy</a></li>
@@ -901,17 +1015,18 @@ We expect learners to choose one language from the above stated list and the lea
       </div>
 
       <!-- Column 3: CTA heading + Map -->
-      <div class="col-lg-3">
+      <div class="col-lg-4 col-xl-3">
         <h3 class="h4 fs-3 fw-bold" style="color:black; font-weight: 400;">Visit The Best International<br>School In Chennai Today</h3>
 
-        <div class="map-card mt-3" style="max-width:260px; background:white; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.06);">
+        <div class="map-card mt-3" style="max-width:160px; background:white; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.06);">
           <!-- Replace the iframe src with your Google Maps embed -->
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.683484227926!2d80.22393577454787!3d13.055807913027596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f499eee457%3A0x4d3f7e677496e707!2sMeenakshi%20Sundararajan%20Engineering%20College!5e0!3m2!1sen!2sin!4v1758109569512!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.683484227926!2d80.22393577454787!3d13.055807913027596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f499eee457%3A0x4d3f7e677496e707!2sMeenakshi%20Sundararajan%20Engineering%20College!5e0!3m2!1sen!2sin!4v1758109569512!5m2!1sen!2sin" 
+width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 
       <!-- Column 4: Contact info -->
-      <div class="col-lg-3">
+      <div class="col-lg-4 col-xl-3">
         <div class="contact-info ps-lg-3">
           <h5 class="fw-bold fs-4" style="color:#164194;">The NEST School</h5>
           <address class="text-muted fs-5" style="font-style:normal;">
@@ -930,8 +1045,6 @@ We expect learners to choose one language from the above stated list and the lea
     </div>
   </div>
 
-  <!-- brochure tab (vertical left) -->
-  <a class="brochure-tab d-flex align-items-center justify-content-center" href="#" role="button" aria-label="Brochure">Brochure</a>
 
   <!-- floating orange quick-link circle bottom-right -->
   <a class="floating-link d-flex align-items-center justify-content-center" href="#" aria-label="quick-link">
@@ -958,7 +1071,7 @@ We expect learners to choose one language from the above stated list and the lea
 
 
   <ul class="mt-5 fs-5 fw-bold">
-    <li><a class="top-link fs-5 fw-bold" href="#">Home</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="/thenestschool">Home</a></li>
 
     <li class="has-sub">
       <div class="top-link" role="button" tabindex="0" aria-expanded="false">
@@ -979,7 +1092,7 @@ We expect learners to choose one language from the above stated list and the lea
       </div>
     </li>
 
-    <li><a class="top-link fs-5 fw-bold" href="#">Admission</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="admission.html">Admission</a></li>
 
     <li class="has-sub">
       <div class="top-link" role="button" tabindex="0" aria-expanded="false">
@@ -995,14 +1108,15 @@ We expect learners to choose one language from the above stated list and the lea
       </div>
     </li>
 
-    <li><a class="top-link fs-5 fw-bold" href="#">Parent Testimonials</a></li>
-    <li><a class="top-link fs-5 fw-bold" href="#">News And Events</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="testimonial.html">Parent Testimonials</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="news&events.html">News And Events</a></li>
     <li><a class="top-link fs-5 fw-bold" href="careers.html">Careers</a></li>
     <li><a class="top-link fs-5 fw-bold" href="contactus.html">Contact Us</a></li>
     <li><a class="top-link fs-5 fw-bold" href="privacypolicy.html">Privacy Policy</a></li>
   </ul>
 </nav>
 
+   <script src="./assets/js/main.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> </body>
   <!-- Custom JS for Menu -->

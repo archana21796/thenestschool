@@ -22,6 +22,15 @@
   margin-left: 10px;
   font-size: 20px;
 }
+
+
+ .social-circle {
+    width:44px; height:44px; border-radius:50%;
+    background:#ff8a3d; color:#fff; font-size:1.05rem;
+    text-decoration:none; box-shadow:0 2px 6px rgba(0,0,0,0.08);
+  }
+  .social-circle i { font-size:1.05rem; }
+
 /* Custom offcanvas menu */
 #customMenu {
   position: fixed;
@@ -256,3 +265,21 @@
 
     /* Accessibility focus */
     a:focus { outline: 3px solid rgba(0,0,0,0.08); outline-offset:3px }
+
+
+
+      /* brochure vertical tab on left */
+  .brochure-tab {
+    position: fixed; left:8px; bottom:140px;
+    background:#ff9b1a; color:#fff;
+    width:56px; height:110px;
+    writing-mode:vertical-rl; text-orientation:mixed;
+    transform:rotate(180deg);
+    border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.15);
+    z-index:1050; font-weight:700; text-decoration:none;
+  }
+
+  .setcalaendarsize{
+    width:70%;
+    height: 500px;
+  }

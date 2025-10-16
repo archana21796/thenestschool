@@ -114,7 +114,7 @@
     }
     .news-card:hover, .event-card:hover { transform: translateY(-6px); box-shadow: 0 8px 22px rgba(30,40,50,0.06); }
 
-    .card-img-top { height: 220px; object-fit: cover; border-radius: 6px 6px 0 0; }
+    .card-img-top { height: 320px; object-fit: cover; border-radius: 6px 6px 0 0; }
 
     .meta-row { display:flex; justify-content:space-between; align-items:center; gap:12px; font-size:0.92rem; color:#1a57a8; margin-top:10px; }
 

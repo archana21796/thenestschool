@@ -68,13 +68,13 @@
     button:hover {
       opacity: 0.9;
     }
-ul {
+.setusp {
   list-style: none;
   padding: 0;
   text-align: center;
 }
-ul li::before {
-  content: "•";  /* custom bullet */
+.setusp li::before {
+  content: "•";  
   margin-right: 8px;
 }
 
@@ -146,7 +146,7 @@ border-bottom:1px solid rgba(0,0,0,0.08);align-items:flex-start;min-height:170px
 }
 
   .wrap {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 48px auto;
     padding: 0 20px 80px; /* room for nav */
   }
@@ -193,7 +193,7 @@ border-bottom:1px solid rgba(0,0,0,0.08);align-items:flex-start;min-height:170px
   /* image area */
   .card .media {
     width:100%;
-    height: 220px;
+    height: 300px;
     background: #f6f6f6;
     display:block;
   }
