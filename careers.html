@@ -60,6 +60,11 @@
     <!-- brochure tab (vertical left) -->
   <a class="brochure-tab d-flex align-items-center justify-content-center" href="#" role="button" aria-label="Brochure">Brochure</a>
 
+    <!-- floating orange quick-link circle bottom-right -->
+  <a class="floating-link d-flex align-items-center justify-content-center" href="#" aria-label="quick-link">
+    <i class="bi bi-arrow-up" style="font-size:1.1rem;"></i>
+  </a>
+
 <main>
         <section class="hero">
         <div class="stylecontactherocontent text-center text-lg-start">
@@ -377,7 +382,7 @@
           <ul class="list-unstyled mb-0 text-end pe-4" style="line-height:1.9; font-weight: 500;">
             <li><a class="text-dark fs-5 text-decoration-none" href="nurseryprograms.html">Programmes</a></li>
             <li><a class="text-dark fs-5 text-decoration-none" href="admission.html">Admission</a></li>
-            <li><a class="text-dark fs-5 text-decoration-none" href="#">About</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="about.html">About</a></li>
             <li><a class="text-dark fs-5 text-decoration-none" href="news&events.html">News and Events</a></li>
             <li><a class="text-dark fs-5 text-decoration-none" href="careers.html">Careers</a></li>
             <li><a class="text-dark fs-5 text-decoration-none" href="contactus.html">Contact</a></li>
@@ -429,7 +434,7 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
   <div class="copyright-bar mt-4" style="border-top:1px solid rgba(0,0,0,0.12); background:transparent;">
     <div class="container py-3 d-flex justify-content-between align-items-center">
       <div style="color:#0a3a3a;">Copyright © 2025 The NEST School. All rights reserved</div>
-      <div><a href="#" class="text-decoration-underline" style="color:#0a3a3a;">Fee Payment - T &amp; C</a></div>
+      <div><a href="./Terms-Conditions-of-The-Nest-School-Revised.pdf" class="text-decoration-underline" style="color:#0a3a3a;">Fee Payment - T &amp; C</a></div>
     </div>
   </div>
 </footer>
@@ -494,6 +499,13 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
 <script src="./assets/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> </body>
   <!-- Custom JS for Menu -->
+   <script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".about-link").addEventListener("click", () => {
+    window.location.href = "about.html";
+  });
+});
+</script>
 <script>
   // Elements
   const menuToggle = document.getElementById("menuToggle");

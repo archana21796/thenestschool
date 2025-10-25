@@ -9,9 +9,13 @@
   margin: 0;
   padding: 0;
 }
+@media (min-width: 900px) {
+  .sticky-nav {
+    position: sticky;
+  }
+}
 .sticky-nav {
   background-color: #f8f8f8;
-  position: sticky;
   top: 0; /* stick when reaches top */
   z-index: 1000; /* keep above other content */
 }

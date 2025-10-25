@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/css/standard.css">
-    <link rel="stylesheet" href="./assets/css/admission-enquiry.css">
+    <link rel="stylesheet" href="./assets/css/admission.css">
 </head>
 <body>
 
@@ -58,311 +58,140 @@
 
   </header>
 <main>
-        <div id="carouselExampleControls" class="carousel slide"  data-bs-ride="carousel" 
-     data-bs-interval="2000">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./assets/img/Web-banner-1920-x-580-1-1.webp" class="d-none d-md-block w-100" alt="...">
-      <img src="./assets/img/Mobile-banner-415-x-635-1.webp" class="d-block d-md-none w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="./assets/img/Amphitheatre-1920-x-580-1-1-1.webp" class="d-none d-md-block w-100" alt="...">
-      <img src="./assets/img/415-x-635-Amphitheatre-1.webp" class="d-block d-md-none w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="./assets/img/Library-1920-x-580-1-1.webp" class="d-none d-md-block w-100" alt="...">
-      <img src="./assets/img/Mobile-Library-415-x-635.webp" class="d-block d-md-none w-100" alt="...">
-    </div>
-        <div class="carousel-item">
-      <img src="./assets/img/landing-page-director-1536x464.jpeg" class="d-none d-md-block w-100" alt="...">
-      <img src="./assets/img/landing-page-mob.jpeg" class="d-block d-md-none w-100" alt="...">
-    </div>
-        <div class="carousel-item">
-      <img src="./assets/img/Mound-1920-x-580.webp" class="d-none d-md-block w-100" alt="...">
-      <img src="./assets/img/Mobile-Mound-415-x-635.webp" class="d-block d-md-none w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<section class="mt-5" style="background-color: #fff4f4;">
-    <div class="container-fluid p-4">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 ps-md-5 overflow-hidden">
-                <iframe class=" ps-xl-5" title="YouTube video player 1" src="https://www.youtube.com/embed/cNUEJc_HhT8?autoplay=0&amp;enablejsapi=1&amp;wmode=opaque" width="600" height="360" allowfullscreen="" allow="autoplay; fullscreen" id="player_2"></iframe>
-            </div>
-            <div class="col-lg-6 text-center">
-                <h1 class="my-2" style="color: #12366d;">IB PYP and Cambridge Affiliated School in Chennai</h1>
-                <h3 class="my-2" style="color: #ffa500;">Pre-KG to Grade 9 Admissions Open</h3>
-                <p class="py-2 fs-5">With 75 Year Legacy in Education of Meenakshi College, Kodambakkam with 12:1 Student to Teacher Ratio, State of the art 100k Sq.ft. Lush Green Campus making it one of The Best International Schools in Chennai</p>
-            </div>
+        <section class="hero">
+        <div class="stylecontactherocontent text-center text-lg-start">
+            <h3 class="fw-bold fs-1">Begin Your Child's NEST Journey</h3>
+            <p class="fs-5">
+                Admissions at The NEST School
+            </p>
         </div>
-    </div>
-</section>
-<section style="background-color: #fff4f4;">
-    <div class="form-container container text-center">
-    <h2 class="fs-2">Enquire Now for Admissions</h2>
-    <form class="text-start">
-      <div class="form-group">
-        <label class="fs-4" for="name">Name <span>*</span></label>
-        <input type="text" id="name" placeholder="" required>
-      </div>
-
-      <div class="form-group">
-        <label class="fs-4" for="email">Email Address <span>*</span></label>
-        <input type="email" id="email" placeholder="" required>
-      </div>
-
-      <div class="form-group">
-        <label class="fs-4" for="phone">Phone Number <span>*</span></label>
-        <input type="text" id="phone" placeholder="081234 56789" required>
-      </div>
-
-      <div class="form-group">
-        <label class="fs-4" for="grade">Grade Enquired For <span>*</span></label>
-        <select id="grade" required>
-          <option>Select Your Option</option>
-          <option>Pre-KG</option>
-          <option>LKG</option>
-          <option>UKG</option>
-          <option>Grade 1</option>
-          <option>Grade 2</option>
-          <option>Grade 3</option>
-          <option>Grade 4</option>
-          <option>Grade 5</option>
-          <option>Grade 6</option>
-          <option>Grade 7</option>
-          <option>Grade 8</option>
-          <option>Grade 9</option>
-          <option>Grade 10</option>
-          <!-- Add more options as needed -->
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label class="fs-4" for="source">Where did you hear about us? <span>*</span></label>
-        <select id="source" required>
-          <option>Select Your Option</option>
-          <option>Google</option>
-          <option>Facebook</option>
-          <option>Instagram</option>
-          <option>Friends/Family</option>
-          <option>Other</option>
-        </select>
-      </div>
-
-      <div class="captcha-box">
-        <!-- Placeholder for Google reCAPTCHA -->
-        <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA">
-      </div>
-
-      <button class="fs-4" type="submit">Submit</button>
-    </form>
-  </div>
-  <div class="text-center my-4">
-    <ul class="mb-4 setusp">
-        <li>75-Year Legacy of Excellence: A tradition of educational brilliance, preparing tomorrow’s leaders.</li>
-        <li>Prime Location in Chennai: Nestled in the heart of the city at Meenakshi College, Kodambakkam.</li>
-        <li>Innovative and Diverse Curriculum: Embracing IB PYP and Cambridge syllabi for a well-rounded education.</li>
-        <li>State-of-the-Art Campus: Equipped with modern facilities to foster learning and creativity.</li>
-        <li>Focus on Individual Growth: Each child’s unique talents are nurtured and celebrated.</li>
-        <li>Balance of Academics and Extracurriculars: Cultivating academic excellence and diverse interests.</li>
-    </ul>
-  </div>
-</section>
-<section class="container-fluid" style="background-color: #fff4f4;">
-<div class="row align-items-center py-5">
-
-
-<div class="col-lg-3">
-<!-- Replace with your cutout PNG/JPEG with transparent background -->
-<img class="img-fluid" src="./assets/img/images-culture.png" alt="kid cutout">
-</div>
-
-
-<div class="col-lg-9 row">
-
-
-
-
-<div class="col-lg-7 row align-items-start setborder">
-<img class="col-6 col-md-4 col-lg-3" style="max-width: 80px;" src="./assets/img/culture-icon-one.svg" alt="">
-<div class="content col-md-8 col-lg-9">
-<h3>Signature Highlights</h3>
-<p class="pt-3">Multi‑Purpose Auditorium (1000‑seater) – for indoor sports, events, performances, and community gatherings.<br><br>
-The Sky Stage – an open‑to‑sky, courtyard‑style amphitheatre with seating for 500 members.<br><br>
-The Discovery Hub – our reimagined Library: a sanctuary for imagination, exploration, and the joy of reading.</p>
-</div>
-</div>
-
-
-<div class="ps-lg-5 col-lg-5 row align-items-start ">
-<img  class="col-6 col-md-4 col-lg-3" style="max-width: 80px;" src="./assets/img/culture-icon-two.svg" alt="">
-<div class="content col-md-8 col-lg-9">
-<h3>Learning Hubs</h3>
-<p class="pt-3">40+ Collaborative Smart Classrooms – technology‑enabled, flexible spaces for interactive learning.<br><br>
-Indoor–Outdoor Classrooms – designed especially for our energetic Early Years learners.</p>
-</div>
-</div>
-
-<div class="bottomborder col-12"></div>
-<div class="col-lg-5 row align-items-start setborder">
-<img class="col-6 col-md-4 col-lg-3" style="max-width: 80px;" src="./assets/img/culture-icon-three.svg" alt="">
-<div class="content col-md-8 col-lg-9">
-<h3>Collaborative & Reflective Spaces</h3>
-<p class="pt-3">The Mound – a vibrant campus lung where ideas breathe and collaboration thrives.<br><br>
-The Huts – cozy corners for informal learning, reflection, and connection.<br><br>
-The Terrarium – a living space where students collaborate, explore, and discover through nature.</p>
-</div>
-</div>
-
-
-<div class="ps-lg-5 col-lg-7 row align-items-start">
-<img class="col-6 col-md-4 col-lg-3" style="max-width: 80px;" src="./assets/img/culture-icon-four.svg" alt="">
-<div class="content col-md-8 col-lg-9">
-<h3>Innovation & Discovery Labs</h3>
-<p class="pt-3">Advanced Labs – Coding, AI/ML, Robotics, Languages & Communication, Ethical Hacking, ICT.<br><br>
-Composite Skill Lab in partnership with AeroBay – hands‑on innovation in aerospace, drones, robotics, and sustainability.<br><br>
-State‑of‑the‑art Science Labs – Physics, Chemistry, and Biology labs that bring Science to life.</p>
-</div>
-</div>
-<div class="bottomborder col-12"></div>
-<div class="col-lg-6 row align-items-start">
-<img class="col-6 col-md-4 col-lg-3" style="max-width: 80px;" src="./assets/img/culture-icon-five.svg" alt="">
-<div class="content  col-md-8 col-lg-9">
-<h3>Creative & Community Spaces</h3>
-<p class="pt-3">Creative Studios – Visual Arts, Performing Arts, Graphic Design, Theatre, and Dance<br><br>
-Wonder Room – celebrating inclusion and learning diversity<br><br>
-Student Corner – a dedicated student-led engagement zone<br/><br/>
-Facilitator Lounges – for quiet reflections<br/><br/>Parent & Visitor Lounge – a warm space for connection and conversations</p>
-</div>
-</div>
-
-
-</div>
-
-
-</div>
-</section>
-<section class="container py-4">
-    <h2 class="my-3" style="color: #12366d;">Explore IB and IGCSE Curriculum at The Nest School</h2>
-    <p class="my-2">
-        The NEST School is an International School with a focus on holistic
-         learning. We are one of the few IB schools offering the IB PYP  programs in Chennai for grades Pre KG – Grade 5. We offer the renowned Cambridge Lower Secondary
-         Program leading to the IGCSE certification for our Grades 6-10.
-    </p>
-    <h3 style="color: #fea80a;" class="my-3">Early Year Program  @ The NEST School</h3>
-    <h5>Child-centred: </h5>
-    <p>Our Early Year program is based on the belief that children learn
-         best when they are allowed to explore and learn at their own pace.
-          We have a carefully curated curriculum which involves the best practices across the Montessori, Waldorf and the Reggio Emilia
-         methods of teaching-learning incorporated with the IB PYP Program.</p>
-         <h5>Inquiry based learning:</h5>
-    <p>Our IB PYP curriculum is designed to help the child see the world through various themes and allows an inquiry based learning. These make 
-        them confident lifelong self learners that can cope up with challenges in the real world.</p>
-        <h5>Hands-on learning: </h5>
-    <p>Our classrooms are filled with hands-on materials adopted from the Montessori method
-         that children can use to learn about the world around them. The 100 languages from the
-          Reggio Emilia approach are brought alive through the various models of learning adopted
-           in the classroom. Our vivid classroom displays celebrate and nurture each child’s talent and capabilities.
-            Role plays, visual art, movement and music are rolled into the lessons using the Waldorf method to make learning more fun and meaningful.
-          A key part of our curriculum focuses on teaching children basic life skills.</p>
-          <h5>Emphasis on independence and life skills: </h5>
-          <p>A perfect amalgamation of leading methods of learning in the early years including Montessori, Waldorf,
-             Reggio Emilia blended with the IB PYP curriculum make our school one of the best IB schools in Chennai. Our program 
-            encourages children to be independent and to take responsibility for their own learning. </p>
-            <h3 style="color: #fea80a;">IB PYP Curriculum</h3>
-            <h5>Internationally recognized and accredited: </h5>
-            <p>The IB Curriculum is recognized by universities around the world, and graduates of IB programs are often well-prepared for success in higher education.</p>
-            <h5>Rigorous and challenging: </h5>
-            <p>The IB curriculum is designed to be academically challenging, and students who complete the program will have developed strong critical thinking, research, and writing skills.</p>
-            <h5>Inquiry based transdisciplinary learning: </h5>
-            <p>The IB PYP curriculum framework has been used to curate the unique Primary years curriculum
-                 at The NEST School where learners learn through inquiry revolving around 6 themes. The 
-                 IB curriculum emphasises transdisciplinary 
-                learning, which means that students will learn to connect ideas from different subjects.</p>
-                <h5>Holistic: </h5>
-                <p>The IB program is not just about academics; it also focuses on developing students’ personal and social skills. Learners are exposed to a variety of subjects including Art, 
-                    Movement, Yoga, Dance  etc. to ensure a hierarchy free learning environment.</p>
-                    <h3 style="color: #fea80a;">IGCSE Curriculum</h3>
-                    <h5>Internationally recognized: </h5>
-                    <p>The IGCSE exams are recognized by universities around the world, and students who complete IGCSE courses are often well-prepared for higher education.</p>
-                    <h5>Flexible and customizable:  </h5>
-                    <p>Schools can choose which IGCSE courses to offer, which means that students can tailor their education to their talents, interests and needs.</p>
-                    <h5>Broad range of subjects:  </h5>
-                    <p>IGCSE courses are available in a wide range of subjects, from traditional academic subjects to more vocational subjects. In addition 
-                        a variety of electives are offered to ensure that learners are able to acquire different skills to make them confident lifelong learners. </p>
-                        <h5>Hierarchy free learning:</h5>
-                        <p>At The NEST School we aim to expose learners to a wide range of co curricular activities 
-                            including Visual and Performing Arts, Sports, Music, Yoga etc to ensure that there is a
-                             hierarchy free learning approach breaking the traditional settings with only focus on
-                              STEM subjects. This makes
-                             The NEST School a unique and one of the top rated Cambridge IGCSE schools in the city,</p>
-                             <h5>Emphasis on practical skills:</h5>
-                             <p>IGCSE courses often emphasise practical skills, such as problem-solving and communication. Learners become confident about their strengths
-                                 to be able to solve challenging problems through innovative and creative approaches.</p>
-</section>
-  <div class="wrap px-5">
-    <h2 class="section-title">Programmes Offered</h2>
-
-    <div class="container-fluid" id="carousel">
-      <div class="viewport">
-        <div class="track pb-5" id="track">
-          <!-- Card 1 -->
-          <article class="card p-0 border-0  shadow-lg">
-            <div class="eyebrow">Nursery</div>
-            <div class="media"><img src="./assets/img/prekg.jpg" alt="Nursery"></div>
-            <div class="body">
-              <div class="title">Pre-KG, LKG, UKG</div>
-              <p class="desc p-3 fs-5">Bringing the best of Reggio Emilia, Montessori, Waldorf methods, and IB PYP curricula to help young learners engage in play and inquiry-based learning.</p>
+    </section>
+<section class="py-5">
+  <div class="container-fluid">
+    <div class="row align-items-center justify-content-center">
+      
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div id="schoolCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner rounded-3 shadow-sm">
+            <div class="carousel-item active">
+              <img src="assets/img/aero-68d135644a40a.webp" class="d-block w-100 img-fluid" alt="Lab Image 1">
             </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="card p-0 border-0  shadow-lg">  
-                        <div class="eyebrow">Primary</div>
-            <div class="media"><img src="./assets/img/grade1to5.jpg" alt="Primary"></div>
-            <div class="body">
-              <div class="title">Grade 1 - 5</div>
-              <p class="desc p-3 fs-5">Bridging budding learners of The NEST School to 21st century skills through a curriculum that is authentic, relevant and inquiry-based.</p>
+            <div class="carousel-item">
+              <img src="assets/img/Thinai-modified-768x827.webp" class="d-block w-100 img-fluid" alt="Lab Image 2">
             </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="card p-0 border-0  shadow-lg">
-                          <div class="eyebrow">Lower Secondary</div>
-            <div class="media"><img src="./assets/img/grade6to8.jpg" alt="Lower Secondary"></div>
-            <div class="body">
-              <div class="title">Grade 6 - 8</div>
-              <p class="desc p-3 fs-5">Empowering developing learners to prepare for life with informed curiosity, your child discovers a challenging, culturally-sensitive yet international curricula.</p>
+            <div class="carousel-item">
+              <img src="assets/img/frnt-68d13566867d6.webp" class="d-block w-100 img-fluid" alt="Lab Image 3">
             </div>
-          </article>
-
-          <!-- Card 4 (extra, shows scroll behavior) -->
-          <article class="card p-0 border-0  shadow-lg">
-                          <div class="eyebrow">Secondary</div>
-            <div class="media"><img src="./assets/img/grade9to10.jpg" alt="Secondary"></div>
-            <div class="body">
-              <div class="title">Grade 9 - 10</div>
-              <p class="desc p-3 fs-5">Comming Soon</p>
+           <div class="carousel-item">
+              <img src="assets/img/sport-68d13566c0e8c.webp" class="d-block w-100 img-fluid" alt="Lab Image 3">
             </div>
-          </article>
-
+          </div>
         </div>
       </div>
 
-      <div class="controls" aria-hidden="false">
-        <button id="prev" aria-label="Previous">&#8592;</button>
-        <button id="next" aria-label="Next">&#8594;</button>
+      <!-- Right Text -->
+      <div class="col-md-6 text-center text-md-start ps-md-5">
+        <p class="fs-5">
+          At <strong>The NEST School</strong>, give your child an experience that is inspired by the
+          <strong>IB & CAIE Curricula</strong> in an environment that centres around their
+          individual needs. Kickstart your child’s journey here.
+        </p>
+
+        <div class="mt-4 justify-content-md-start justify-content-center">
+          <a href="admission-enquiry.html" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-semibold">
+            Enquire for Admissions
+          </a> <br/> <br/>
+          <a href="brochure.pdf" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-semibold">
+            View/Download Brochure
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ===== Admission Procedure ===== -->
+<section class="admission-procedure py-5">
+  <div class="container">
+
+    <h2 class="display-6 fw-semibold mb-5">Admission Procedure</h2>
+
+    <!-- viewport -->
+    <div class="steps-viewport position-relative">
+      <ul class="steps-track list-unstyled m-0 p-0 d-flex gap-5">
+        <!-- Step 1 -->
+        <li class="step-card">
+          <div class="step-label">STEP 1</div>
+          <h4 class="fw-bold mb-3">Enquiry</h4>
+          <p class="mb-4">
+            Submit an online enquiry form or mail us at <strong>enquiry@thenest.school</strong>
+            or contact our admissions office at <strong>9940106378</strong> for an appointment.
+          </p>
+          <div class="ratio-row"><span>1/4</span><hr></div>
+        </li>
+
+        <!-- Step 2 -->
+        <li class="step-card">
+          <div class="step-label">STEP 2</div>
+          <h4 class="fw-bold mb-3">School Visit and Interaction</h4>
+          <p class="mb-4">
+            Take a school tour and meet our Admissions Team along with your child to understand
+            our culture, values and philosophy. We conduct an interaction and/or Prior Knowledge
+            Assessment to understand the learner better.
+          </p>
+          <div class="ratio-row"><span>2/4</span><hr></div>
+        </li>
+
+        <!-- Step 3 -->
+        <li class="step-card">
+          <div class="step-label">STEP 3</div>
+          <h4 class="fw-bold mb-3">Application</h4>
+          <p class="mb-4">
+            Fill up the admission form, send in all documents and pay the fee.
+             Admit letter is given once all procedure is complete.
+          </p>
+          <div class="ratio-row"><span>3/4</span><hr></div>
+        </li>
+
+        <!-- Step 4 -->
+        <li class="step-card">
+          <div class="step-label">STEP 4</div>
+          <h4 class="fw-bold mb-3">Join</h4>
+          <p class="mb-4">
+            Welcome to The NEST Family! Your child is ready to take The NEST Step
+          </p>
+          <div class="ratio-row"><span>4/4</span><hr></div>
+        </li>
+      </ul>
+
+      <!-- arrows -->
+      <div class="nav-arrows d-flex gap-3 justify-content-center mt-4">
+        <button class="arrow-btn" id="stepPrev" aria-label="Previous">
+          <span class="arrow">←</span>
+        </button>
+        <button class="arrow-btn" id="stepNext" aria-label="Next">
+          <span class="arrow">→</span>
+        </button>
       </div>
     </div>
   </div>
+</section>
+<section style="background-color: #2c9eff;" class="container-fluid">
+<div class="row justify-content-between align-items-center px-2 px-md-3 ps-lg-5">
+  <div class="col-lg-6 text-white px-md-5">
+    <h2 class="styleresourcecontent fw-bold ">Other Resources</h2>
+    <p class="fs-4">A comprehensive list of pre-requisites to <br/> make your admission process seamless</p>
+    <a href="./NEST-list-of-document.pdf" class="text-decoration-none d-inline-flex align-items-center fw-bold fs-5 py-4" style="color:inherit;">
+  List of Documents
+  <span style="color:#FFD700; font-size:1.3em; margin-left:8px;">&#8594;</span>
+</a>
+
+  </div>
+    <div class="col-lg-4">
+    <img class="img-fluid" src="./assets/img/nest-admission-bottom-banner-800x538.webp" alt="">
+  </div>
+</div>
+</section>
 </main>
 
 
@@ -498,6 +327,11 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
   <!-- brochure tab (vertical left) -->
   <a class="brochure-tab d-flex align-items-center justify-content-center" href="#" role="button" aria-label="Brochure">Brochure</a>
 
+    <!-- floating orange quick-link circle bottom-right -->
+  <a class="floating-link d-flex align-items-center justify-content-center" href="#" aria-label="quick-link">
+    <i class="bi bi-arrow-up" style="font-size:1.1rem;"></i>
+  </a>
+
   <!-- floating orange quick-link circle bottom-right -->
   <a class="floating-link d-flex align-items-center justify-content-center" href="#" aria-label="quick-link">
     <i class="bi bi-link-45deg" style="font-size:1.1rem;"></i>
@@ -507,7 +341,7 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
   <div class="copyright-bar mt-4" style="border-top:1px solid rgba(0,0,0,0.12); background:transparent;">
     <div class="container py-3 d-flex justify-content-between align-items-center">
       <div style="color:#0a3a3a;">Copyright © 2025 The NEST School. All rights reserved</div>
-      <div><a href="#" class="text-decoration-underline" style="color:#0a3a3a;">Fee Payment - T &amp; C</a></div>
+      <div><a href="./Terms-Conditions-of-The-Nest-School-Revised.pdf" class="text-decoration-underline" style="color:#0a3a3a;">Fee Payment - T &amp; C</a></div>
     </div>
   </div>
 </footer>
@@ -576,6 +410,13 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS for Menu -->
+   <script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".about-link").addEventListener("click", () => {
+    window.location.href = "about.html";
+  });
+});
+</script>
 <script>
   // Elements
   const menuToggle = document.getElementById("menuToggle");
@@ -673,90 +514,62 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
 </script>
 <script>
   (function () {
-    const track = document.getElementById('track');
-    const nextBtn = document.getElementById('next');
-    const prevBtn = document.getElementById('prev');
-    const carousel = document.getElementById('carousel');
+    const viewport = document.querySelector('.steps-viewport');   // <-- new
+    const track    = document.querySelector('.steps-track');
+    const cards    = [...document.querySelectorAll('.step-card')];
+    const prevBtn  = document.getElementById('stepPrev');
+    const nextBtn  = document.getElementById('stepNext');
 
     let index = 0;
 
-    // returns calculated card width (includes margin/gap effect)
-    function getCardWidth() {
-      const card = track.querySelector('.card');
-      if (!card) return 0;
-      // get computed width (includes padding, border), but gap sits between flex children so we need flex gap
-      return card.getBoundingClientRect().width;
+    function perView() {
+      if (window.matchMedia('(min-width:1200px)').matches) return 3; // xl
+      if (window.matchMedia('(min-width:768px)').matches)  return 2; // md
+      return 1;
     }
 
-    function visibleCount() {
-      // how many whole cards fit in the viewport
-      const vw = carousel.querySelector('.viewport').getBoundingClientRect().width;
-      const cw = getCardWidth();
-      if (cw <= 0) return 1;
-      return Math.max(1, Math.floor((vw + 0.0001) / cw));
+    function cardStride() {
+      const first  = cards[0];
+      const styles = getComputedStyle(track);
+      const gap    = parseFloat(styles.columnGap || styles.gap || 0);
+      return first.offsetWidth + gap;
     }
 
-    function maxIndex() {
-      // last index so the last full set of visible cards is in view
-      const children = track.children.length;
-      const visible = visibleCount();
-      return Math.max(0, children - visible);
+    function update() {
+      // how many we can show fully
+      const stride        = cardStride();
+      const visibleCount  = Math.max(1, Math.round(viewport.clientWidth / stride));
+      const maxIndex      = Math.max(0, cards.length - visibleCount);
+
+      // clamp requested index
+      if (index < 0) index = 0;
+      if (index > maxIndex) index = maxIndex;
+
+      // compute max translate so last card is fully visible
+      const totalWidth    = track.scrollWidth;
+      const visibleWidth  = viewport.clientWidth;
+      const maxTranslate  = Math.max(0, totalWidth - visibleWidth);
+
+      const wanted        = index * stride;
+      const translateX    = -Math.min(wanted, maxTranslate);
+
+      track.style.transform = `translateX(${translateX}px)`;
+
+      // buttons state
+      prevBtn.disabled = (index === 0);
+      nextBtn.disabled = (index === maxIndex);
+      prevBtn.style.opacity = prevBtn.disabled ? .4 : 1;
+      nextBtn.style.opacity = nextBtn.disabled ? .4 : 1;
     }
 
-    function updateButtons() {
-      prevBtn.disabled = index <= 0;
-      nextBtn.disabled = index >= maxIndex();
-    }
+    nextBtn.addEventListener('click', () => { index++; update(); });
+    prevBtn.addEventListener('click', () => { index--; update(); });
+    window.addEventListener('resize', () => requestAnimationFrame(update));
 
-    function updatePosition(animate = true) {
-      const cw = getCardWidth();
-      // because cards have gap via flex gap, translate by index * cw
-      const x = index * cw;
-      if (!animate) track.style.transition = 'none';
-      requestAnimationFrame(() => {
-        track.style.transform = `translateX(-${x}px)`;
-        if (!animate) {
-          // force reflow then restore transition
-          void track.offsetHeight;
-          track.style.transition = '';
-        }
-      });
-      updateButtons();
-    }
-
-    nextBtn.addEventListener('click', () => {
-      index = Math.min(maxIndex(), index + 1);
-      updatePosition();
-    });
-
-    prevBtn.addEventListener('click', () => {
-      index = Math.max(0, index - 1);
-      updatePosition();
-    });
-
-    // handle resize: recompute visible & clamp index
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        index = Math.min(index, maxIndex());
-        updatePosition(false);
-      }, 80);
-    });
-
-    // init
-    window.addEventListener('load', () => {
-      index = 0;
-      updatePosition(false);
-    });
-
-    // keyboard support (optional)
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') prevBtn.click();
-      if (e.key === 'ArrowRight') nextBtn.click();
-    });
+    update();
   })();
 </script>
+
 
 
 <script>

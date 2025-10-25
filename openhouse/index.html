@@ -1,22 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Nest School Header</title>
+  <title>The Nest School — Cambridge & IB International School in Chennai</title>
+
+  <!-- SEO meta (keep description ~150–160 chars) -->
+  <meta name="description" content="The Nest School — Cambridge & IB-inspired international school in the heart of Chennai. Sustainability-led campus, enquiry-based learning, global curriculum and modern facilities.">
+  <meta name="keywords" content="The Nest School,Best IB School in chennai,Top International School, Cambridge school Chennai, IB school Chennai, international school Chennai, enquiry-based learning, sustainability campus, green school Chennai, global curriculum, admissions 2025, primary & secondary education">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="The Nest School">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://thenest.school/">
+
+  <!-- Language / Hreflang -->
+  <link rel="alternate" href="https://thenest.school/" hreflang="en-in" />
+  <!-- If you have a Tamil page add: 
+  <link rel="alternate" href="https://thenest.school/ta/" hreflang="ta-in" /> 
+  -->
+
+  <!-- Performance preconnects -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <!-- Favicons (replace files) -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="The Nest School">
+  <meta property="og:title" content="The Nest School — Cambridge & IB International School, Chennai">
+  <meta property="og:description" content="Cambridge & IB-inspired international school in central Chennai with a sustainability-led campus and enquiry-based learning. Global curriculum, modern facilities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thenest.school/">
+  <meta property="og:image" content="https://thenest.school/assets/images/og-image.jpg"> <!-- replace -->
+  <meta property="og:image:alt" content="The Nest School campus — sustainability gardens and modern classrooms">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@thenest_school"> <!-- replace with your X handle -->
+  <meta name="twitter:title" content="The Nest School — Cambridge & IB International School, Chennai">
+  <meta name="twitter:description" content="Sustainability-led campus, enquiry-based learning, Cambridge & IB-inspired curriculum in the heart of Chennai.">
+  <meta name="twitter:image" content="https://thenest.school/assets/images/twitter-card.jpg"> <!-- replace -->
+
+  <!-- Structured data: School (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "School",
+    "name": "The Nest School",
+    "url": "https://thenest.school/",
+    "logo": "https://thenest.school/assets/images/logo.png",
+    "description": "Cambridge & IB-inspired international school in central Chennai with a sustainability-led campus and enquiry-based, enquiry-based learning for holistic development.",
+    "telephone": "+91-XXXXXXXXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Replace with street address",
+      "addressLocality": "Chennai",
+      "addressRegion": "TN",
+      "postalCode": "600XXX",
+      "addressCountry": "IN"
+    },
+    "additionalType": "InternationalSchool",
+    "curriculum": ["Cambridge", "IB-inspired", "International Curriculum"],
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Sustainability Campus",
+        "value": "Eco-friendly campus with gardens and green learning spaces"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Enquiry-based Learning",
+        "value": "Student-centred project & inquiry pedagogy"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/thenestschool",
+      "https://instagram.com/thenestschool",
+      "https://twitter.com/thenest_school"
+    ]
+  }
+  </script>
+
+  <!-- Stylesheets -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 
-    <link rel="stylesheet" href="./assets/css/standard.css">
-    <link rel="stylesheet" href="./assets/css/admission-enquiry.css">
+
+  <!-- TIP: add Open Graph image at 1200x630 and Twitter image at 1200x630 for best sharing previews -->
 </head>
+
 <body>
 
   <header class="top-header">
     <div class="row justify-content-between w-100">
     <!-- Left Logo -->
     <div class="d-flex align-items-center col-10  col-lg-2  justify-content-center">
-      <a href="./"><img class="nestlogo" src="./assets/img/thenestschoollogo.webp" alt="The Nest School Logo"></a>
+      <a href="https://thenest.school/"><img class="nestlogo" src="../assets/img/thenestschoollogo.webp" alt="The Nest School Logo"></a>
     </div>
 
     <div class=" col-2 col-lg-10 row ">
@@ -24,9 +110,9 @@
     <div class="col-12 d-flex justify-content-end border-bottom d-none d-lg-inline-block">
     <div class="social-icons d-flex justify-content-end mb-2">
         <a href="https://www.facebook.com/TheNESTSchoolChennai/"><i class="bi bi-facebook btn p-1 sizeoficon btn-outline-danger"></i></a>
-        <a href="https://www.instagram.com/the_nest_school/?hl=en"><i class="bi bi-instagram btn p-1 sizeoficon btn-outline-danger mx-0"></i></a>
+        <a href="https://www.instagram.com/the_nest_school/"><i class="bi bi-instagram btn p-1 sizeoficon btn-outline-danger mx-0"></i></a>
         <a href="https://www.youtube.com/@TheNESTSchoolChennai"><i class="bi bi-youtube btn p-1 sizeoficon btn-outline-danger mx-0"></i></a>
-         <a href="https://x.com/the_nest_school?lang=en"><i class="bi bi-twitter-x btn p-1 sizeoficon btn-outline-danger"></i></a>
+         <a href="https://x.com/The_NEST_School"><i class="bi bi-twitter-x btn p-1 sizeoficon btn-outline-danger"></i></a>
     </div>
     </div>
 
@@ -35,8 +121,8 @@
       <div class="programmes border-1 border-black border-end pe-4 ">
         Programmes Offered <br><span>Pre-KG to Grade 12</span>
       </div>
-      <img style="height: 60px;" class="border-end pt-1 border-black px-5" src="./assets/img/ib logo.webp" alt="IB Logo">
-      <img  class="pt-1 ps-5" src="./assets/img/cambridge logo.webp" alt="Cambridge Logo">
+      <img style="height: 60px;" class="border-end pt-1 border-black px-5" src="../assets/img/ib logo.webp" alt="IB Logo">
+      <img  class="pt-1 ps-5" src="../assets/img/cambridge logo.webp" alt="Cambridge Logo">
         </div>
         <!-- Right Section -->
         <div class="d-flex justify-content-end p-0 col-12 col-lg-1 ">
@@ -62,24 +148,24 @@
      data-bs-interval="2000">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="./assets/img/Web-banner-1920-x-580-1-1.webp" class="d-none d-md-block w-100" alt="...">
-      <img src="./assets/img/Mobile-banner-415-x-635-1.webp" class="d-block d-md-none w-100" alt="...">
+      <img src="../assets/img/Web-banner-1920-x-580-1-1.webp" class="d-none d-md-block w-100" alt="...">
+      <img src="../assets/img/Mobile-banner-415-x-635-1.webp" class="d-block d-md-none w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="./assets/img/Amphitheatre-1920-x-580-1-1-1.webp" class="d-none d-md-block w-100" alt="...">
-      <img src="./assets/img/415-x-635-Amphitheatre-1.webp" class="d-block d-md-none w-100" alt="...">
+      <img src="../assets/img/Amphitheatre-1920-x-580-1-1-1.webp" class="d-none d-md-block w-100" alt="...">
+      <img src="../assets/img/Amphitheatre-website-02.webp" class="d-block d-md-none w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="./assets/img/Library-1920-x-580-1-1.webp" class="d-none d-md-block w-100" alt="...">
-      <img src="./assets/img/Mobile-Library-415-x-635.webp" class="d-block d-md-none w-100" alt="...">
+      <img src="../assets/img/Library-1920-x-580-1-1.webp" class="d-none d-md-block w-100" alt="...">
+      <img src="../assets/img/Mobile-Library-415-x-635.webp" class="d-block d-md-none w-100" alt="...">
     </div>
         <div class="carousel-item">
-      <img src="./assets/img/landing-page-director-1536x464.jpeg" class="d-none d-md-block w-100" alt="...">
-      <img src="./assets/img/landing-page-mob.jpeg" class="d-block d-md-none w-100" alt="...">
+      <img src="../assets/img/landing-page-director-1536x464.jpeg" class="d-none d-md-block w-100" alt="...">
+      <img src="../assets/img/landing-page-mob.jpeg" class="d-block d-md-none w-100" alt="...">
     </div>
         <div class="carousel-item">
-      <img src="./assets/img/Mound-1920-x-580.webp" class="d-none d-md-block w-100" alt="...">
-      <img src="./assets/img/Mobile-Mound-415-x-635.webp" class="d-block d-md-none w-100" alt="...">
+      <img src="../assets/img/Mound-1920-x-580.webp" class="d-none d-md-block w-100" alt="...">
+      <img src="../assets/img/Mobile-Mound-415-x-635.webp" class="d-block d-md-none w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -92,42 +178,53 @@
   </button>
 </div>
 <section class="mt-5" style="background-color: #fff4f4;">
-    <div class="container-fluid p-4">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 ps-md-5 overflow-hidden">
-                <iframe class=" ps-xl-5" title="YouTube video player 1" src="https://www.youtube.com/embed/cNUEJc_HhT8?autoplay=0&amp;enablejsapi=1&amp;wmode=opaque" width="600" height="360" allowfullscreen="" allow="autoplay; fullscreen" id="player_2"></iframe>
+    <div class="container p-4">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-6 text-center">
+<div class="card card-event shadow-lg" style="margin-top: 20px;">                          
+
+                            <h3 class="event-title">OPEN HOUSE | 1st November  2025 <br> <br>
+EXPERIENCE THE NEST School <br> <br>
+Join us for an exclusive session and discover how we nurture the next generation of global leaders. </h3>                           
+                           
+                            <h5 class="text-center fw-bold fs-4 ms-5"> 1st November 2025 | 10.30 AM onwards</h5>
+
+                        </div>
             </div>
             <div class="col-lg-6 text-center">
-                <h1 class="my-2" style="color: #12366d;">IB PYP and Cambridge Affiliated School in Chennai</h1>
-                <h3 class="my-2" style="color: #ffa500;">Pre-KG to Grade 9 Admissions Open</h3>
-                <p class="py-2 fs-5">With 75 Year Legacy in Education of Meenakshi College, Kodambakkam with 12:1 Student to Teacher Ratio, State of the art 100k Sq.ft. Lush Green Campus making it one of The Best International Schools in Chennai</p>
-            </div>
-        </div>
-    </div>
-</section>
-<section style="background-color: #fff4f4;">
-    <div class="form-container container text-center">
-    <h2 class="fs-2">Enquire Now for Admissions</h2>
+                <section  class="pb-5" style="background-color: #fff4f4;">
+  <div style="font-size:20px;" class="form-container container text-center">
+    <h2 style="font-size:24px;">Open House Registration Form</h2>
     <form class="text-start">
+      <!-- Parent Name -->
       <div class="form-group">
-        <label class="fs-4" for="name">Name <span>*</span></label>
-        <input type="text" id="name" placeholder="" required>
+        <label style="font-size:22px;" for="parent-name">Parent Name <span>*</span></label>
+        <input type="text" id="parent-name" placeholder="Enter Parent's Name" required>
       </div>
 
+      <!-- Email -->
       <div class="form-group">
-        <label class="fs-4" for="email">Email Address <span>*</span></label>
-        <input type="email" id="email" placeholder="" required>
+        <label style="font-size:22px;" for="email">Email Address <span>*</span></label>
+        <input type="email" id="email" placeholder="example@email.com" required>
       </div>
 
+      <!-- Phone -->
       <div class="form-group">
-        <label class="fs-4" for="phone">Phone Number <span>*</span></label>
+        <label style="font-size:22px;" for="phone">Phone Number <span>*</span></label>
         <input type="text" id="phone" placeholder="081234 56789" required>
       </div>
 
+      <!-- Student Name -->
       <div class="form-group">
-        <label class="fs-4" for="grade">Grade Enquired For <span>*</span></label>
+        <label style="font-size:22px;" for="student-name">Student Name <span>*</span></label>
+        <input type="text" id="student-name" placeholder="Enter Student's Name" required>
+      </div>
+
+      <!-- Grade -->
+      <div class="form-group">
+        <label style="font-size:22px;" for="grade">Grade <span>*</span></label>
         <select id="grade" required>
-          <option>Select Your Option</option>
+          <option>Select Grade</option>
           <option>Pre-KG</option>
           <option>LKG</option>
           <option>UKG</option>
@@ -141,32 +238,38 @@
           <option>Grade 8</option>
           <option>Grade 9</option>
           <option>Grade 10</option>
-          <!-- Add more options as needed -->
         </select>
       </div>
 
+      <!-- Willing to attend -->
       <div class="form-group">
-        <label class="fs-4" for="source">Where did you hear about us? <span>*</span></label>
-        <select id="source" required>
-          <option>Select Your Option</option>
-          <option>Google</option>
-          <option>Facebook</option>
-          <option>Instagram</option>
-          <option>Friends/Family</option>
-          <option>Other</option>
+        <label style="font-size:22px;" for="attend">Are you willing to attend Open Day? <span>*</span></label>
+        <select id="attend" required>
+          <option>Select Option</option>
+          <option>Yes</option>
+          <option>No</option>
+          <option>Maybe</option>
         </select>
       </div>
 
-      <div class="captcha-box">
-        <!-- Placeholder for Google reCAPTCHA -->
-        <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA">
+      <!-- Number of attendees -->
+      <div class="form-group">
+        <label style="font-size:22px;" for="attendees">Number of Attendees <span>*</span></label>
+        <input type="number" id="attendees" placeholder="Enter Number" min="1" required>
       </div>
 
-      <button class="fs-4" type="submit">Submit</button>
+      <!-- Submit Button -->
+      <button style="font-size:22px;" type="submit">Submit</button>
     </form>
   </div>
-  <div class="text-center my-4">
-    <ul class="mb-4 setusp">
+</section>
+            </div>
+            <div class="col-lg-6 text-center">
+                                <h1 class="my-2" style="color: #12366d;">IB PYP and Cambridge Affiliated School in Chennai</h1>
+                <h3 class="my-4" style="color: #ffa500;">Pre-KG to Grade 9 Admissions Open</h3>
+                <p class="py-2 fs-5">With 75 Year Legacy in Education of Meenakshi College, Kodambakkam with 12:1 Student to Teacher Ratio, State of the art 100k Sq.ft. Lush Green Campus making it one of The Best International Schools in Chennai</p>
+                  <div class="text-center my-4">
+    <ul style="font-size:20px;" class="mb-4 setusp setstyletag">
         <li>75-Year Legacy of Excellence: A tradition of educational brilliance, preparing tomorrow’s leaders.</li>
         <li>Prime Location in Chennai: Nestled in the heart of the city at Meenakshi College, Kodambakkam.</li>
         <li>Innovative and Diverse Curriculum: Embracing IB PYP and Cambridge syllabi for a well-rounded education.</li>
@@ -175,14 +278,17 @@
         <li>Balance of Academics and Extracurriculars: Cultivating academic excellence and diverse interests.</li>
     </ul>
   </div>
+            </div>
+    </div>
 </section>
+
 <section class="container-fluid" style="background-color: #fff4f4;">
 <div class="row align-items-center py-5">
 
 
 <div class="col-lg-3">
 <!-- Replace with your cutout PNG/JPEG with transparent background -->
-<img class="img-fluid" src="./assets/img/images-culture.png" alt="kid cutout">
+<img class="img-fluid" src="../assets/img/images-culture.png" alt="kid cutout">
 </div>
 
 
@@ -192,10 +298,10 @@
 
 
 <div class="col-lg-7 row align-items-start setborder">
-<img class="col-6 col-md-4 col-lg-3" style="max-width: 80px;" src="./assets/img/culture-icon-one.svg" alt="">
+<img class="col-6 col-md-4 col-lg-3" style="max-width: 80px;" src="../assets/img/culture-icon-one.svg" alt="">
 <div class="content col-md-8 col-lg-9">
 <h3>Signature Highlights</h3>
-<p class="pt-3">Multi‑Purpose Auditorium (1000‑seater) – for indoor sports, events, performances, and community gatherings.<br><br>
+<p style="font-size:20px;" class="pt-3 setstyletag">Multi‑Purpose Auditorium (1000‑seater) – for indoor sports, events, performances, and community gatherings.<br><br>
 The Sky Stage – an open‑to‑sky, courtyard‑style amphitheatre with seating for 500 members.<br><br>
 The Discovery Hub – our reimagined Library: a sanctuary for imagination, exploration, and the joy of reading.</p>
 </div>
@@ -203,20 +309,20 @@ The Discovery Hub – our reimagined Library: a sanctuary for imagination, explo
 
 
 <div class="ps-lg-5 col-lg-5 row align-items-start ">
-<img  class="col-6 col-md-4 col-lg-3" style="max-width: 80px;" src="./assets/img/culture-icon-two.svg" alt="">
+<img  class="col-6 col-md-4 col-lg-3" style="max-width: 80px;" src="../assets/img/culture-icon-two.svg" alt="">
 <div class="content col-md-8 col-lg-9">
 <h3>Learning Hubs</h3>
-<p class="pt-3">40+ Collaborative Smart Classrooms – technology‑enabled, flexible spaces for interactive learning.<br><br>
+<p style="font-size:20px;" class="pt-3 setstyletag">40+ Collaborative Smart Classrooms – technology‑enabled, flexible spaces for interactive learning.<br><br>
 Indoor–Outdoor Classrooms – designed especially for our energetic Early Years learners.</p>
 </div>
 </div>
 
 <div class="bottomborder col-12"></div>
 <div class="col-lg-5 row align-items-start setborder">
-<img class="col-6 col-md-4 col-lg-3" style="max-width: 80px;" src="./assets/img/culture-icon-three.svg" alt="">
+<img class="col-6 col-md-4 col-lg-3" style="max-width: 80px;" src="../assets/img/culture-icon-three.svg" alt="">
 <div class="content col-md-8 col-lg-9">
 <h3>Collaborative & Reflective Spaces</h3>
-<p class="pt-3">The Mound – a vibrant campus lung where ideas breathe and collaboration thrives.<br><br>
+<p style="font-size:20px;" class="pt-3 setstyletag">The Mound – a vibrant campus lung where ideas breathe and collaboration thrives.<br><br>
 The Huts – cozy corners for informal learning, reflection, and connection.<br><br>
 The Terrarium – a living space where students collaborate, explore, and discover through nature.</p>
 </div>
@@ -224,20 +330,20 @@ The Terrarium – a living space where students collaborate, explore, and discov
 
 
 <div class="ps-lg-5 col-lg-7 row align-items-start">
-<img class="col-6 col-md-4 col-lg-3" style="max-width: 80px;" src="./assets/img/culture-icon-four.svg" alt="">
+<img class="col-6 col-md-4 col-lg-3" style="max-width: 80px;" src="../assets/img/culture-icon-four.svg" alt="">
 <div class="content col-md-8 col-lg-9">
 <h3>Innovation & Discovery Labs</h3>
-<p class="pt-3">Advanced Labs – Coding, AI/ML, Robotics, Languages & Communication, Ethical Hacking, ICT.<br><br>
+<p style="font-size:20px;" class="pt-3 setstyletag">Advanced Labs – Coding, AI/ML, Robotics, Languages & Communication, Ethical Hacking, ICT.<br><br>
 Composite Skill Lab in partnership with AeroBay – hands‑on innovation in aerospace, drones, robotics, and sustainability.<br><br>
 State‑of‑the‑art Science Labs – Physics, Chemistry, and Biology labs that bring Science to life.</p>
 </div>
 </div>
 <div class="bottomborder col-12"></div>
 <div class="col-lg-6 row align-items-start">
-<img class="col-6 col-md-4 col-lg-3" style="max-width: 80px;" src="./assets/img/culture-icon-five.svg" alt="">
+<img class="col-6 col-md-4 col-lg-3" style="max-width: 80px;" src="../assets/img/culture-icon-five.svg" alt="">
 <div class="content  col-md-8 col-lg-9">
 <h3>Creative & Community Spaces</h3>
-<p class="pt-3">Creative Studios – Visual Arts, Performing Arts, Graphic Design, Theatre, and Dance<br><br>
+<p style="font-size:20px;" class="pt-3 setstyletag">Creative Studios – Visual Arts, Performing Arts, Graphic Design, Theatre, and Dance<br><br>
 Wonder Room – celebrating inclusion and learning diversity<br><br>
 Student Corner – a dedicated student-led engagement zone<br/><br/>
 Facilitator Lounges – for quiet reflections<br/><br/>Parent & Visitor Lounge – a warm space for connection and conversations</p>
@@ -252,105 +358,105 @@ Facilitator Lounges – for quiet reflections<br/><br/>Parent & Visitor Lounge �
 </section>
 <section class="container py-4">
     <h2 class="my-3" style="color: #12366d;">Explore IB and IGCSE Curriculum at The Nest School</h2>
-    <p class="my-2">
+    <p style="font-size:20px;" class="my-2 setstyletag">
         The NEST School is an International School with a focus on holistic
          learning. We are one of the few IB schools offering the IB PYP  programs in Chennai for grades Pre KG – Grade 5. We offer the renowned Cambridge Lower Secondary
          Program leading to the IGCSE certification for our Grades 6-10.
     </p>
     <h3 style="color: #fea80a;" class="my-3">Early Year Program  @ The NEST School</h3>
     <h5>Child-centred: </h5>
-    <p>Our Early Year program is based on the belief that children learn
+    <p style="font-size:20px;" class="setstyletag">Our Early Year program is based on the belief that children learn
          best when they are allowed to explore and learn at their own pace.
           We have a carefully curated curriculum which involves the best practices across the Montessori, Waldorf and the Reggio Emilia
          methods of teaching-learning incorporated with the IB PYP Program.</p>
          <h5>Inquiry based learning:</h5>
-    <p>Our IB PYP curriculum is designed to help the child see the world through various themes and allows an inquiry based learning. These make 
+    <p style="font-size:20px;" class="setstyletag">Our IB PYP curriculum is designed to help the child see the world through various themes and allows an inquiry based learning. These make 
         them confident lifelong self learners that can cope up with challenges in the real world.</p>
         <h5>Hands-on learning: </h5>
-    <p>Our classrooms are filled with hands-on materials adopted from the Montessori method
+    <p style="font-size:20px;" class="setstyletag">Our classrooms are filled with hands-on materials adopted from the Montessori method
          that children can use to learn about the world around them. The 100 languages from the
           Reggio Emilia approach are brought alive through the various models of learning adopted
            in the classroom. Our vivid classroom displays celebrate and nurture each child’s talent and capabilities.
             Role plays, visual art, movement and music are rolled into the lessons using the Waldorf method to make learning more fun and meaningful.
           A key part of our curriculum focuses on teaching children basic life skills.</p>
           <h5>Emphasis on independence and life skills: </h5>
-          <p>A perfect amalgamation of leading methods of learning in the early years including Montessori, Waldorf,
+          <p style="font-size:20px;" class="setstyletag">A perfect amalgamation of leading methods of learning in the early years including Montessori, Waldorf,
              Reggio Emilia blended with the IB PYP curriculum make our school one of the best IB schools in Chennai. Our program 
             encourages children to be independent and to take responsibility for their own learning. </p>
             <h3 style="color: #fea80a;">IB PYP Curriculum</h3>
             <h5>Internationally recognized and accredited: </h5>
-            <p>The IB Curriculum is recognized by universities around the world, and graduates of IB programs are often well-prepared for success in higher education.</p>
+            <p style="font-size:20px;" class="setstyletag">The IB Curriculum is recognized by universities around the world, and graduates of IB programs are often well-prepared for success in higher education.</p>
             <h5>Rigorous and challenging: </h5>
-            <p>The IB curriculum is designed to be academically challenging, and students who complete the program will have developed strong critical thinking, research, and writing skills.</p>
+            <p style="font-size:20px;" class="setstyletag">The IB curriculum is designed to be academically challenging, and students who complete the program will have developed strong critical thinking, research, and writing skills.</p>
             <h5>Inquiry based transdisciplinary learning: </h5>
-            <p>The IB PYP curriculum framework has been used to curate the unique Primary years curriculum
+            <p style="font-size:20px;" class="setstyletag">The IB PYP curriculum framework has been used to curate the unique Primary years curriculum
                  at The NEST School where learners learn through inquiry revolving around 6 themes. The 
                  IB curriculum emphasises transdisciplinary 
                 learning, which means that students will learn to connect ideas from different subjects.</p>
                 <h5>Holistic: </h5>
-                <p>The IB program is not just about academics; it also focuses on developing students’ personal and social skills. Learners are exposed to a variety of subjects including Art, 
+                <p style="font-size:20px;" class="setstyletag">The IB program is not just about academics; it also focuses on developing students’ personal and social skills. Learners are exposed to a variety of subjects including Art, 
                     Movement, Yoga, Dance  etc. to ensure a hierarchy free learning environment.</p>
                     <h3 style="color: #fea80a;">IGCSE Curriculum</h3>
                     <h5>Internationally recognized: </h5>
-                    <p>The IGCSE exams are recognized by universities around the world, and students who complete IGCSE courses are often well-prepared for higher education.</p>
+                    <p style="font-size:20px;" class="setstyletag">The IGCSE exams are recognized by universities around the world, and students who complete IGCSE courses are often well-prepared for higher education.</p>
                     <h5>Flexible and customizable:  </h5>
-                    <p>Schools can choose which IGCSE courses to offer, which means that students can tailor their education to their talents, interests and needs.</p>
+                    <p class="setstyletag">Schools can choose which IGCSE courses to offer, which means that students can tailor their education to their talents, interests and needs.</p>
                     <h5>Broad range of subjects:  </h5>
-                    <p>IGCSE courses are available in a wide range of subjects, from traditional academic subjects to more vocational subjects. In addition 
+                    <p style="font-size:20px;" class="setstyletag">IGCSE courses are available in a wide range of subjects, from traditional academic subjects to more vocational subjects. In addition 
                         a variety of electives are offered to ensure that learners are able to acquire different skills to make them confident lifelong learners. </p>
                         <h5>Hierarchy free learning:</h5>
-                        <p>At The NEST School we aim to expose learners to a wide range of co curricular activities 
+                        <p style="font-size:20px;" class="setstyletag">At The NEST School we aim to expose learners to a wide range of co curricular activities 
                             including Visual and Performing Arts, Sports, Music, Yoga etc to ensure that there is a
                              hierarchy free learning approach breaking the traditional settings with only focus on
                               STEM subjects. This makes
                              The NEST School a unique and one of the top rated Cambridge IGCSE schools in the city,</p>
                              <h5>Emphasis on practical skills:</h5>
-                             <p>IGCSE courses often emphasise practical skills, such as problem-solving and communication. Learners become confident about their strengths
+                             <p style="font-size:20px;" class="setstyletag">IGCSE courses often emphasise practical skills, such as problem-solving and communication. Learners become confident about their strengths
                                  to be able to solve challenging problems through innovative and creative approaches.</p>
 </section>
-  <div class="wrap px-5">
+  <div class="wrap">
     <h2 class="section-title">Programmes Offered</h2>
 
-    <div class="container-fluid" id="carousel">
+    <div class="" id="carousel">
       <div class="viewport">
-        <div class="track pb-5" id="track">
+        <div class="track" id="track">
           <!-- Card 1 -->
-          <article class="card p-0 border-0  shadow-lg">
+          <article class="card p-0 border-0">
             <div class="eyebrow">Nursery</div>
-            <div class="media"><img src="./assets/img/prekg.jpg" alt="Nursery"></div>
+            <div class="media"><img src="../assets/img/prekg.webp" alt="Nursery"></div>
             <div class="body">
               <div class="title">Pre-KG, LKG, UKG</div>
-              <p class="desc p-3 fs-5">Bringing the best of Reggio Emilia, Montessori, Waldorf methods, and IB PYP curricula to help young learners engage in play and inquiry-based learning.</p>
+              <p style="font-size:20px;" class="desc">Bringing the best of Reggio Emilia, Montessori, Waldorf methods, and IB PYP curricula to help young learners engage in play and inquiry-based learning.</p>
             </div>
           </article>
 
           <!-- Card 2 -->
-          <article class="card p-0 border-0  shadow-lg">  
+          <article class="card p-0 border-0">  
                         <div class="eyebrow">Primary</div>
-            <div class="media"><img src="./assets/img/grade1to5.jpg" alt="Primary"></div>
+            <div class="media"><img src="../assets/img/grade1to5.jpg" alt="Primary"></div>
             <div class="body">
               <div class="title">Grade 1 - 5</div>
-              <p class="desc p-3 fs-5">Bridging budding learners of The NEST School to 21st century skills through a curriculum that is authentic, relevant and inquiry-based.</p>
+              <p style="font-size:20px;" class="desc">Bridging budding learners of The NEST School to 21st century skills through a curriculum that is authentic, relevant and inquiry-based.</p>
             </div>
           </article>
 
           <!-- Card 3 -->
-          <article class="card p-0 border-0  shadow-lg">
+          <article class="card p-0 border-0">
                           <div class="eyebrow">Lower Secondary</div>
-            <div class="media"><img src="./assets/img/grade6to8.jpg" alt="Lower Secondary"></div>
+            <div class="media"><img src="../assets/img/grade6to8.jpg" alt="Lower Secondary"></div>
             <div class="body">
               <div class="title">Grade 6 - 8</div>
-              <p class="desc p-3 fs-5">Empowering developing learners to prepare for life with informed curiosity, your child discovers a challenging, culturally-sensitive yet international curricula.</p>
+              <p style="font-size:20px;" class="desc">Empowering developing learners to prepare for life with informed curiosity, your child discovers a challenging, culturally-sensitive yet international curricula.</p>
             </div>
           </article>
 
           <!-- Card 4 (extra, shows scroll behavior) -->
-          <article class="card p-0 border-0  shadow-lg">
+          <article class="card p-0 border-0">
                           <div class="eyebrow">Secondary</div>
-            <div class="media"><img src="./assets/img/grade9to10.jpg" alt="Secondary"></div>
+            <div class="media"><img src="../assets/img/grade9to10.jpg" alt="Secondary"></div>
             <div class="body">
               <div class="title">Grade 9 - 10</div>
-              <p class="desc p-3 fs-5"> Wherever your child dreams of going and whichever career they wish to pursue, The NEST School is
+              <p style="font-size:20px;" class="desc">Wherever your child dreams of going and whichever career they wish to pursue, The NEST School is
                          dedicated to helping them get there with the globally respected Cambridge IGCSE.</p>
             </div>
           </article>
@@ -401,7 +507,7 @@ Facilitator Lounges – for quiet reflections<br/><br/>Parent & Visitor Lounge �
       <div class="col-lg-3 ps-md-5">
         <div class="mb-3">
           <!-- replace src with your logo -->
-          <img src="./assets/img/thenestschoollogo.webp" alt="The NEST School" style="max-width:170px;">
+          <img src="../assets/img/thenestschoollogo.webp" alt="The NEST School" style="max-width:170px;">
         </div>
 
         <p class="lead" style="font-size:18px; line-height:1.7; color:black; font-weight: bold;">
@@ -454,13 +560,13 @@ Facilitator Lounges – for quiet reflections<br/><br/>Parent & Visitor Lounge �
       <div class="col-lg-3 d-none d-lg-block majorlinks text-end">
         <nav class="footer-nav text-center">
           <ul class="list-unstyled mb-0 text-end pe-4" style="line-height:1.9; font-weight: 500;">
-            <li><a class="text-dark fs-5 text-decoration-none" href="nurseryprograms.html">Programmes</a></li>
-            <li><a class="text-dark fs-5 text-decoration-none" href="admission.html">Admission</a></li>
-            <li><a class="text-dark fs-5 text-decoration-none" href="#">About</a></li>
-            <li><a class="text-dark fs-5 text-decoration-none" href="news&events.html">News and Events</a></li>
-            <li><a class="text-dark fs-5 text-decoration-none" href="careers.html">Careers</a></li>
-            <li><a class="text-dark fs-5 text-decoration-none" href="contactus.html">Contact</a></li>
-            <li><a class="text-dark fs-5 text-decoration-none" href="privacypolicy.html">Privacy Policy</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="https://thenest.school/programmes-nursery/">Programmes</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="https://thenest.school/admission/">Admission</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="https://thenest.school/about/">About</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="https://thenest.school/school-news/">News and Events</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="https://thenest.school/nest-careers/">Careers</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="https://thenest.school/contact/">Contact</a></li>
+            <li><a class="text-dark fs-5 text-decoration-none" href="https://thenest.school/privacy-policy/">Privacy Policy</a></li>
           </ul>
         </nav>
       </div>
@@ -471,8 +577,7 @@ Facilitator Lounges – for quiet reflections<br/><br/>Parent & Visitor Lounge �
 
         <div class="map-card mt-3 overflow-hidden" style="max-width:260px; background:white; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.06);">
           <!-- Replace the iframe src with your Google Maps embed -->
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.683484227926!2d80.22393577454787!3d13.055807913027596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f499eee457%3A0x4d3f7e677496e707!2sMeenakshi%20Sundararajan%20Engineering%20College!5e0!3m2!1sen!2sin!4v1758109569512!5m2!1sen!2sin" 
-width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.683484227926!2d80.22393577454787!3d13.055807913027596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f499eee457%3A0x4d3f7e677496e707!2sMeenakshi%20Sundararajan%20Engineering%20College!5e0!3m2!1sen!2sin!4v1758109569512!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 
@@ -508,17 +613,10 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
   <div class="copyright-bar mt-4" style="border-top:1px solid rgba(0,0,0,0.12); background:transparent;">
     <div class="container py-3 d-flex justify-content-between align-items-center">
       <div style="color:#0a3a3a;">Copyright © 2025 The NEST School. All rights reserved</div>
-      <div><a href="./Terms-Conditions-of-The-Nest-School-Revised.pdf" class="text-decoration-underline" style="color:#0a3a3a;">Fee Payment - T &amp; C</a></div>
+      <div><a href="#" class="text-decoration-underline" style="color:#0a3a3a;">Fee Payment - T &amp; C</a></div>
     </div>
   </div>
 </footer>
-  <!-- brochure tab (vertical left) -->
-  <a class="brochure-tab d-flex align-items-center justify-content-center" href="#" role="button" aria-label="Brochure">Brochure</a>
-
-    <!-- floating orange quick-link circle bottom-right -->
-  <a class="floating-link d-flex align-items-center justify-content-center" href="#" aria-label="quick-link">
-    <i class="bi bi-arrow-up" style="font-size:1.1rem;"></i>
-  </a>
 
 <nav id="customMenu" aria-hidden="true" aria-label="Main navigation">
   <button class="close-btn" id="menuClose" aria-label="Close menu">
@@ -531,7 +629,7 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
 
 
   <ul class="mt-5 fs-5 fw-bold">
-    <li><a class="top-link fs-5 fw-bold" href="/index.html">Home</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="https://thenest.school/">Home</a></li>
 
     <li class="has-sub">
       <div class="top-link" role="button" tabindex="0" aria-expanded="false">
@@ -541,19 +639,19 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
         </span>
       </div>
       <div class="submenu" aria-hidden="true">
-        <a href="nurseryprograms.html">Nursery</a>
-        <a href="primaryprograms.html">Primary</a>
-        <a href="lowersecondary.html">Lower Secondary</a>
-        <a href="programegrade9-10.html">Grade 9-10</a>
-        <a href="programmegrade11&12.html">Grade 11-12</a>
-        <a href="usdp.html">USDP</a>
+        <a href="https://thenest.school/programmes-nursery/">Nursery</a>
+        <a href="https://thenest.school/programmes-primary/">Primary</a>
+        <a href="https://thenest.school/programmes-lower-secondary/">Lower Secondary</a>
+        <a href="https://thenest.school/programmes-grade9-10/">Grade 9-10</a>
+        <a href="https://thenest.school/programmes-grade-11-12/">Grade 11-12</a>
+        <a href="https://thenest.school/usdp/">USDP</a>
 
 
       </div>
     </li>
 
-    <li><a class="top-link fs-5 fw-bold" href="admission.html">Admission</a></li>
-    <li><a class="top-link fs-5 fw-bold" href="thenestschoolcampus.html">The NEST School Campus</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="https://thenest.school/admission/">Admission</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="https://thenest.school/the-nest-school-campus/">The NEST School Campus</a></li>
 
     <li class="has-sub">
       <div class="top-link" role="button" tabindex="0" aria-expanded="false">
@@ -563,32 +661,22 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
         </span>
       </div>
       <div class="submenu" aria-hidden="true">
-        <a href="#">Mission & Vision</a>
-        <a href="#">Leadership</a>
-        <a href="#">History</a>
+        <a href="https://thenest.school/about/#vission-mission">Mission & Vision</a>
+        <a href="https://thenest.school/about/#our-culture">Our Values & Culture</a>
+        <a href="https://thenest.school/about/#the-nest-pillars">The NEST School Pillars</a>
       </div>
     </li>
 
-    <li><a class="top-link fs-5 fw-bold" href="testimonial.html">Parent Testimonials</a></li>
-    <li><a class="top-link fs-5 fw-bold" href="news&events.html">News And Events</a></li>
-    <li><a class="top-link fs-5 fw-bold" href="careers.html">Careers</a></li>
-    <li><a class="top-link fs-5 fw-bold" href="contactus.html">Contact Us</a></li>
-    <li><a class="top-link fs-5 fw-bold" href="privacypolicy.html">Privacy Policy</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="https://thenest.school/parents-testimonial/">Parent Testimonials</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="https://thenest.school/school-news/">News And Events</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="https://thenest.school/nest-careers/">Careers</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="https://thenest.school/contact/">Contact Us</a></li>
+    <li><a class="top-link fs-5 fw-bold" href="https://thenest.school/privacy-policy/">Privacy Policy</a></li>
   </ul>
 </nav>
 
-
-   <script src="./assets/js/main.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> </body>
   <!-- Custom JS for Menu -->
-   <script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector(".about-link").addEventListener("click", () => {
-    window.location.href = "about.html";
-  });
-});
-</script>
 <script>
   // Elements
   const menuToggle = document.getElementById("menuToggle");
@@ -770,92 +858,113 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 </script>
-
-
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const form = document.querySelector("form.text-start");
-  const submitBtn = form.querySelector('button[type="submit"]');
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  if (!form) return;
 
-  form.addEventListener("submit", async function(e) {
+  const msgBox = document.createElement("p");
+  msgBox.style.fontSize = "18px";
+  msgBox.style.marginTop = "15px";
+  msgBox.style.fontWeight = "500";
+  form.appendChild(msgBox);
+
+  // Elements
+  const attendSelect = document.getElementById("attend");
+  const attendeesField = document.getElementById("attendees");
+  const attendeesGroup = attendeesField.closest(".form-group"); // whole div
+
+  // ✅ Hide "Number of Attendees" initially if "Select Option" is chosen
+  if (attendSelect.value === "Select Option" || attendSelect.value === "No") {
+    attendeesGroup.style.display = "none";
+    attendeesField.disabled = true;
+  }
+
+  // ✅ Toggle field visibility when user changes "Are you willing to attend?"
+  attendSelect.addEventListener("change", () => {
+    const value = attendSelect.value.trim().toLowerCase();
+    if (value === "no") {
+      attendeesGroup.style.display = "none";
+      attendeesField.disabled = true;
+      attendeesField.value = ""; // clear any existing value
+    } else {
+      attendeesGroup.style.display = "block";
+      attendeesField.disabled = false;
+    }
+  });
+
+  // ✅ Handle form submission
+  form.addEventListener("submit", async function (e) {
     e.preventDefault();
+
+    const submitBtn = this.querySelector("button[type=submit]");
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Submitting...';
+    submitBtn.textContent = "Submitting...";
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const grade = document.getElementById("grade").value;
-    const source = document.getElementById("source").value;
+    const parentName = document.getElementById("parent-name")?.value.trim() || "";
+    const parentEmail = document.getElementById("email")?.value.trim() || "";
+    const parentPhone = document.getElementById("phone")?.value.trim() || "";
+    const studentName = document.getElementById("student-name")?.value.trim() || "";
+    const grade = document.getElementById("grade")?.value || "";
+    const willingToAttend = attendSelect?.value || "";
+    const attendeesCount = attendeesField.disabled ? 0 : (attendeesField?.value || 1);
 
-    if (!name || !email || !phone || grade === "Select Your Option" || source === "Select Your Option") {
-      alert("⚠️ Please fill in all required fields.");
+    // ✅ Phone number validation
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(parentPhone)) {
+      msgBox.style.color = "red";
+      msgBox.textContent = "Please enter a valid 10-digit phone number.";
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Submit';
+      submitBtn.textContent = "Submit";
       return;
     }
 
-    const fd = new FormData();
-    fd.append('name', name);
-    fd.append('email', email);
-    fd.append('phone', phone);
-    fd.append('grade', grade);
-    fd.append('source', source);
+    // Build data payload
+    const formData = {
+      parent_name: parentName,
+      parent_email: parentEmail,
+      parent_phone: parentPhone,
+      student_name: studentName,
+      grade: grade,
+      willing_to_attend: willingToAttend,
+      attendees_count: attendeesCount,
+      pageUrl: window.location.href
+    };
 
     try {
-      const res = await fetch('admission.php', { method: 'POST', body: fd, credentials: 'same-origin' });
+      const response = await fetch("/wp-json/openday/v1/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
 
-      const raw = await res.text();
-      let data = null;
-      try { data = raw ? JSON.parse(raw) : null; } catch (err) {
-        console.warn('Could not parse JSON from server response', err);
-        console.log('Raw server response:', raw);
-      }
+      const result = await response.json();
 
-      console.log('admission.php status:', res.status, res.statusText);
-      console.log('Parsed JSON:', data);
-
-      // If server explicitly returned { success: true } -> success
-      if (data && data.success === true) {
-        alert('✅ ' + (data.message || 'Submitted successfully'));
+      if (response.ok && result.success) {
+        msgBox.style.color = "green";
+        msgBox.textContent = "✅ Thank you! Your registration was submitted successfully.";
         form.reset();
-        submitBtn.textContent = 'Submit';
-        submitBtn.disabled = false;
-        return;
-      }
 
-      // If server returned JSON but success=false -> show server message
-      if (data && data.success === false) {
-        alert('⚠️ Submission failed: ' + (data.message || 'Please try again later.'));
-        submitBtn.textContent = 'Submit';
-        submitBtn.disabled = false;
-        return;
+        // Hide attendees field again after reset
+        attendeesGroup.style.display = "none";
+        attendeesField.disabled = true;
+      } else {
+        msgBox.style.color = "red";
+        msgBox.textContent = "❌ " + (result.message || "An error occurred. Please try again.");
       }
-
-      // If server returned non-JSON but HTTP 2xx -> assume success fallback
-      if (res.status >= 200 && res.status < 300 && !data) {
-        alert('✅ Submission received (server returned non-JSON).');
-        form.reset();
-        submitBtn.textContent = 'Submit';
-        submitBtn.disabled = false;
-        return;
-      }
-
-      // Otherwise show informative failure (prefer server message if available)
-      const serverMsg = (data && data.message) ? data.message : raw || res.statusText;
-      alert('⚠️ Submission failed: ' + serverMsg);
-      submitBtn.textContent = 'Submit';
+    } catch (error) {
+      console.error("Error:", error);
+      msgBox.style.color = "red";
+      msgBox.textContent = "⚠️ Network error while submitting form.";
+    } finally {
       submitBtn.disabled = false;
-
-    } catch (err) {
-      console.error('Network/fetch error:', err);
-      alert('❌ Network error — please check your connection.');
-      submitBtn.textContent = 'Submit';
-      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit";
     }
   });
 });
 </script>
+
+
 
 
 

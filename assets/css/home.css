@@ -147,12 +147,25 @@
   }
   .carousel-caption-custom1{
     top:20% !important;
-    right: 25%;
+    right: 20%;
 
+  }
+}
+@media screen and (min-width:1000px) {
+      .carousel-caption-custom1{
+    right: 25% !important;
+
+  }
+  .carousel-caption-custom2 {
+      right: 33% !important;
   }
 }
 
 @media screen and (min-width:1100px) {
+    .carousel-caption-custom1{
+    right: 20% !important;
+
+  }
   .carousel-caption-custom1 p{
       font-size: 30px !important;
   }
@@ -190,6 +203,9 @@
   }
 }
 @media screen and (max-width: 500px) {
+   .carousel-caption-custom2 h2,h3{
+    font-size: 16px !important;
+   }
   .carousel-caption-custom2 {
     right: 12%;
   }
@@ -197,6 +213,7 @@
     right: 10% !important;
   }
 }
+
 .carousel-caption-custom .btn {
   border-radius: 30px;
   padding: 10px 20px;

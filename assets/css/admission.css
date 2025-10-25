@@ -76,55 +76,61 @@
     max-width: 400px;
   }
 }
-  :root{
-    --pink:#fff0f0;
-    --muted:#111;
-    --accent:#ff8a2b;
-    --line:#d9d1d1;
-    --arrow-border:#f1bcbc;
-    --arrow-fill:#fff;
+
+.btn-outline-dark {
+  border-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+  background-color: #000;
+  color: #fff;
+}
+  
+
+.admission-procedure{ background:#fff3f2; } /* soft pink like screenshot */
+
+  .steps-viewport{
+    overflow:hidden; /* hides off-screen cards */
+  }
+  .steps-track{
+    transition: transform .45s ease;
+    will-change: transform;
+  }
+  .step-card{
+    min-width: clamp(260px, 32vw, 520px); /* responsive width */
+    max-width: 520px;
+  }
+  .step-label{
+    font-size: clamp(22px, 2.2vw, 34px);
+    font-weight: 600;
+    letter-spacing:.5px;
+    margin-bottom:.75rem;
+  }
+  .step-card h4{ font-size: clamp(22px, 1.8vw, 28px); }
+  .step-card p{ font-size: clamp(16px, 1.05vw, 18px); line-height:1.7; }
+
+  .ratio-row{
+    display:flex; align-items:center; gap:1rem; color:#222;
+    margin-top:1.25rem;
+  }
+  .ratio-row hr{
+    flex:1; opacity:.2; border-top:1px solid #111;
+    margin:0;
   }
 
-  .admission-section{background:var(--pink); padding:48px 20px 80px; overflow:hidden;}
-  .admission-inner{max-width:1180px; margin:0 auto; padding:0 20px;}
-  .admission-title{font-size:34px; font-weight:600; margin:8px 0 36px;}
-  /* viewport window that masks the long track */
-  .admission-viewport{overflow:hidden; position:relative;}
-  /* the long horizontal track */
-  .admission-track{display:flex; gap:28px; transition:transform .45s cubic-bezier(.22,.9,.3,1);}
-  /* each step card */
-  .step{
-    flex:0 0 33.3333%; /* 3 visible columns on large screens */
-    background:transparent;
-    padding:0 10px;
-    box-sizing:border-box;
-    min-width:260px;
-  }
-  .step-card{background:transparent; padding:14px 18px; border-radius:4px; min-height:240px;}
-  .step-h{font-weight:700; font-size:22px; margin-bottom:18px;}
-  .step-sub{font-size:18px; margin-bottom:14px; color:#0f1720}
-  .step-desc{color:#333; line-height:1.7; font-size:15px; margin-bottom:22px}
-  .progress-row{display:flex; align-items:center; gap:20px; color:#444; font-size:14px}
-  .progress-line{flex:1; height:1px; background:var(--line)}
-  .frac{min-width:40px; text-align:left}
-  /* arrows UI */
-  .arrows-wrap{display:flex; justify-content:center; gap:14px; margin-top:28px;}
+  /* arrows */
+  .nav-arrows{ position:relative; }
   .arrow-btn{
-    width:56px;height:56px;border-radius:50%;border:2px solid var(--arrow-border);background:var(--arrow-fill);display:inline-grid;place-items:center;cursor:pointer;
-    box-shadow: 0 6px 18px rgba(20,30,50,0.04);
-    transition:transform .15s ease,opacity .15s;
+    width:52px; height:52px; border-radius:50%;
+    border:2px solid #f2b7ac; background:#fff; color:#ff6f47;
+    display:inline-flex; align-items:center; justify-content:center;
+    transition: all .2s ease; box-shadow:none;
   }
-  .arrow-btn:active{transform:translateY(1px)}
-  .arrow-btn.disabled{opacity:.36; cursor:not-allowed; pointer-events:none}
-  .arrow-icon{display:inline-block;width:18px;height:18px;border-radius:50%; position:relative}
-  .arrow-icon::after{content:''; position:absolute; inset:0; background:transparent}
-  /* small responsive tweaks */
-  @media (max-width: 991px){
-    .step{flex:0 0 50%}
-    .admission-title{font-size:28px}
-  }
-  @media (max-width: 575px){
-    .step{flex:0 0 100%}
-    .arrows-wrap{margin-top:18px}
-    .admission-section{padding-bottom:48px}
+  .arrow-btn:hover{ background:#ffe9e5; border-color:#ff6f47; }
+  .arrow{ font-size:20px; line-height:1; }
+
+  /* bigger screens show larger cards & gap like screenshot */
+  @media (min-width: 1200px){
+    .steps-track{ gap: 6rem !important; }
   }
