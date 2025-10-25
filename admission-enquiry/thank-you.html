@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Thank You — The NEST School</title>
+
+  <!-- ✅ Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ✅ Google Tag (GA4 + Ads Conversion Tracking) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WT7VSFXF6D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // ✅ Google Analytics 4 (your GA4 ID)
+    gtag('config', 'G-WT7VSFXF6D');
+
+    // ✅ Google Ads Conversion Tag (your AW ID)
+    gtag('config', 'AW-17597476859');
+
+    // ✅ Fire conversion event for this page (THANK YOU / successful enquiry)
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17597476859/CUSTOM_LEAD', // replace CUSTOM_LEAD with your Google Ads conversion label if available
+      'value': 1.0,
+      'currency': 'INR'
+    });
+  </script>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #FFCC4E 0%, #F04E45 100%);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+    .thankyou-box {
+      background: rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      max-width: 600px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.3);
+      animation: fadeIn 0.8s ease;
+    }
+    .thankyou-box h1 {
+      font-weight: 700;
+      font-size: 2.2rem;
+    }
+    .thankyou-box p {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      color: #f8f9fa;
+    }
+    .btn-home {
+      background-color: #fff;
+      color: #F04E45;
+      font-weight: 600;
+      border: none;
+      border-radius: 30px;
+      padding: 0.75rem 2rem;
+      margin-top: 2rem;
+      transition: all 0.3s ease;
+    }
+    .btn-home:hover {
+      background-color: #FFCC4E;
+      color: #fff;
+      transform: translateY(-3px);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.95);}
+      to {opacity: 1; transform: scale(1);}
+    }
+  </style>
+</head>
+<body>
+  <div class="thankyou-box">
+    <img src="./assest/thenestschoollogo.webp" alt="The NEST School Logo" class="mb-4" style="max-width:150px;">
+    <h1>Thank You for Your Enquiry!</h1>
+    <p>We’ve received your admission enquiry successfully.<br>Our admissions team will contact you shortly.</p>
+    <a href="/" class="btn btn-home">Back to Home</a>
+  </div>
+</body>
+</html>

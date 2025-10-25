@@ -557,15 +557,16 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
 
     <li class="has-sub">
       <div class="top-link" role="button" tabindex="0" aria-expanded="false">
-        <span>About</span>
+        <span class="about-link">About</span>
         <span class="chev" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>
       </div>
       <div class="submenu" aria-hidden="true">
-        <a href="#">Mission & Vision</a>
-        <a href="#">Leadership</a>
-        <a href="#">History</a>
+        <a href="about.html#story">Our Story</a>
+        <a href="about.html#vision">Vision & Mission</a>
+        <a href="about.html#culture">Our values & Culture</a>
+        <a href="about.html#pillar">The NEST School Pillars</a>
       </div>
     </li>
 
@@ -578,17 +579,61 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
 </nav>
 
 
+<!-- 🌟 NESTival Popup -->
+<div id="nestivalPopup" class="nestival-overlay">
+  <div class="nestival-modal">
+    <button class="close-btn" aria-label="Close">&times;</button>
+    <a href="https://www.thenest.school/nestival" target="_blank" class="poster-link">
+      <img src="assets/img/nestival-2025_11zon (1).webp" alt="NESTival Poster" class="nestival-poster" />
+      <p class="caption">
+        Celebrate creativity, talent, and fun at <strong>The NEST School’s</strong> grand interschool festival!
+      </p>
+    </a>
+  </div>
+</div>
+
+
+
    <script src="./assets/js/main.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS for Menu -->
-   <script>
+<script>
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector(".about-link").addEventListener("click", () => {
-    window.location.href = "about.html";
+  // --- optional: About link handler ---
+  const aboutLink = document.querySelector(".about-link");
+  if (aboutLink) {
+    aboutLink.addEventListener("click", () => {
+      window.location.href = "about.html";
+    });
+  }
+
+  // --- NESTival popup ---
+  const popup = document.getElementById("nestivalPopup");
+  if (!popup) return;                         // markup check
+
+  const closeBtn = popup.querySelector(".close-btn");
+
+  // show once per tab session
+
+    setTimeout(() => {
+      popup.classList.add("active");
+      sessionStorage.setItem("nestivalPopupShown", "true");
+    }, 800);
+
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => popup.classList.remove("active"));
+  }
+
+  // close when clicking outside the modal
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.classList.remove("active");
   });
 });
 </script>
+
+
 <script>
   // Elements
   const menuToggle = document.getElementById("menuToggle");

@@ -863,6 +863,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   if (!form) return;
 
+  // === CONFIG ===
+  // Point this to your standalone endpoint:
+  const API_URL = "/openhouse.php?action=register"; // or "/nestival/openhouse.php?action=register"
+
   const msgBox = document.createElement("p");
   msgBox.style.fontSize = "18px";
   msgBox.style.marginTop = "15px";
@@ -870,99 +874,119 @@ document.addEventListener("DOMContentLoaded", function () {
   form.appendChild(msgBox);
 
   // Elements
-  const attendSelect = document.getElementById("attend");
-  const attendeesField = document.getElementById("attendees");
-  const attendeesGroup = attendeesField.closest(".form-group"); // whole div
+  const attendSelect    = document.getElementById("attend");
+  const attendeesField  = document.getElementById("attendees");
+  const attendeesGroup  = attendeesField ? attendeesField.closest(".form-group") : null;
 
-  // ✅ Hide "Number of Attendees" initially if "Select Option" is chosen
-  if (attendSelect.value === "Select Option" || attendSelect.value === "No") {
-    attendeesGroup.style.display = "none";
-    attendeesField.disabled = true;
-  }
-
-  // ✅ Toggle field visibility when user changes "Are you willing to attend?"
-  attendSelect.addEventListener("change", () => {
-    const value = attendSelect.value.trim().toLowerCase();
-    if (value === "no") {
+  // Hide "Number of Attendees" initially if 'Select Option' or 'No'
+  if (attendSelect && attendeesGroup) {
+    const initial = (attendSelect.value || "").trim().toLowerCase();
+    if (initial === "select option" || initial === "no" || initial === "") {
       attendeesGroup.style.display = "none";
       attendeesField.disabled = true;
-      attendeesField.value = ""; // clear any existing value
-    } else {
-      attendeesGroup.style.display = "block";
-      attendeesField.disabled = false;
     }
-  });
 
-  // ✅ Handle form submission
+    // Toggle visibility when user changes "Are you willing to attend?"
+    attendSelect.addEventListener("change", () => {
+      const value = (attendSelect.value || "").trim().toLowerCase();
+      if (value === "no") {
+        attendeesGroup.style.display = "none";
+        attendeesField.disabled = true;
+        attendeesField.value = ""; // clear any value
+      } else {
+        attendeesGroup.style.display = "block";
+        attendeesField.disabled = false;
+      }
+    });
+  }
+
+  // Handle form submission
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const submitBtn = this.querySelector("button[type=submit]");
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Submitting...";
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Submitting...";
+    }
 
-    const parentName = document.getElementById("parent-name")?.value.trim() || "";
-    const parentEmail = document.getElementById("email")?.value.trim() || "";
-    const parentPhone = document.getElementById("phone")?.value.trim() || "";
-    const studentName = document.getElementById("student-name")?.value.trim() || "";
-    const grade = document.getElementById("grade")?.value || "";
-    const willingToAttend = attendSelect?.value || "";
-    const attendeesCount = attendeesField.disabled ? 0 : (attendeesField?.value || 1);
+    const parentName   = document.getElementById("parent-name")?.value.trim() || "";
+    const parentEmail  = document.getElementById("email")?.value.trim() || "";
+    const parentPhone  = document.getElementById("phone")?.value.trim() || "";
+    const studentName  = document.getElementById("student-name")?.value.trim() || "";
+    const grade        = document.getElementById("grade")?.value || "";
+    const willingToAttendRaw = attendSelect?.value || "";
+    const willingToAttend = willingToAttendRaw.trim(); // send exactly "Yes"/"No"/"Maybe" if possible
 
-    // ✅ Phone number validation
+    // attendees_count must be >= 1 for the PHP validator.
+    // If attendance is "No" or field is disabled/hidden, send 1.
+    let attendeesCount = 1;
+    if (attendeesField && !attendeesField.disabled) {
+      const n = parseInt(attendeesField.value, 10);
+      attendeesCount = Number.isFinite(n) && n > 0 ? n : 1;
+    }
+
+    // Phone validation
     const phoneRegex = /^[0-9]{10}$/;
     if (!phoneRegex.test(parentPhone)) {
       msgBox.style.color = "red";
       msgBox.textContent = "Please enter a valid 10-digit phone number.";
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Submit";
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit";
+      }
       return;
     }
 
-    // Build data payload
-    const formData = {
-      parent_name: parentName,
-      parent_email: parentEmail,
-      parent_phone: parentPhone,
-      student_name: studentName,
-      grade: grade,
+    // Build payload (matches your PHP keys exactly)
+    const payload = {
+      parent_name:       parentName,
+      parent_email:      parentEmail,
+      parent_phone:      parentPhone,
+      student_name:      studentName,
+      grade:             grade,
       willing_to_attend: willingToAttend,
-      attendees_count: attendeesCount,
-      pageUrl: window.location.href
+      attendees_count:   attendeesCount,
+      pageUrl:           window.location.href
     };
 
     try {
-      const response = await fetch("/wp-json/openday/v1/register", {
+      const response = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(payload)
       });
 
-      const result = await response.json();
+      const result = await response.json().catch(() => ({}));
 
-      if (response.ok && result.success) {
+      if (response.ok && result && result.success) {
         msgBox.style.color = "green";
         msgBox.textContent = "✅ Thank you! Your registration was submitted successfully.";
         form.reset();
 
-        // Hide attendees field again after reset
-        attendeesGroup.style.display = "none";
-        attendeesField.disabled = true;
+        // Hide attendees again after reset
+        if (attendeesGroup && attendeesField) {
+          attendeesGroup.style.display = "none";
+          attendeesField.disabled = true;
+        }
       } else {
         msgBox.style.color = "red";
-        msgBox.textContent = "❌ " + (result.message || "An error occurred. Please try again.");
+        msgBox.textContent = "❌ " + (result?.message || "An error occurred. Please try again.");
       }
-    } catch (error) {
-      console.error("Error:", error);
+    } catch (err) {
+      console.error("Error submitting form:", err);
       msgBox.style.color = "red";
       msgBox.textContent = "⚠️ Network error while submitting form.";
     } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Submit";
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit";
+      }
     }
   });
 });
 </script>
+
 
 
 

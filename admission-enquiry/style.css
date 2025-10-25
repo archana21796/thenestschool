@@ -1,0 +1,962 @@
+/* -------------------------
+   HERO / HEADER STYLES
+   ------------------------- */
+
+/* parent: hero background */
+.setbgimg {
+  background-color: #faf7f3;
+  position: relative;          /* stacking context for children */
+  background-image: url("./assest/homedesk1.webp");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  min-height: 100vh;
+  overflow: visible;           /* allow decorative curve to extend */
+}
+.setborder{
+  border-right: 1px solid black;
+}
+
+/* mobile background */
+@media (max-width: 768px) {
+  .setbgimg {
+    background-image: url("./assest/homemob1.webp");
+    min-height: 150vh !important;
+  }
+}
+
+/* background overlay: above BG image, below curve and content */
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;                   /* baseline overlay */
+  pointer-events: none;
+}
+
+/* decorative curve/rectangle wrapper:
+   sits above overlay but BELOW main content (logo, hero text, form) */
+.hero-shape-wrapper {
+  height: 380px;
+  position: absolute;
+  left: 0; bottom: -7%; width: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+@media screen and (min-width:1000px) {
+  .hero-shape-wrapper {
+    height: 240px;
+    bottom: -18%;
+  }
+    .setpadding{
+    padding-top: 12rem !important;
+  }
+}
+@media screen and (min-width:1300px) {
+    .hero-shape-wrapper {
+    height: 390px;
+    bottom: -28%;
+  }
+  .setpadding{
+    padding-top: 16rem !important;
+  }
+  .setcontent{
+    font-size: 30px;
+  }
+}
+.hero-shape-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keep aspect & fill the box */
+  display: block;
+}
+
+
+/* Make sure hero content (logo, headings, form) sits ABOVE overlay and curve */
+.setbgimg > *:not(.bg-overlay):not(.hero-shape-wrapper) {
+  position: relative;
+  z-index: 3;
+}
+.setcontent{
+  top:40%;
+  left:10%;
+}
+
+/* container that holds hero content/form */
+.setformsection {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  z-index: 4;                   /* content sits above overlay & curve */
+  pointer-events: auto;
+}
+
+/* wide-screen shift for form */
+@media screen and (min-width: 1445px) {
+  .setformsection {
+    left: 20%;
+    right: auto;
+  }
+}
+
+/* -------------------------
+   LOGO / MENU BOXES
+   ------------------------- */
+.setlogoborder,
+.setmenuborder {
+  background: #fff;
+  display: inline-block;
+  padding: .5rem .75rem;
+  border-radius: 0 0 20px 0;     /* logo default; override for menu below */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.setmenuborder { border-radius: 0 0 0 20px; }
+
+/* small logo sizing */
+.setlogoborder img,
+.footer-logo {
+  display: block;
+  max-width: 130px;
+  height: auto;
+}
+
+/* -------------------------
+   HERO TEXT & CTA
+   ------------------------- */
+.hero-left {
+  color: #fff;
+  padding: 2.5rem 1.25rem;
+}
+
+.hero-title {
+  font-size: clamp(1.4rem, 2.6vw, 2.25rem);
+  line-height: 1.15;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 1rem;
+}
+
+/* gradient CTA button */
+.btn-gradient {
+  display: inline-block;
+  padding: .6rem 1rem;
+  border-radius: 26px;
+  color: #fff;
+  background: linear-gradient(90deg,#FFB548 0%, #F04E45 100%);
+  border: none;
+  box-shadow: 0 6px 18px rgba(240,78,69,0.18);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* -------------------------
+   ENQUIRE CARD (FORM)
+   ------------------------- */
+.enquire-card {
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(4,20,40,0.12);
+  padding: 1rem;
+  position: relative;           /* ensure stacking works */
+  z-index: 5;                   /* sits above hero content & curve */
+  margin: 1.25rem;
+}
+
+/* form fields spacing */
+.enquire-card .form-label { color: #333; font-size: .85rem; }
+.enquire-card .form-control,
+.enquire-card .form-select {
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+/* ensure CTA inside card sits visually above curve */
+.enquire-card .btn-enquire {
+  width: 100%;
+  background: linear-gradient(90deg,#FFB548 0%, #F04E45 100%);
+  border: none;
+  color: white;
+  padding: .7rem 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* small screens: center everything and reduce overlap */
+@media (max-width: 768px) {
+  .enquire-card { max-width: 320px; margin: .75rem auto 2rem auto; z-index: 6; }
+  /* .hero-shape-wrapper img { max-height: 180px; } */
+  .setformsection { top: 6%; left: 0; right: 0; padding: 0 1rem; }
+  .hero-left { padding: 1.5rem 1rem; text-align: center; }
+}
+
+/* -------------------------
+   UTILITY / SAFETY
+   ------------------------- */
+
+/* prevent accidental stacking context on frequently used bootstrap wrappers —
+   remove transforms/opacity or override if you were using them */
+.setbgimg,
+.setbgimg * {
+  -webkit-transform: none !important;
+  transform: none !important;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  will-change: auto !important;
+}
+
+/* if you do have overflow hidden somewhere and need the curve to extend, use this */
+.setbgimg { overflow: visible !important; }
+
+/* small helper to keep curve from blocking clicks */
+.hero-shape-wrapper,
+.hero-shape-wrapper * { pointer-events: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Off-canvas & menu styles (kept from your working CSS) */
+.offcanvas-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(380px, 92vw);
+  background: #ffffff;
+  box-shadow: -18px 0 40px rgba(2,18,54,.12);
+  transform: translateX(110%);
+  transition: transform .36s cubic-bezier(.2,.9,.2,1);
+  z-index: 1200;
+  padding: 1.25rem;
+  overflow-y: auto;
+}
+.offcanvas-menu.open { transform: translateX(0); }
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 1150;
+  opacity: 0;
+  transition: opacity .24s ease;
+  pointer-events: none;
+}
+.menu-overlay.visible { opacity: 1; pointer-events: auto; }
+
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  padding: .4rem .6rem;
+}
+
+/* burger icon */
+.burger { display:inline-block; width:26px; height:18px; position:relative; }
+.burger span { position:absolute; left:0; right:0; height:3px; background:#034EA2; display:block; transition: transform .28s ease, top .28s ease, opacity .28s ease; }
+.burger span:nth-child(1){ top:0; }
+.burger span:nth-child(2){ top:7.5px; }
+.burger span:nth-child(3){ top:15px; }
+
+/* open -> X animation */
+.menu-toggle.open .burger span:nth-child(1){ top:7.5px; transform: rotate(45deg); }
+.menu-toggle.open .burger span:nth-child(2){ opacity:0; transform: scaleX(.2); }
+.menu-toggle.open .burger span:nth-child(3){ top:7.5px; transform: rotate(-45deg); }
+
+/* menu list */
+.menu-list { list-style:none; padding: 2.25rem 0 1rem; margin:0; }
+.menu-list a, .menu-list button.dropdown-toggle {
+  display:block;
+  padding:.6rem 0;
+  text-decoration:none;
+  color:#0b2340;
+  width:100%;
+  text-align:left;
+  background:transparent;
+  border:none;
+  font-size:1rem;
+  cursor:pointer;
+}
+
+/* dropdown */
+.dropdown { list-style:none; margin:.25rem 0 0; padding-left:1rem; max-height:0; overflow:hidden; transition:max-height .28s ease; }
+.has-dropdown.open > .dropdown { max-height:480px; }
+
+/* responsive tweaks */
+@media (max-width: 991px) {
+  .hero-title { font-size: 1.6rem; }
+  .enquire-card { width: 90%; margin: 2rem auto; }
+}
+.positionform{
+    position: relative;
+    z-index: 9;
+}
+@media screen and (min-width:1000px) {
+    .positionform{
+    position: absolute;
+    z-index: 9;
+}
+}
+.setdesigncontainer{
+    background-image: url("./assest/Rectangle\ 5.webp");
+    height: 400px;
+}
+.hero-shape {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  /* z-index: 2; */
+}
+.setcontainerposition{
+    position: absolute;
+    top:160px;
+}
+
+/* container */
+.ctas-section {
+  background: #faf7f3; /* match your background color */
+  padding: 2.5rem 1rem;
+}
+
+/* list layout */
+.cta-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 3.5rem;            /* space between items */
+  justify-content: center; /* center horizontally */
+  align-items: flex-start;
+  flex-wrap: wrap;        /* wrap on small screens */
+}
+
+/* each item */
+.cta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-width: 220px;       /* prevents very small items */
+}
+
+/* the small blue dot */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #034EA2; /* blue */
+  display: inline-block;
+  margin-top: 6px; /* vertically align with text baseline */
+}
+
+/* link wrapper (text + underline) */
+.cta-link {
+  display: inline-flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #0b2340; /* main text color */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+  outline: none;
+}
+
+/* the label */
+.cta-text {
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* thin underline bar centered below the text */
+.cta-underline {
+  display: block;
+  width: 56%;
+  height: 2px;
+  background: #0b2340;
+  opacity: 0.45;
+  border-radius: 2px;
+  margin: 0 auto;
+  transition: all .18s ease;
+}
+
+/* hover / focus states — slightly bolder underline and text color */
+.cta-link:hover .cta-underline,
+.cta-link:focus .cta-underline {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.cta-link:hover .cta-text,
+.cta-link:focus .cta-text {
+  color: #034EA2;
+}
+
+/* accessibility: focus ring */
+.cta-link:focus {
+  box-shadow: 0 0 0 4px rgba(3,78,162,0.12);
+  border-radius: 6px;
+}
+
+/* responsive: stack vertically on small screens */
+@media (max-width: 520px) {
+  .cta-list {
+    gap: 1.25rem;
+  }
+  .cta-item {
+    min-width: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .cta-underline { width: 40%; }
+}
+
+
+
+
+
+
+
+
+
+
+
+/****************************************/
+
+
+
+
+
+/* --- General Setup & Variables --- */
+:root {
+    --bg-color: #fdfaf6;
+    --slab-color: #004a99;
+    --text-dark: #333;
+    --text-light: #fff;
+    --text-secondary: #555;
+    --accent-gradient: linear-gradient(90deg, #ff8c42, #ff6347);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        --gap: 24px;
+    --accent: #034ea2;
+    --btn-gradient: linear-gradient(90deg, #ffb84d, #ff6b6b);
+}
+
+
+
+/* --- Main Section Styling --- */
+.admissions-process {
+    text-align: center;
+    padding: 2rem;
+    width: 100%; /* Allow section to span width for centering content */
+    max-width: 1200px; /* Set a max-width for very large screens */
+    margin: 0 auto; /* Center the section itself */
+}
+
+.section-title {
+    color: var(--slab-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--accent-gradient);
+    margin: 0.5rem auto 3rem;
+    border-radius: 2px;
+}
+
+.process-container {
+    display: flex;
+    /* Center the flex items (the steps) within the container */
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    height: 500px;
+    flex-wrap: wrap; /* Allow wrapping on medium screens if needed */
+}
+
+/* --- Step Component (Parent) --- */
+.process-step {
+    position: relative; /* Crucial for positioning the content card */
+    height: 100%;
+    flex-shrink: 0; /* Prevents slabs from shrinking */
+}
+
+/* --- Blue Slab Styling --- */
+.step-slab {
+    width: 120px;
+    height: 100%;
+    background-color: var(--slab-color);
+    color: var(--text-light);
+    border-radius: 1rem;
+    cursor: pointer;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    
+    position: relative;
+    z-index: 2; /* Ensures slab is on top */
+    transition: transform 0.3s ease;
+}
+
+.process-step:hover .step-slab {
+    transform: scale(1.02); /* Subtle hover effect on the slab */
+}
+
+.slab-title {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg); /* Flips the text to read top-to-bottom */
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.chevron {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* --- Content Card Styling --- */
+.step-content {
+    background-color: var(--text-light);
+    width: 350px;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    z-index: 9;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50%) translateX(-20px);
+    
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+.process-step.active .step-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
+
+.content-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
+
+.content-text {
+    text-align: left;
+    padding: 1rem 0.5rem 0.5rem;
+}
+
+.content-text h4, .content-text h5, .content-text p {
+    margin: 0;
+}
+
+.content-text h5 {
+    color: var(--text-dark);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0.25rem 0 0.75rem;
+    line-height: 1.2;
+}
+
+.content-text p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.content-btn {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--accent-gradient);
+    color: var(--text-light);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.content-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 100, 71, 0.4);
+}
+
+
+/*
+============================================
+--- NEW: Media Query for Responsiveness ---
+============================================
+*/
+@media (max-width: 900px) {
+    .process-container {
+        display: flex;
+        /* On smaller screens, stack the items vertically */
+        flex-direction: row !important;
+        /* Remove the fixed height to allow the container to grow */
+        height: auto;
+        /* Adjust the gap for vertical stacking */
+        gap: 2.5rem;
+    }
+
+    .process-step {
+        /* Each step takes up the full width available */
+        width: 100%;
+        /* Center the slab within the step container */
+        display: flex;
+        justify-content: center;
+    }
+
+    .step-slab {
+        /* Reduce the height of the slabs for a better mobile fit */
+        height: 350px;
+        width: 110px;
+    }
+
+    .step-content {
+        /* Make the content card slightly smaller for mobile */
+        width: 300px;
+        /* Adjust position so it doesn't go off-screen */
+        left: 50%;
+        transform: translateY(-50%) translateX(-40%);
+    }
+
+    .process-step.active .step-content {
+        /* Center the card relative to the slab when active */
+        transform: translateY(-50%) translateX(-50%);
+    }
+}
+.setdesignbg {
+  background-image: url("./assest/BG 31.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+/* Container hides overflow */
+.ticker-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Main moving container */
+.ticker-move {
+  display: flex;
+  align-items: center;
+}
+
+/* Track holds one complete set of images */
+.ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Each image block */
+.ticker-item {
+  flex: 0 0 auto;
+  width: auto;
+  margin: 10px;
+}
+
+/* Maintain your original image size */
+.ticker-item img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation only applies after JS duplication */
+.ticker-move.animated {
+  animation: scroll-left-to-right 15s linear infinite;
+}
+
+/* Pause on hover */
+.ticker-wrapper:hover .ticker-move.animated {
+  animation-play-state: paused;
+}
+
+/* Keyframes for smooth continuous movement */
+@keyframes scroll-left-to-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+  /* Carousel container */
+  .carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* Header */
+  .carousel-header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+  }
+
+  /* Viewport (visible area) */
+  .carousel-viewport {
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Track that moves */
+  .carousel-track {
+    display: flex;
+    gap: var(--gap);
+    transition: transform 0.4s ease;
+    will-change: transform;
+  }
+
+  /* Each card */
+  .carousel-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    flex: 0 0 calc((100% - var(--gap)) / 2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Card image */
+  .carousel-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  /* Card content */
+  .card-body {
+    padding: 1rem 1.25rem;
+    flex: 1;
+  }
+
+  .card-body h3 {
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin: 0.2rem 0;
+  }
+
+  .card-body p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .card-body .grade {
+    color: #0b2340;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  /* CTA button */
+  .btn {
+    display: inline-block;
+    background: var(--btn-gradient);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7rem 1.1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Arrows */
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    color: var(--accent);
+    font-size: 22px;
+    transition: 0.2s;
+  }
+
+  .carousel-arrow:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .arrow-left {
+    left: -5px;
+  }
+
+  .arrow-right {
+    right: -5px;
+  }
+
+  .carousel-arrow[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .carousel-card {
+      flex: 0 0 100%;
+    }
+    .arrow-left {
+      left: 10px;
+    }
+    .arrow-right {
+      right: 10px;
+    }
+  }
+
+
+.setfooter {
+  background: linear-gradient(90deg, #FFCC4E 5%, #F04E45 100%);
+  border-radius: 50px 50px 0 0;
+  color: #fff;
+}
+
+.footer-logo {
+  width: 150px;
+  height: auto;
+}
+
+.footer-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.footer-links ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-right p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.logo-bg {
+  background-color: #fff;    /* White background only for image */
+  border-radius: 0 0 20px 0;        /* Optional: smooth rounded corners */
+  padding: 8px;              /* Optional: spacing around logo */
+}
+.social-icons a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-left, .footer-links, .footer-right {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .footer-links ul {
+    display: inline-block;
+  }
+}
+.footer-right{
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1063,6 +1063,21 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
   </div>
 </footer>
 
+<!-- 🌟 NESTival Popup -->
+<div id="nestivalPopup" class="nestival-overlay">
+  <div class="nestival-modal">
+    <button class="close-btn" aria-label="Close">&times;</button>
+
+    <!-- Wrap image + caption in an anchor -->
+    <a href="https://www.thenest.school/nestival" target="_blank" class="poster-link">
+      <img src="assets/img/nestival-2025_11zon (1).webp" alt="NESTival Poster" class="nestival-poster" />
+      <p class="caption">
+        Celebrate creativity, talent, and fun at <strong>The NEST School’s</strong> grand interschool festival!
+      </p>
+    </a>
+  </div>
+</div>
+
 <nav id="customMenu" aria-hidden="true" aria-label="Main navigation">
   <button class="close-btn" id="menuClose" aria-label="Close menu">
     <!-- simple X -->
@@ -1123,6 +1138,31 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> </body>
   <!-- Custom JS for Menu -->
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("nestivalPopup");
+  const closeBtn = popup.querySelector(".close-btn");
+
+  // Show popup after slight delay (only once per session)
+  if (!sessionStorage.getItem("nestivalPopupShown")) {
+    setTimeout(() => {
+      popup.classList.add("active");
+      sessionStorage.setItem("nestivalPopupShown", "true");
+    }, 800); // delay in ms
+  }
+
+  // Close popup when ❌ is clicked
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("active");
+  });
+
+  // Optional: close when clicking outside modal
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.classList.remove("active");
+  });
+});
+</script>
 <script>
   // Elements
   const menuToggle = document.getElementById("menuToggle");
