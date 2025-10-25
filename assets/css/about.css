@@ -1,0 +1,329 @@
+@media screen and (max-width: 424px) {
+  .hero {
+    background-image: url("../img/about-banner-mobile.webp");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 600px;
+  }
+  .stylecontactherocontent {
+    position: absolute;
+    max-width: 400px;
+    top: 20%;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 426px) {
+  .hero {
+    background-image: url("../img/about-tab-bnr.webp");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 550px;
+  }
+  .stylecontactherocontent {
+    position: absolute;
+    max-width: 400px;
+    top: 10%;
+    left: 3%;
+  }
+}
+@media screen and (min-width: 427px) and (max-width: 768px) {
+  .hero {
+    background-image: url("../img/about-tab-bnr.webp");
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 750px;
+  }
+  .stylecontactherocontent {
+    position: absolute;
+    max-width: 400px;
+    left: 25%;
+    top: 10%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .hero {
+    background-image: url("../img/about-banner.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40vh;
+  }
+  .stylecontactherocontent {
+    position: absolute;
+    right: 5%;
+    top: 25%;
+    max-width: 300px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 2000px) {
+  .hero {
+    background-image: url("../img/about-banner.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+  }
+  .stylecontactherocontent {
+    position: absolute;
+    right: 10%;
+    /* right: 6%; */
+    top: 35%;
+    max-width: 400px;
+    font-weight: 600;
+  }
+}
+
+.thin-rule{
+    border: none;
+    height: 1px;
+    background-color: #272525;
+    margin: 1.5rem 0;
+  }
+
+  /* Slightly larger title on wide screens */
+  @media (min-width: 1200px) {
+    section h2 { font-size: 34px; }
+  }
+  .thinrulemargin{
+    margin-top: 8rem !important;
+  }
+
+  
+
+
+
+
+
+  :root {
+  --accent: #ff7a00;
+  --divider: #e9e9e9;
+  --text: #111;
+  --bg: #fafafa;
+}
+
+.sticky-nav {
+  background-color: #f8f8f8;
+  position: sticky;
+  top: 0; /* stick when reaches top */
+  z-index: 1000; /* keep above other content */
+}
+
+/* base menu list */
+.nav-list {
+  list-style: none;
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+}
+.nav-list li a {
+  display: block;
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  /* border-bottom:1px solid var(--divider); */
+}
+.nav-list li:last-child a {
+  border-bottom: 0;
+}
+.nav-list li a.active {
+  color: var(--accent);
+}
+.stylenurserycontent {
+  font-size: 20px;
+}
+.stylenurserycontent1{
+  font-size: 18px !important;
+}
+/* desktop style */
+@media (min-width: 900px) {
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    /* border-bottom: 1px solid var(--divider); */
+  }
+  .nav-list li {
+    flex: 0 0 auto;
+    position: relative;
+  }
+  .nav-list li a {
+    border: 0;
+    padding: 20px 36px;
+    font-size: 20px;
+    font-weight: 700;
+    border-right: 1px solid black;
+  }
+  .nav-list li:last-child a {
+    border-right: 0;
+  }
+  .nav-list li a.active {
+    position: relative;
+    color: var(--text);
+  }
+  .nav-list li a.active::after {
+    content: "";
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    bottom: 6px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+}
+
+
+
+
+  /* center-art controls size and slight overlap spacing */
+  .center-art { 
+    max-width: 420px; /* controls how big the center image appears on desktop */
+    margin-top: -12px; /* slight upward nudge to match design */
+  }
+
+  /* On large wide screens make the center image bigger and visually overlapping columns */
+  @media (min-width: 1200px) {
+    .center-art { max-width: 520px; margin-top: -24px; }
+  }
+
+  /* On medium screens restrict width */
+  @media (max-width: 991.98px) {
+    .center-art { max-width: 360px; margin: 0 auto 1.5rem; }
+  }
+
+  /* On small screens stack cleanly and make center image smaller */
+  @media (max-width: 575.98px) {
+    .center-art { max-width: 280px; margin-bottom: 1rem; }
+    section .col-lg-4 { text-align: left; } /* keep text left-aligned on mobile */
+  }
+
+  /* Optional: limit paragraph width for better reading on large screens */
+  .col-lg-4 p { max-width: 520px; }
+
+  /* Fine tune text color if your theme uses different base color */
+  h3, h4 { color: #111; }
+
+
+
+  .object-cover { object-fit: cover; height: 100%; }
+
+
+  .circle-wrap img { position: relative; z-index: 2; display:block; }
+
+
+
+  /* adjust size/placement on larger screens */
+  @media (min-width: 1200px) {
+    .circle-wrap[style] { /* keep inline width but allow subtle scale */
+      transform: scale(1.06);
+    }
+    .mission-ill { position: absolute; right: -20px; bottom: -10px; }
+  }
+
+  /* stack nicely on small screens */
+  @media (max-width: 767.98px) {
+    .circle-wrap { width:120px !important; height:120px !important; }
+    .circle-wrap + .circle-wrap { margin-top:8px !important; }
+    .d-none.d-lg-block { display:none !important; } /* hide spacer */
+  }
+
+
+  .bottomborder {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(75, 75, 75, 0.489);
+  }
+
+  .setborder {
+    border-right: 1px solid rgba(75, 75, 75, 0.489);
+}
+
+ .pillar { padding-bottom: 1rem; }
+  .pillar-top { height: 4px;  border-radius: 2px; } /* colored short rule */
+  .pillar h5 { font-size: 1.3rem; font-weight: 700 !important; color:#111; }
+  .pillar p, .pillar li { color: #222; line-height:1.8; font-size:1rem; }
+  .pillar ul { padding-left: 1rem; margin-bottom: 0; }
+  @media (max-width: 767.98px) {
+    .pillar-top { width: 56px; }
+  }
+
+ 
+
+    .team-carousel-wrapper { position: relative; }
+  .carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+    padding: 6px 0; /* gives a little breathing space for shadow */
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 28px; /* space between cards */
+    transition: transform 450ms cubic-bezier(.2,.9,.2,1);
+    will-change: transform;
+  }
+
+  .team-card {
+    flex: 0 0 auto;
+    width: calc((100% / 3) - 18.66px); /* default for desktop: 3 visible */
+    box-sizing: border-box;
+  }
+
+  /* card visuals */
+  .card-inner { background: transparent; border-right: 1px solid rgba(0, 0, 0, 0.363);}
+  .team-img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 32% 68% 52% 48% / 42% 32% 68% 58%;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    display: inline-block;
+  }
+  .team-desc { line-height: 1.7; color: #333; }
+  .team-callout {  border-image: linear-gradient(to bottom, #2b85ff, #ff7d00) 1; 
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #111;
+  border-left: 4px solid transparent; }
+
+  /* Prev/Next buttons (circular) */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: rgba(255,255,255,0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    line-height:1;
+    color: #ff7d00;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+  .carousel-btn.prev { left: 12px; }
+  .carousel-btn.next { right: 12px; }
+
+  /* responsive breakpoints: 2 visible on tablet, 1 on mobile */
+  @media (max-width: 991.98px) {
+    .team-card { width: calc((100% / 2) - 14px); } /* 2 visible */
+    .carousel-btn { width: 50px; height:50px; }
+  }
+  @media (max-width: 767.98px) {
+    .team-card { width: 100%; } /* 1 visible */
+    .carousel-btn { display: none; } /* hide large overlay arrows on small screens */
+  }
+
+  /* Accessibility focus */
+  .carousel-btn:focus { outline: 3px solid rgba(255,125,0,0.18); outline-offset: 2px; }

@@ -1096,7 +1096,7 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
 
     <li class="has-sub">
       <div class="top-link" role="button" tabindex="0" aria-expanded="false">
-        <span>About</span>
+        <span class="about-link">About</span>
         <span class="chev" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>
@@ -1340,6 +1340,13 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
     });
   });
 })();
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".about-link").addEventListener("click", () => {
+    window.location.href = "about.html";
+  });
+});
 </script>
 <script>
 (function () {
