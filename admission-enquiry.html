@@ -574,7 +574,7 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
 
    <script src="./assets/js/main.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS for Menu -->
 <script>
   // Elements
@@ -757,39 +757,94 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
     });
   })();
 </script>
+
+
 <script>
-document.querySelector("form").addEventListener("submit", async function (e) {
-  e.preventDefault(); // stop normal form submission
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector("form.text-start");
+  const submitBtn = form.querySelector('button[type="submit"]');
 
-  const formData = {
-    name: document.getElementById("name").value.trim(),
-    email: document.getElementById("email").value.trim(),
-    phone: document.getElementById("phone").value.trim(),
-    grade: document.getElementById("grade").value,
-    source: document.getElementById("source").value
-  };
+  form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
 
-  try {
-    const response = await fetch("URL_TO_YOUR_BACKEND", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(formData)
-    });
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const grade = document.getElementById("grade").value;
+    const source = document.getElementById("source").value;
 
-    if (response.ok) {
-      alert("Form submitted successfully ✅");
-      e.target.reset(); // clear form
-    } else {
-      alert("Something went wrong ❌ Please try again.");
+    if (!name || !email || !phone || grade === "Select Your Option" || source === "Select Your Option") {
+      alert("⚠️ Please fill in all required fields.");
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit';
+      return;
     }
-  } catch (error) {
-    console.error("Error:", error);
-    alert("Error submitting form. Check console.");
-  }
+
+    const fd = new FormData();
+    fd.append('name', name);
+    fd.append('email', email);
+    fd.append('phone', phone);
+    fd.append('grade', grade);
+    fd.append('source', source);
+
+    try {
+      const res = await fetch('admission.php', { method: 'POST', body: fd, credentials: 'same-origin' });
+
+      const raw = await res.text();
+      let data = null;
+      try { data = raw ? JSON.parse(raw) : null; } catch (err) {
+        console.warn('Could not parse JSON from server response', err);
+        console.log('Raw server response:', raw);
+      }
+
+      console.log('admission.php status:', res.status, res.statusText);
+      console.log('Parsed JSON:', data);
+
+      // If server explicitly returned { success: true } -> success
+      if (data && data.success === true) {
+        alert('✅ ' + (data.message || 'Submitted successfully'));
+        form.reset();
+        submitBtn.textContent = 'Submit';
+        submitBtn.disabled = false;
+        return;
+      }
+
+      // If server returned JSON but success=false -> show server message
+      if (data && data.success === false) {
+        alert('⚠️ Submission failed: ' + (data.message || 'Please try again later.'));
+        submitBtn.textContent = 'Submit';
+        submitBtn.disabled = false;
+        return;
+      }
+
+      // If server returned non-JSON but HTTP 2xx -> assume success fallback
+      if (res.status >= 200 && res.status < 300 && !data) {
+        alert('✅ Submission received (server returned non-JSON).');
+        form.reset();
+        submitBtn.textContent = 'Submit';
+        submitBtn.disabled = false;
+        return;
+      }
+
+      // Otherwise show informative failure (prefer server message if available)
+      const serverMsg = (data && data.message) ? data.message : raw || res.statusText;
+      alert('⚠️ Submission failed: ' + serverMsg);
+      submitBtn.textContent = 'Submit';
+      submitBtn.disabled = false;
+
+    } catch (err) {
+      console.error('Network/fetch error:', err);
+      alert('❌ Network error — please check your connection.');
+      submitBtn.textContent = 'Submit';
+      submitBtn.disabled = false;
+    }
+  });
 });
 </script>
+
+
 
 
 </body>
