@@ -12,16 +12,16 @@
 
 // ======================= CONFIG =======================
 $DB_HOST = "localhost";
-$DB_NAME = "YOUR_DB_NAME";
-$DB_USER = "YOUR_DB_USER";
-$DB_PASS = "YOUR_DB_PASS";
+$DB_NAME = "theneo1n_testnestdb";
+$DB_USER = "theneo1n_smmuser";
+$DB_PASS = "Nest@2025";
 $DB_REG_TABLE = "nestival_registrations";
 $DB_PART_TABLE = "nestival_participants";
 
 $GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbwJmrOrZHIhucsP5vEhBydLgVgsV-mdSeSNgrARKNGRyheRd4ZgC9T3JJ4HfeMLi51s/exec";
 
-$ADMIN_EMAIL = "info@rankraze.com";
-$FROM_EMAIL = "no-reply@thenest.school";
+$ADMIN_EMAIL = "smm@msec.edu.in";
+$FROM_EMAIL = "events@thenest.school";
 $FROM_NAME = "NESTival Team";
 
 // ======================= HELPERS =======================
