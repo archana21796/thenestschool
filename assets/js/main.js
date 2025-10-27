@@ -271,63 +271,7 @@
     `;
   }
 
-//   function openApplyModal() {
-//     if (document.querySelector('.jn-modal-backdrop') || document.getElementById('jobModalBackdrop')) return;
-//     const modal = elFrom(buildApplyModal());
-//     document.body.appendChild(modal);
-//     document.documentElement.style.overflow = 'hidden'; document.body.style.overflow = 'hidden';
 
-//     const closeBtn = modal.querySelector('.jn-modal-close');
-//     const form = modal.querySelector('.jn-apply-form');
-//     const msgEl = modal.querySelector('.jn-message');
-
-//     function close() { if (modal && modal.parentNode) modal.parentNode.removeChild(modal); document.documentElement.style.overflow = ''; document.body.style.overflow = ''; document.removeEventListener('keydown', onKey); }
-//     function onKey(e) { if (e.key === 'Escape') close(); }
-
-//     closeBtn.addEventListener('click', close);
-//     modal.addEventListener('click', (ev) => { if (ev.target === modal) close(); });
-//     document.addEventListener('keydown', onKey);
-
-//     const submitBtn = form.querySelector('.jn-submit-btn');
-//     function setMessage(t, c) { msgEl.textContent = t; msgEl.style.color = c || '#333'; }
-
-//     form.addEventListener('submit', function (ev) {
-//       ev.preventDefault();
-//       setMessage('');
-//       const name = (form.querySelector('[name="your-name"]').value || '').trim();
-//       const email = (form.querySelector('[name="your-email"]').value || '').trim();
-//       const phone = (form.querySelector('[name="your-phone"]').value || '').trim();
-//       if (!name) { setMessage('Please enter your name', '#c00'); return; }
-//       if (!email || !isEmail(email)) { setMessage('Please enter a valid email', '#c00'); return; }
-//       if (!phone || !isPhone(phone)) { setMessage('Please enter a valid phone', '#c00'); return; }
-
-//       const positions = Array.from(form.querySelectorAll('input[name="positions"]:checked')).map(n => n.value);
-//       const fd = new FormData();
-//       fd.append('name', name);
-//       fd.append('email', email);
-//       fd.append('phone', phone);
-//       positions.forEach(p => fd.append('positions[]', p));
-//       const resumeInput = form.querySelector('[name="your-resume"]');
-//       if (resumeInput && resumeInput.files && resumeInput.files[0]) fd.append('resume', resumeInput.files[0]);
-
-//       submitBtn.disabled = true; submitBtn.style.opacity = '0.7'; setMessage('Submitting...');
-
-//       // send as multipart/form-data (file support)
-//       fetch(APPLY_API_ENDPOINT, { method: 'POST', body: fd, credentials: 'same-origin' })
-//         .then(async res => {
-//           let json = null;
-//           try { json = await res.json(); } catch(e){ json = null; }
-//           if (!res.ok) throw new Error((json && json.message) ? json.message : `Server ${res.status}`);
-//           setMessage((json && json.message) ? json.message : 'Application received — we will contact you shortly.', '#0a7');
-//           setTimeout(() => close(), 1400);
-//         })
-//         .catch(err => {
-//           console.warn('Apply submit failed', err);
-//           setMessage('Submission failed — please try again later.', '#c33');
-//         })
-//         .finally(() => { submitBtn.disabled = false; submitBtn.style.opacity = '1'; });
-//     });
-//   }
 
   // ----------------- delegates -----------------
   document.addEventListener('click', function (ev) {

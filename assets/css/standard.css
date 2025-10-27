@@ -380,3 +380,26 @@
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
     text-decoration: none;
 }
+
+.follow-section p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.social-circle {
+  width: 45px;
+  height: 45px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 22px;
+  color: black;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.social-circle:hover {
+  background-color: black;
+  color: #ff6600;
+  transform: translateY(-3px);
+}
