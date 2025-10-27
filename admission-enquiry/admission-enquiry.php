@@ -13,10 +13,10 @@
 */
 
 // ---------- CONFIG ----------
-$DB_HOST = 'localhost';
-$DB_NAME = 'YOUR_DB_NAME';
-$DB_USER = 'YOUR_DB_USER';
-$DB_PASS = 'YOUR_DB_PASSWORD';
+$DB_HOST = "localhost";
+$DB_NAME = "theneo1n_testnestdb";
+$DB_USER = "theneo1n_smmuser";
+$DB_PASS = "Nest@2025";
 $DB_TABLE = 'admission_enquiries'; // new table
 
 // Your Apps Script Web App URL (same as in plugin)

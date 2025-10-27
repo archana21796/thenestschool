@@ -8,10 +8,10 @@
  */
 
 // DB connection (use the DB that contains your new table)
-const DB_HOST  = 'localhost';
-const DB_NAME  = 'theneo1n_testnestdb';   // <-- change to the DB shown in phpMyAdmin
-const DB_USER  = 'YOUR_DB_USER';          // <-- user with INSERT privileges on that DB
-const DB_PASS  = 'YOUR_DB_PASSWORD';
+$DB_HOST = "localhost";
+$DB_NAME = "theneo1n_testnestdb";
+$DB_USER = "theneo1n_smmuser";
+$DB_PASS = "Nest@2025";
 
 // Use your new table (no wp_ prefix)
 const DB_TABLE = 'openday_enquiries';     // <-- EXACT table name you created
