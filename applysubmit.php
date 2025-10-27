@@ -80,7 +80,7 @@ try {
     // --- Handle resume upload (if any) ---
     $resumePath = null;
     if (!empty($_FILES['resume']['name']) && isset($_FILES['resume']['tmp_name'])) {
-        $uploadDir = __DIR__ . '/uploads/';
+        $uploadDir = __DIR__ . './assets/uploads';
         if (!is_dir($uploadDir)) {
             @mkdir($uploadDir, 0755, true);
         }
