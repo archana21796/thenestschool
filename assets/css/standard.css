@@ -366,3 +366,17 @@
     opacity: 1;
   }
 }
+
+.floating-link {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 56px;
+    height: 56px;
+    background: #ff9224;
+    border-radius: 50%;
+    color: #fff;
+    z-index: 1050;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    text-decoration: none;
+}
