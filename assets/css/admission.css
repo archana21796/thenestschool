@@ -1,0 +1,136 @@
+@media screen and (max-width: 424px) {
+  .hero {
+    background-image: url("../img/admissionmob.webp");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 600px;
+  }
+  .stylecontactherocontent {
+    position: absolute;
+    max-width: 400px;
+    top: 20%;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 426px) {
+  .hero {
+    background-image: url("../img/admissionmob.webp");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 550px;
+  }
+  .stylecontactherocontent {
+    position: absolute;
+    max-width: 400px;
+    top: 15%;
+    left: 10%;
+  }
+}
+@media screen and (min-width: 427px) and (max-width: 768px) {
+  .hero {
+    background-image: url("../img/admissiontab.webp");
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 750px;
+  }
+  .stylecontactherocontent {
+    position: absolute;
+    max-width: 400px;
+    left: 25%;
+    top: 20%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .hero {
+    background-image: url("../img/admisiondesktop.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40vh;
+  }
+  .stylecontactherocontent {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    max-width: 300px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 2000px) {
+  .hero {
+    background-image: url("../img/admisiondesktop.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+  }
+  .stylecontactherocontent {
+    position: absolute;
+    right: 3%;
+    /* right: 6%; */
+    top: 30%;
+    max-width: 400px;
+  }
+}
+
+.btn-outline-dark {
+  border-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+  background-color: #000;
+  color: #fff;
+}
+  
+
+.admission-procedure{ background:#fff3f2; } /* soft pink like screenshot */
+
+  .steps-viewport{
+    overflow:hidden; /* hides off-screen cards */
+  }
+  .steps-track{
+    transition: transform .45s ease;
+    will-change: transform;
+  }
+  .step-card{
+    min-width: clamp(260px, 32vw, 520px); /* responsive width */
+    max-width: 520px;
+  }
+  .step-label{
+    font-size: clamp(22px, 2.2vw, 34px);
+    font-weight: 600;
+    letter-spacing:.5px;
+    margin-bottom:.75rem;
+  }
+  .step-card h4{ font-size: clamp(22px, 1.8vw, 28px); }
+  .step-card p{ font-size: clamp(16px, 1.05vw, 18px); line-height:1.7; }
+
+  .ratio-row{
+    display:flex; align-items:center; gap:1rem; color:#222;
+    margin-top:1.25rem;
+  }
+  .ratio-row hr{
+    flex:1; opacity:.2; border-top:1px solid #111;
+    margin:0;
+  }
+
+  /* arrows */
+  .nav-arrows{ position:relative; }
+  .arrow-btn{
+    width:52px; height:52px; border-radius:50%;
+    border:2px solid #f2b7ac; background:#fff; color:#ff6f47;
+    display:inline-flex; align-items:center; justify-content:center;
+    transition: all .2s ease; box-shadow:none;
+  }
+  .arrow-btn:hover{ background:#ffe9e5; border-color:#ff6f47; }
+  .arrow{ font-size:20px; line-height:1; }
+
+  /* bigger screens show larger cards & gap like screenshot */
+  @media (min-width: 1200px){
+    .steps-track{ gap: 6rem !important; }
+  }

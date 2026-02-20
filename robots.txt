@@ -1,0 +1,9 @@
+# robots.txt for https://thenest.school
+
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Allow: /
+
+Sitemap: https://thenest.school/sitemap.xml

@@ -1,0 +1,3903 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>The NEST School — Vision, Curriculum & Campus</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="The NEST School: IB PYP + Cambridge pathways, makerspaces, digital intelligence, hyper-personalised mentoring, incubation and university linkages. Explore programs, campus, admission & events.">
+  <meta name="keywords" content="The NEST School, IB PYP, Cambridge, IGCSE, A-Levels, makerspace, robotics, entrepreneurship, incubation, school in Chennai">
+  <link rel="canonical" href="https://www.thenestschool.example/" />
+  <meta name="author" content="The NEST School">
+  <!-- Replace the google-site-verification content value below with the real token -->
+  <meta name="google-site-verification" content="REPLACE_WITH_TOKEN" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The NEST School — IB PYP & Cambridge Pathways" />
+  <meta property="og:description" content="A future-ready campus combining IB and Cambridge pathways with makerspaces, incubation, and personalised mentoring." />
+  <meta property="og:image" content="/assets/og-image.jpg" />
+  <meta property="og:url" content="https://www.thenestschool.example/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The NEST School — IB PYP & Cambridge Pathways">
+  <meta name="twitter:description" content="Future-focused education with industry linkages, makerspaces, and hyper-personalised mentoring.">
+  <meta name="twitter:image" content="/assets/og-image.jpg">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "School",
+    "name": "The NEST School",
+    "url": "https://www.thenestschool.example/",
+    "logo": "https://www.thenestschool.example/assets/logo.png",
+    "description": "IB PYP + Cambridge pathways, makerspaces, labs, incubation and personalised mentoring.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Campus Address",
+      "addressLocality": "Chennai",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "600xxx",
+      "addressCountry": "IN"
+    },
+    "sameAs": ["https://www.facebook.com/thenestschool","https://www.instagram.com/thenestschool"]
+  }
+  </script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    /* Minimal styling for long landing page */
+    :root{--accent:#0d6efd}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.6}
+    .hero{background:linear-gradient(180deg, #f8f9ff 0%, #ffffff 60%);padding:6rem 0}
+    .badge-pill{border-radius:9999px}
+    .section-pad{padding:2rem 0}
+    .feature-card{border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,.06);padding:1.6rem}
+    .sticky-cta{position:fixed;right:18px;bottom:18px;z-index:1080}
+    .timeline-item{margin-bottom:1.5rem}
+    pre.sample-plan{background:#0f172a;color:#fff;padding:1rem;border-radius:8px;overflow:auto}
+    footer{background:#0b1220;color:#cbd5e1;padding:2.5rem 0}
+
+    .ticker-wrap {
+        width: 100%;
+        overflow: hidden;
+        }
+
+        .ticker-track {
+        display: flex;
+        width: max-content;
+        animation: scrollTicker 35s linear infinite;
+        }
+
+        .ticker-track img {
+        height: 280px;
+        margin-right: 24px;
+        border-radius: 12px;
+        object-fit: cover;
+        }
+
+        @keyframes scrollTicker {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+        }
+        .ticker-track:hover {
+  animation-play-state: paused;
+}
+
+.program-card {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.program-img {
+  overflow: hidden;
+  height: 270px;
+}
+
+.program-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.program-card:hover .program-img img {
+  transform: scale(1.15);
+}
+
+.program-content {
+  padding: 20px;
+}
+
+.program-content h5 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.feature-card {
+  position: relative;
+  height: 300px;
+  border-radius: 16px;
+  background-size: cover;
+  background-color: white;
+  background-position: center;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Dark overlay for readability */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Text container */
+.feature-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.feature-overlay h6 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.feature-overlay p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+  opacity: 0.95;
+}
+.bg-internship {
+  background-image: url("./assets/img/internship.jpg");
+}
+
+.bg-counselling {
+  background-image: url("./assets/img/Counselling.png");
+}
+
+.bg-skills {
+  background-image: url("./assets/img/skills.png");
+}
+.facility-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.facility-btn {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.facility-btn:hover,
+.facility-btn.active {
+  background: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+}
+
+
+.facility-desc {
+  font-size: 1.05rem;
+  max-width: 900px;
+  margin: 0 auto 24px;
+  text-align: center;
+  color: #444;
+  line-height: 1.6;
+}
+
+.facility-panel {
+  display: none;
+  animation: fadeUp 0.4s ease;
+}
+
+.facility-panel.active {
+  display: block;
+}
+.hidesection{
+  height: 450px !important;
+  overflow-y: hidden !important;
+}
+
+.btn-logo {
+  background: linear-gradient(135deg, #F36A21, #FF9A3C);
+  color: #fff;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-logo:hover {
+  background: linear-gradient(135deg, #e85f1c, #ff8c2a);
+  color: #fff;
+}
+
+.sticky-md {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .sticky-md {
+    position: sticky;
+    top: 0;
+  }
+
+
+}
+.overlay-card {
+  position: relative;
+  min-height: 220px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.overlay-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.315); /* overlay darkness */
+}
+
+.overlay-card .content {
+  position: relative;
+  z-index: 1;
+  padding: 1.25rem;
+}
+.keypoint{
+  padding: 20px;
+  border-radius: 30px;
+}
+.keypoint h2{
+  color: #00277533;
+}
+.keypoint:hover {
+  transform: all 0.3s ease-in-out;
+  background-color: #dff7f6;
+}
+.keypoint:hover h2{
+  color: #002775;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.program-card {
+  position: relative;
+  height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+}
+
+/* Image */
+.program-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Overlay */
+.program-card .overlay {
+  position: absolute;
+  inset: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 20px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.15)
+  );
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+/* Text */
+.program-card h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.program-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+/* Read more button */
+.read-more {
+  margin-top: 14px;
+  align-self: flex-start;
+  background: #fff;
+  color: #8b1024;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: none;
+}
+
+/* HOVER & ACTIVE STATE */
+.program-card:hover,
+.program-card.active {
+  filter: grayscale(0%);
+}
+
+.program-card:hover img,
+.program-card.active img {
+  transform: scale(1.05);
+}
+
+.program-card:hover .overlay,
+.program-card.active .overlay {
+  background: linear-gradient(
+    to top,
+    rgba(139, 16, 36, 0.164),
+    rgba(139, 16, 36, 0.3)
+  );
+}
+
+.program-card:hover .read-more,
+.program-card.active .read-more {
+  display: inline-block;
+}
+@media (max-width: 992px) {
+  .program-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.program-tabs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background: #002775;
+  color: #fff;
+  border-color: #002775;
+}
+
+.program-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.program-panel {
+  display: none;
+  animation: fadeUp 0.4s ease;
+}
+
+.program-panel.active {
+  display: block;
+}
+
+/* TYPOGRAPHY FOR LONG CONTENT */
+.program-panel h3 {
+  margin-top: 30px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.program-panel h4 {
+  margin-top: 20px;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.program-panel p,
+.program-panel li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.program-panel ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.insight-card { 
+  margin-bottom: 20px;
+  background: #d3eaea; /* lavender */
+  border-radius:0px  56px  0px 56px;
+  padding: 18px;
+  height: 100%;
+  transition: all 0.1s ease-in-out;
+}
+
+.insight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.12);
+  border: 5px solid #002775;
+}
+
+.insight-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.insight-card .card-body {
+  padding: 20px 6px 6px;
+}
+
+.insight-card h5 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.insight-card p {
+  font-size: 15px;
+  color: #222;
+  line-height: 1.6;
+}
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #164194;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.application-section {
+  background-color: #fff4f4;
+  padding: 80px 0;
+}
+
+.application-form {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.application-form .form-group {
+  margin-bottom: 28px;
+}
+
+.application-form label {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.application-form label span {
+  color: red;
+}
+
+.application-form input,
+.application-form select {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.application-form input:focus,
+.application-form select:focus {
+  border-color: #1e3a8a;
+}
+
+.captcha-box {
+  margin: 30px 0;
+}
+
+.submit-btn {
+  display: block;
+  margin: 0 auto;
+  background-color: #0b1e8a;
+  color: #fff;
+  padding: 14px 50px;
+  font-size: 18px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #09176b;
+}
+
+
+  </style>
+
+  <!-- Google Tag Manager (GTM) -->
+  <!-- Replace GTM ID if needed. Current ID from user context: GTM-W9XTLRR5 -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W9XTLRR5');
+  </script>
+
+  <!-- Google Analytics 4 (G- ID from user context: G-WT7VSFXF6D) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WT7VSFXF6D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+    gtag('config', 'G-WT7VSFXF6D');
+  </script>
+
+</head>
+<body>
+  <!-- GTM (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9XTLRR5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+  <!-- NAVBAR -->
+<header class="bg-white border-bottom sticky-lg-top">
+  <nav class="container navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <a href="./" target="_blank"><img src="./assets/img/thenestschoollogo.webp" alt="The NEST School" height="80" class="me-2"></a>
+      <img src="./assets/img/ib logo.webp" alt="IB Logo" height="80" class="ms-4">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li style="color: #0f172a;" class="nav-item"><a class="nav-link btn btn-outline-primary" href="./nurseryprograms.html">Programme</a></li>
+        <li class="nav-item"><a class="nav-link btn btn-outline-primary" href="./about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link btn btn-outline-primary" href="./thenestschoolcampus.html">Campus</a></li>
+        <li class="nav-item"><a class="nav-link btn btn-outline-primary" href="./testimonial.html">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link btn btn-logo" href="#applicationForm">Admissions</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<div class="container">
+  <div class="text-center">
+    <img 
+      class="img-fluid d-md-none mx-auto"
+      src="./assets/img/landing-page-mob.jpeg"
+      alt="Landing page mobile banner"
+    />
+
+    <img 
+      class="img-fluid d-none d-md-block mx-auto"
+      src="./assets/img/landing-page-director-1536x464.jpeg"
+      alt="Landing page banner"
+    />
+  </div>
+</div>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7" data-aos="fade-up">
+          <span class="badge bg-danger px-3 py-2 text-white badge-pill mb-3">IB PYP • Cambridge • Makerspace • Incubation</span>
+          <h1 class="display-5 fw-bold">The NEST School — A Campus For Future-Ready Learners</h1>
+          <p class="lead">Integrated <span class="text-danger fw-bold">IB and Cambridge</span>  pathways, <span class="text-danger fw-bold">hyper-personalised mentoring</span>  (1:3), <span class="text-danger fw-bold">industry-linked labs</span>  and an <span class="text-danger fw-bold">incubation ecosystem</span>  — all designed to convert vision into daily practice.</p>
+
+          <div class="d-flex gap-3 mt-4">
+            <a href="#applicationForm" class="btn btn-logo btn-lg">Apply for Admissions</a>
+          </div>
+
+          <ul class="list-unstyled mt-4 small text-muted">
+            <li>Campus access to 100+ labs & university collaborations</li>
+            <li>Structured internships, career coaching & university profiling</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-5" data-aos="fade-left">
+          <div class="card p-3">
+
+            <div id="campusCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+              <div class="carousel-inner rounded">
+
+                <div class="carousel-item active">
+                  <img src="./assets/img/hero.jpeg" class="d-block w-100" alt="Campus View 1">
+                </div>
+
+                <div class="carousel-item">
+                  <img src="./assets/img/herosport.png" class="d-block w-100" alt="Campus View 2">
+                </div>
+                 <div class="carousel-item">
+                  <img src="./assets/img/mentoring.jpg" class="d-block w-100" alt="Campus View 3">
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/img/Counselling.png" class="d-block w-100" alt="Campus View 3">
+                </div>
+                 <!-- <div class="carousel-item">
+                  <img src="./assets/img/aerobay-modified-1-768x827.webp" class="d-block w-100" alt="Campus View 3">
+                </div> -->
+
+
+              </div>
+
+              <!-- controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#campusCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#campusCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <div class="mt-3">
+              <strong>Campus snapshot</strong>
+              <p class="mb-0 small text-muted">
+                15-acre campus, amphitheatre, sports fields, makerspace & research centre.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+    <!-- APPLICATION FORM (Modal anchor) -->
+<section id="applicationForm" class="section-pad application-section">
+  <div class="container">
+    <h2 class="text-center mb-5">Enquire Now for Admissions</h2>
+
+    <form id="admissionform" class="application-form">
+      
+      <div class="form-group">
+        <label for="name">Name <span>*</span></label>
+        <input type="text" id="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address <span>*</span></label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number <span>*</span></label>
+        <input type="text" id="phone" placeholder="081234 56789" required>
+      </div>
+
+      <div class="form-group">
+        <label for="grade">Grade Enquired For <span>*</span></label>
+        <select id="grade" required>
+          <option value="">Select Your Option</option>
+          <option>Pre-KG</option>
+          <option>LKG</option>
+          <option>UKG</option>
+          <option>Grade 1</option>
+          <option>Grade 2</option>
+          <option>Grade 3</option>
+          <option>Grade 4</option>
+          <option>Grade 5</option>
+          <option>Grade 6</option>
+          <option>Grade 7</option>
+          <option>Grade 8</option>
+          <option>Grade 9</option>
+          <option>Grade 10</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="source">Where did you hear about us? <span>*</span></label>
+        <select id="source" required>
+          <option value="">Select Your Option</option>
+          <option>Google</option>
+          <option>Facebook</option>
+          <option>Instagram</option>
+          <option>Friends / Family</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="captcha-box">
+        <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA">
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+
+    </form>
+  </div>
+</section>
+
+
+    <!-- GALLERY / MEDIA -->
+  <section id="gallery" class="section-pad bg-light">
+    <div class="container">
+      <h2 data-aos="fade-up">Gallery & Media</h2>
+      <div class="row g-3 mt-3">
+        <div class="col-md-4 " data-aos="zoom-in" ><iframe width="100%" height="450px" src="https://www.youtube.com/embed/cNUEJc_HhT8?si=OKbR8HUsLpMeUJZ-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="80"><iframe width="100%" height="450px" src="https://www.youtube.com/embed/1sO-xNLO2BQ?si=BcsS4qURiOdVg1BX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="col-md-4 hidesection" data-aos="zoom-in" data-aos-delay="160"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQ_vQ82jPZ8/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+          <div style="padding:16px;"> <a href="https://www.instagram.com/reel/DQ_vQ82jPZ8/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;">
+           <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g>
+            <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> 
+            <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DQ_vQ82jPZ8/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by The NEST School (@the_nest_school)</a></p></div></blockquote>
+<script async src="//www.instagram.com/embed.js"></script></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION -->
+  <section id="vision" class="section-pad bg-light">
+    <h1 class="fw-bold text-center">VISION, PHILOSOPHY & <span style="color: #002775;">PURPOSE</span></h1>
+    <div class="container mx-auto p-5">
+      <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4 keypoint">
+            <h2 style="font-size: 50px; font-weight: bolder;">01</h2>
+            <h3 class="h2">A Vision Built for an Uncertain Future</h3>
+            <p style="text-align: justify;">
+              At The NEST, education is designed as a long-term system, not a short-term syllabus solution.
+Our purpose is to prepare learners to navigate uncertainty, complexity, and change with confidence and character.
+In a rapidly evolving world, “good enough” education is no longer sufficient.
+Learning must go beyond information delivery to build thinking, adaptability, and real-world capability.
+            </p>
+          </div>
+          <div class="col-md-6 col-lg-4 keypoint">
+            <h2 style="font-size: 50px; font-weight: bolder;">02</h2>
+            <h3 class="h2">A Foundation of Proven Educational Legacy</h3>
+            <p style="text-align: justify;">
+              The NEST is built on a 75+ year legacy exclusively in education under the Meenakshi Group of Institutions.
+Over decades, this ecosystem has educated lakhs of students across school, engineering, arts & science, management, and healthcare.
+Learners study within a 15-acre green campus and a 1.5 lakh sq. ft. purpose-built school facility in the heart of the city.
+This is not a pop-up model, but a stable, time-tested institution designed for long-term educational excellence.
+            </p>
+          </div>
+          <div class="col-md-6 col-lg-4 keypoint">
+            <h2 style="font-size: 50px; font-weight: bolder;">03</h2>
+            <h3 class="h2">Our Educational Philosophy</h3>
+            <p style="text-align: justify;">
+              At The NEST, learning shifts from being taught to acquiring and retaining knowledge through understanding and application.
+Education is built on respect for diversity, real-world relevance, and early research literacy.
+Learners develop self-management of body, mind, and emotions, alongside strong collaboration skills.
+These principles ensure education remains useful, grounded, and transferable beyond the classroom.
+            </p>
+          </div>
+                    <div class="col-md-6 col-lg-4 keypoint">
+            <h2 style="font-size: 50px; font-weight: bolder;">04</h2>
+            <h3 class="h2">The NEST School System</h3>
+            <p style="text-align: justify;">
+              The NEST’s vision is not aspirational language—it is a designed execution framework. Our philosophy is translated into:
+structured curriculum pathways
+daily academic planning
+measurable learning outcomes
+continuous mentoring and review
+This ensures that vision is consistently practiced, not occasionally referenced.
+            </p>
+          </div>
+                    <div class="col-md-6 col-lg-4 keypoint">
+            <h2 style="font-size: 50px; font-weight: bolder;">05</h2>
+            <h3 class="h2">Our Commitment</h3>
+            <p style="text-align: justify;">
+              The NEST exists to develop learners who are:
+intellectually capable
+emotionally balanced
+socially responsible
+and prepared for the demands of global universities and real-world careers
+Education here is intentional, personalised, and outcome-driven—designed to serve learners not just today, but for the decades ahead.
+            </p>
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMIC PATHWAYS -->
+  <section id="programs" class="section-pad">
+    <h2 class="h1 text-center fw-bold">ACADEMIC PROGRAMME AT <span style="color: #002775;">The NEST School</span></h2>
+
+
+    <section class="programmes my-5">
+  <div class="container">
+    <div class="program-grid">
+
+      <!-- CARD -->
+      <div class="program-card">
+        <img src="./assets/img/ticker1.jpg" alt="Pre Primary">
+        <div class="overlay">
+          <h5>EYP - Early Year Programme</h5>
+          <p>Where every day is an adventure, sparking curiosity and laying the foundation for lifelong learning.</p>
+           <a target="_blank" href="https://thenest.school/nurseryprograms.html" class="read-more">Read More…</a>
+        </div>
+      </div>
+
+      <div class="program-card">
+        <img src="./assets/img/admissionmob.webp" alt="Primary">
+        <div class="overlay">
+          <h5>PYP - Primary Year Programme</h5>
+          <p>A vibrant stage where creativity, collaboration, and essential skills come to life.</p>
+           <a target="_blank" href="https://thenest.school/primaryprograms.html" class="read-more">Read More…</a>
+        </div>
+      </div>
+
+      <!-- ACTIVE / HOVER CARD STYLE -->
+      <div class="program-card">
+        <img src="./assets/img/caie6to8.webp" alt="Middle School">
+        <div class="overlay">
+          <h5>CAIE</h5>
+          <p>A time to explore ideas, build confidence, and develop critical thinking skills.</p>
+          <a target="_blank" href="https://thenest.school/lowersecondary.html" class="read-more">Read More…</a>
+        </div>
+      </div>
+
+      <div class="program-card">
+        <img src="./assets/img/grade11to12tab.webp" alt="High School">
+        <div class="overlay">
+          <h5>AS/A</h5>
+          <p>Fostering resilience, leadership, and independence for global success.</p>
+           <a target="_blank" href="https://thenest.school/programmegrade11&12.html" class="read-more">Read More…</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <section id="programmes" class="section-pad">
+  <div class="container">
+
+    <!-- <h2 class="text-center mb-4">Academic Programmes</h2> -->
+
+    <!-- PROGRAM TABS -->
+    <div class="program-tabs">
+      <button class="tab-btn active" data-target="eyp">Early Years (EYP)</button>
+      <button class="tab-btn" data-target="pyp">Primary (PYP)</button>
+      <button class="tab-btn" data-target="cls">Lower Secondary</button>
+      <button class="tab-btn" data-target="igcse">Grade 9 - 10</button>
+      <button class="tab-btn" data-target="alevels">Grade 11 - 12</button>
+    </div>
+
+    <div class="program-content">
+
+      <!-- ================= EYP ================= -->
+      <div class="program-panel active" id="eyp">
+
+  <h3>EARLY YEARS PROGRAMME (EYP)</h3>
+  <p><strong>Pre-KG to UKG | Ages 3–6 | IB PYP–Inspired</strong></p>
+
+  <!-- 1. GENESIS OF EXCELLENCE -->
+  <h4> The Genesis of Excellence: A Future-Ready Foundation</h4>
+  <p>
+    The Early Years Programme at The NEST is not positioned as a preschool,
+    but as a joyful, future-ready foundation for learners aged 3 to 6.
+    It is designed to build confidence, curiosity, emotional security,
+    and academic readiness as the first step in a long-term leadership journey.
+  </p>
+
+  <p>
+    Our programme is proudly rooted in the <strong>International Baccalaureate (IB)
+    Primary Years Programme (PYP)</strong>—the same inquiry-driven global framework
+    followed by the world’s most respected institutions.
+  </p>
+
+  <p>
+    Parents choose The NEST for a safe, caring environment that blends
+    academic foundations with whole-child development, ensuring a seamless
+    transition into primary education.
+  </p>
+
+  <!-- 2. RATIO OF EXCELLENCE -->
+  <h4>The Ratio of Excellence</h4>
+  <p>
+    We maintain a strict <strong class="text-danger">1:12 teacher–student ratio</strong>.
+    Every classroom is led by two facilitators (HRF & Co-HRF), ensuring
+    personalised care, close observation, and meaningful learning engagement
+    for every child.
+  </p>
+
+  <!-- 3. GUARDIANS OF GENNEST -->
+  <h4> Guardians of GenNEST: Expert Educators</h4>
+  <p>
+    Our educators are known as the <strong>Guardians of GenNEST</strong>—a team of
+    highly skilled facilitators who bring global pedagogy to life with warmth,
+    consistency, and depth.
+  </p>
+
+  <ul>
+    <li>All Home Room Facilitators (HRFs) are IB-trained and selected for expertise in early childhood education</li>
+    <li>45 days of annual professional development covering IB PYP, Montessori, Waldorf, and Reggio-inspired practices</li>
+    <li>Weekly collaborative planning ensures consistency across classrooms</li>
+    <li>Faculty Welfare & Wellness Forum supports educator wellbeing</li>
+    <li>Facilitator Growth Journals track professional development and classroom impact</li>
+  </ul>
+
+  <!-- 4. ACADEMIC GOLD STANDARD -->
+  <h4> The Academic Gold Standard: IB PYP & Global Pedagogy</h4>
+  <p>
+    Academic goals in EYP are woven around four foundational pillars:
+  </p>
+
+  <ul>
+    <li>Academic progression</li>
+    <li>Retaining creativity and curiosity</li>
+    <li>Secure social relationships</li>
+    <li>Self-management</li>
+  </ul>
+
+  <p>
+    The <strong>Kath Murdoch Inquiry Cycle</strong> enables children to build
+    conceptual understanding through conversation, exploration, and reflection,
+    encouraging deep connections across subjects.
+  </p>
+
+  <p>
+    Learner agency is central—children are encouraged to exercise voice,
+    choice, and ownership from the earliest years.
+  </p>
+
+  <h5>Rigorous Progression</h5>
+  <ul>
+    <li><strong class="text-danger">Literacy & Numeracy:</strong> Activity-driven progression inspired by Montessori, Waldorf, and Reggio Emilia practices</li>
+    <li><strong class="text-danger">Holistic Skill Building:</strong> Equal emphasis on Visual & Performing Arts and Physical Education</li>
+  </ul>
+
+  <!-- 5. SPECIALISED CURRICULUM -->
+  <h4> The NEST Way: Specialized Curriculum & Future-Ready Innovation</h4>
+  <p>
+    Beyond IB compliance, The NEST Way injects a superior, specialised curriculum
+    designed to cultivate leadership, adaptability, and curiosity.
+  </p>
+
+  <p>
+    Inspired learning centres rotate across sensory, science, fantasy, drama,
+    and mathematics zones, allowing children to exercise choice and sustain curiosity.
+  </p>
+
+  <p>
+    <strong>Deep Dives</strong>—conducted once or twice a semester—offer immersive,
+    real-world experiences beyond the classroom.
+  </p>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h5>Future-Ready Curriculum Modules</h5>
+      <ul>
+        <li><strong class="text-danger">Digital Intelligence:</strong> Safe and responsible digital behaviour</li>
+        <li> <strong class="text-danger">Financial Literacy: </strong>Understanding needs vs wants and currency concepts</li>
+        <li><strong class="text-danger">Sustainability Curriculum:</strong> Eco-awareness and mindful habits</li>
+        <li><strong class="text-danger">Nutrition Curriculum:</strong> Graded lessons on food, health, and body awareness</li>
+        <li><strong class="text-danger">Personal & Social Curriculum:</strong> Resilience, empathy, and daily routines</li>
+        <li><strong class="text-danger">Skilling Program:</strong> Communication skills and hands-on exploration</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <!-- 6. CAMPUS DESIGN -->
+      <h4> Architecting Wonder: Campus Design as a Learning Catalyst</h4>
+      <ul>
+        <li>In-and-out classrooms enabling seamless indoor–outdoor learning</li>
+        <li>Sensory gardens for multi-sensory cognitive development</li>
+        <li>Cozy reading, puzzle, and reflection corners for calm focus</li>
+        <li>Outdoor learning huts for open-air exploration</li>
+        <li>Joyful, child-centred campus design throughout</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <!-- 7. DAILY RHYTHM -->
+      <h4> The Rhythm of Excellence: A Day Designed for Mastery</h4>
+      <ul>
+        <li>The Gathering: Community building and unit introduction</li>
+        <li>Wonder Workshop: Core inquiry block for literacy and numeracy</li>
+        <li>Learning Corners: Child-led exploration (Reggio-inspired)</li>
+        <li>Imagination Studio: Art, craft, drama, and music</li>
+        <li>Rhythm & Motion: Yoga, dance, and physical play</li>
+        <li>Melody Moments: Music and rhythm exploration</li>
+        <li>Creative Canvas: Theme-linked art experiences</li>
+        <li>Active Adventures: Gross motor skills and sports</li>
+        <li>Circle of Voices: Reflection and student voice</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 8. ASSESSMENT -->
+  <h4> Evidence of Growth: Continuous Assessment & Reporting</h4>
+  <ul>
+    <li>Continuous formative and summative assessment</li>
+    <li>GenNEST Growth Journal documenting learning journeys</li>
+    <li>Weekly classroom logs</li>
+    <li>Mid-semester academic progress conferences</li>
+    <li>End-semester comprehensive reports before learner-led conferences</li>
+    <li>Holistic reporting covering strengths, focus areas, reflections, and next steps</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 9. MENTORING & WELLNESS -->
+  <h4> The Emotional Fortress: Mentoring & Wellness</h4>
+  <ul>
+    <li>1:3 Know Your Child (KYC) mentoring model</li>
+    <li>Deep emotional trust between facilitators and learners</li>
+    <li>Dedicated wellness team for socio-emotional support</li>
+    <li>School-based remedial assistance when required</li>
+    <li>Regular parent collaboration and observations</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 10. SAFETY -->
+  <h4> Uncompromised Sanctuary: Safety & Security</h4>
+  <ul>
+    <li>On-site infirmary with qualified full-time nurse</li>
+    <li>Hospital tie-ups for emergency care</li>
+    <li>Barcode-based entry and exit systems</li>
+    <li>Full-campus CCTV surveillance</li>
+    <li>Trained housekeeping and hygiene teams</li>
+    <li>1:12 supervision ratio inside and outside classrooms</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 11. PARENT PARTNERSHIP -->
+  <h4> Parents as Co-Architects</h4>
+  <ul>
+    <li>NEST Parent Hour (NPH) for active parent participation</li>
+    <li>Curriculum orientation sessions</li>
+    <li>Learner expeditions showcasing inquiry journeys</li>
+    <li>Community events including Grandparents’ Day and Mini Supermarkets</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 13. OPERATIONS & CTA -->
+  <h4> Operational Excellence & The Call to Leadership</h4>
+  <ul>
+    <li>Pre-KG: 9:00 am – 12:00 noon</li>
+    <li>LKG: 8:30 am – 12:30 pm</li>
+    <li>UKG: 8:30 am – 1:00 pm</li>
+    <li>After-school programmes in sports, martial arts, theatre, and music</li>
+  </ul>
+    </div>
+  </div>
+  <p class="fw-bold mt-3">
+    The NEST EYP is the foundation of a leader. Cohorts are intentionally limited.
+    Secure your child’s place in the future—welcome to The NEST.
+  </p>
+
+</div>
+
+
+<!-- ================= PYP ================= -->
+<div class="program-panel" id="pyp">
+
+  <h3>PRIMARY YEARS PROGRAMME (PYP)</h3>
+  <p><strong>Grades 1–5 | Ages 6–11 | IB PYP Framework</strong></p>
+
+  <!-- 1. ARCHITECTURE OF FUTURE LEADERS -->
+  <h4> The Architecture of Future Leaders: A Power Foundation</h4>
+  <p>
+    The Primary Years Programme at The NEST is designed for the most critical
+    cognitive years—ages 6 to 11. We are not just teaching primary school;
+    we are building a foundation of power rooted in the global gold standard
+    <strong>IB PYP Framework</strong>.
+  </p>
+
+  <p>
+    Our outcome is clear: we do not produce mere students. We develop
+    confident, articulate, and globally minded learners prepared to lead.
+  </p>
+
+  <p>
+    The programme blends IB pedagogy, specialised curricula, and purposeful
+    real-world learning into a seamless academic architecture.
+  </p>
+
+  <ul>
+    <li>Small learning communities (maximum 24 students)</li>
+    <li>Two facilitators per class (HRF + Co-HRF)</li>
+    <li>Strict 1:12 teacher–student ratio</li>
+    <li>Every child is seen, heard, and supported</li>
+  </ul>
+
+  <!-- 2. WHY PARENTS CHOOSE NEST -->
+  <h4> The Elite Choice: Why Discerning Parents Choose The NEST PYP</h4>
+  <ul>
+    <li>Unrivalled academic foundation through inquiry-led IB PYP learning</li>
+    <li>Expert IB-trained educators supported by 45 days of annual professional development</li>
+    <li>Holistic mastery across communication, collaboration, research, creativity, sustainability, and personal–social skills</li>
+    <li>Engaging learning ecosystems including outdoor huts, sensory gardens, reflective mounds, and hands-on spaces</li>
+    <li>Uncompromised safety with CCTV monitoring and barcode-based entry/exit</li>
+    <li>Strong parent partnership through Weekly Logs, Growth Journals, NPH, Advocacy Hour, and conferences</li>
+    <li>Strategic backward and forward integration into Cambridge Middle School</li>
+  </ul>
+
+  <!-- 3. FACULTY EXCELLENCE -->
+  <h4> Guardians of GenNEST: The Engine of Academic Excellence</h4>
+  <ul>
+    <li>All Home Room Facilitators are IB-trained for authentic PYP implementation</li>
+    <li>Two facilitators per classroom ensuring academic and emotional support</li>
+    <li>Selective recruitment of inquiry-driven primary educators</li>
+    <li>Specialist faculty for Art, Music, Theatre, Drama, Yoga, PSPE, EDI, Sustainability, and Digital Intelligence</li>
+  </ul>
+
+  <h5>The NEST Professional Development (NPD) Culture</h5>
+  <ul>
+    <li>45 days (370+ hours) of annual professional development</li>
+    <li>Training in IB PYP, subject mastery, classroom management, tech, research, and global pedagogies</li>
+    <li>Weekly collaborative planning with documented unit design and assessment alignment</li>
+    <li>Faculty Welfare & Wellness Forum</li>
+    <li>Teacher evaluations and Facilitator Growth Journals</li>
+  </ul>
+
+  <!-- 4. STRATEGIC BLUEPRINT -->
+  <h4>The Strategic Blueprint: Vision Engineered into Reality</h4>
+  <p>
+    Our vision is to develop conceptual thinkers, effective communicators,
+    and empathetic global citizens.
+  </p>
+
+  <p>The 8 Core Pillars are embedded across the entire PYP programme:</p>
+  <ol>
+    <li>Diversity & Differences</li>
+    <li>Acquisition vs Teaching</li>
+    <li>Real-World Application</li>
+    <li>Talent Identification</li>
+    <li>Social Conscience</li>
+    <li>Research Mastery</li>
+    <li>Collaboration</li>
+    <li>Self-Management</li>
+  </ol>
+
+  <!-- 5. HOLISTIC CURRICULUM -->
+  <h4>The NEST Way: An Extraordinary & Superior Holistic Curriculum</h4>
+    <div class="row">
+      <div class="col-md-6">
+          <h5>Part 1: IB PYP Framework</h5>
+          <ul>
+            <li>Six transdisciplinary themes</li>
+            <li>Inquiry-based, conversational learning environment</li>
+            <li>Conceptual learning over rote facts</li>
+            <li>Strong learner agency</li>
+            <li>Standalone subjects including Math, Science, and Literacy</li>
+          </ul>
+      </div>
+      <div class="col-md-6">
+        <h5>Part 2: Subject-Specific Academic Rigour</h5>
+        <ul>
+          <li>Vertically and horizontally integrated curriculum</li>
+          <li>Literacy: Reading, writing, phonics, comprehension, communication</li>
+          <li>Numeracy: Number sense, reasoning, real-world problem-solving</li>
+          <li>Science: Experimentation and hands-on discovery</li>
+          <li>Library & research skills development</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h5>Part 3: Languages & Cultural Learning</h5>
+        <ul>
+          <li>Second language development</li>
+          <li>Tamil immersion for authentic language and cultural fluency</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h5>Part 4: Physical, Social & Personal Education (PSPE)</h5>
+        <ul>
+          <li>Fitness, sports, teamwork, and wellbeing</li>
+          <li>Yoga and Carnatic music for mindfulness and discipline</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h5>Part 5: Arts & Creative Expression</h5>
+        <ul>
+          <li>Western & Indian classical music and theatre</li>
+          <li>Visual arts and dance</li>
+          <li>UOI extensions through art, theatre, and coding</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h5>Part 6: The NEST Way – Superior Specialized Curriculum</h5>
+        <ul>
+          <li>Aero Modelling with drones (Aero Lab)</li>
+          <li>Weekly robotics across all grades</li>
+          <li>Digital Intelligence: AI, coding, cybersecurity, app & game development</li>
+          <li>Financial literacy with hands-on applications</li>
+          <li>Sustainability projects (rainwater harvesting, recycling, organic farming)</li>
+          <li>Entrepreneurship (EDI) from ideation to market launch</li>
+          <li>Club Hour for talent grooming</li>
+          <li>Weekly Assembly & Advocacy Hour</li>
+          <li>Personal Social Curriculum across subjects</li>
+          <li>Nutrition curriculum delivered during PE</li>
+          <li>Skilling programmes in communication, research, collaboration, and life skills</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <!-- 6. ASSESSMENT -->
+        <h4> Precision Analytics: Personalized & Developmental Assessment</h4>
+        <ul>
+          <li>UOI formative assessments every two weeks</li>
+          <li>UOI summative assessments every six weeks</li>
+          <li>Prior knowledge checks in standalone subjects</li>
+          <li>Bi-weekly formative and bi-monthly summative tests</li>
+          <li>Monthly assessment of specialised subjects</li>
+          <li>Project-based rubrics for EDI, Sustainability, and Digital Intelligence</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+  <!-- 7. HOME REINFORCEMENT -->
+  <h4> Home Reinforcement: Building Independent Intellectuals</h4>
+  <ul>
+    <li>Age-appropriate, staggered home tasks</li>
+    <li>Aligned with learning pillars and real-life connections</li>
+    <li>Hands-on and engaging</li>
+    <li>Encourages learner autonomy</li>
+  </ul>
+      </div>
+      <div class="col-md-6">
+          <!-- 8. REPORTING -->
+  <h4> The Holistic Portrait: Transparent Reporting</h4>
+  <ul>
+    <li>Weekly Logs</li>
+    <li>GenNEST Growth Journal (student-led from Grade 3)</li>
+    <li>Mid-semester academic progress conferences</li>
+    <li>End-semester reports before learner-led conferences</li>
+  </ul>
+      </div>
+      <div class="col-md-6">
+  <!-- 9. PARENT PARTNERSHIP -->
+  <h4> Parents as Co-Architects</h4>
+  <ul>
+    <li>Curriculum orientation sessions</li>
+    <li>NEST Parent Hour (Grades 1 & 2)</li>
+    <li>NEST Advocacy Hour</li>
+    <li>Learner expeditions</li>
+    <li>Academic progress conferences</li>
+    <li>Three-way learner conferences</li>
+  </ul>
+      </div>
+      <div class="col-md-6">
+  <!-- 10. WELLNESS -->
+  <h4> The Emotional Fortress: Wellness & Mental Strength</h4>
+  <ul>
+    <li>Dedicated socio-emotional support team</li>
+    <li>School-based counselling and remedial assistance</li>
+    <li>Monthly student wellness activities</li>
+  </ul>
+      </div>
+      <div class="col-md-6">
+
+  <!-- 11. HYPER-PERSONALISATION -->
+  <h4> Hyper-Personalization: Flagship Learner Initiatives</h4>
+  <ul>
+    <li>Backward-integrated PYP–Cambridge academic bridge</li>
+    <li>Graduated assessment rigour starting Grade 4</li>
+    <li>1:3 mentoring (Know Your Child model)</li>
+    <li>GenNEST Growth Journal ownership</li>
+    <li>Project-driven learning</li>
+    <li>Mandatory internships from Grade 4</li>
+    <li>Enrichment & enhancement hours</li>
+    <li>Clubs, competitions, and deep dives</li>
+  </ul>
+      </div>
+      <div class="col-md-6">
+  <!-- 12. CAMPUS AS TEACHER -->
+  <h4> The Campus as a Teacher</h4>
+  <ul>
+    <li>Reading, puzzle & reflection corners</li>
+    <li>Sensory garden and learning mound</li>
+    <li>Outdoor learning huts</li>
+    <li>Science labs (Physics, Chemistry, Biology)</li>
+    <li>Aero Modelling Lab</li>
+    <li>Robotics Lab</li>
+    <li>Advanced ICT Lab</li>
+    <li>Makerspace for hands-on skills</li>
+    <li>Terrarium micro-ecosystem</li>
+  </ul>
+      </div>
+      <div class="col-md-6">
+
+  <!-- 15. OPERATIONS & CTA -->
+  <h4> Operational Precision</h4>
+  <p>School Timings: <strong>8:20 am – 2:45 pm</strong></p>
+      </div>
+    </div>
+
+  <p class="fw-bold mt-3">
+    The NEST PYP is the foundation of a leader. Cohorts are intentionally limited.
+    Secure your child’s place in the future today. Welcome to The NEST.
+  </p>
+
+</div>
+
+<!-- ================= LOWER SECONDARY ================= -->
+<div class="program-panel" id="cls">
+
+  <h3>LOWER SECONDARY PROGRAMME (Cambridge)</h3>
+  <p><strong>Grades 6–8 | Ages 11–14 | Cambridge Lower Secondary</strong></p>
+
+  <!-- 1. VISIONARY FOUNDATIONS -->
+  <h4> Visionary Foundations: The Architecture of Leadership</h4>
+  <p>
+    The NEST Way for Lower Secondary is not just a school programme—it is a
+    launchpad. Aligned with the Cambridge Lower Secondary Framework, it
+    provides structure, depth, and intellectual growth during the most defining
+    adolescent years.
+  </p>
+
+  <p>
+    We move beyond the outdated model of “teaching” to a powerful framework
+    of <strong>Retain, Acquire, and Apply</strong>, shaping analytical thinkers who
+    don’t just learn—but lead.
+  </p>
+
+  <h5>The 7 Implementation Pillars</h5>
+  <ul>
+    <li>Diversity & Differences – Cherishing differences without hierarchy</li>
+    <li>Real-World Application – Connecting every concept to life</li>
+    <li>Individual Strengths – Early identification and talent nurturing</li>
+    <li>Community Consciousness – Building responsible societal leaders</li>
+    <li>Data Intelligence – Research, data collection, and analysis</li>
+    <li>Collaboration – Team-based learning and leadership</li>
+    <li>Self-Management – Mastery over body, mind, emotions, and life</li>
+  </ul>
+
+  <!-- 2. ACADEMIC RIGOUR -->
+  <h4> Uncompromising Academic Rigor</h4>
+  <p>
+    A high-performance academic culture is enforced through structured planning,
+    disciplined execution, and measurable outcomes.
+  </p>
+
+  <ul>
+    <li>Prior Knowledge Assessment (PKA) at the start of every semester</li>
+    <li>Customised course outlines with strict academic tracking</li>
+  </ul>
+
+  <h5>Core Academic Mastery</h5>
+  <ul>
+    <li>Cambridge English, Mathematics, Science, Global Perspectives & Computing</li>
+    <li>Languages: Hindi / French / Tamil with a specialised Tamil Immersion programme</li>
+    <li>Creative Arts: Art & Design, Dance, Music, Yoga, and Theatre</li>
+  </ul>
+
+  <p>
+    Learning is powered by execution, not demonstration. Students conduct
+    hands-on practicals in:
+  </p>
+
+  <ul>
+    <li>Dedicated Physics, Chemistry & Biology Labs</li>
+    <li>Makers Space</li>
+    <li>Aero Modelling Lab</li>
+    <li>Robotics Lab</li>
+  </ul>
+
+  <div class="row">
+    <div class="col-md-6">
+  <h4> Future-Ready Intelligence</h4>
+
+  <h5>Digital Intelligence</h5>
+  <ul>
+    <li>Vibe Coding (Python / Java)</li>
+    <li>AI & Machine Learning</li>
+    <li>App & Game Development</li>
+    <li>Web Design & Cybersecurity</li>
+    <li>ICT Tools: 3D Modelling, Vlogging, Podcasting, Video & Sound Editing</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <h5>Entrepreneurship, Design & Innovation (EDI)</h5>
+  <p>
+    Students experience the full product lifecycle—Problem Definition →
+    Ideation → Prototyping → Market Launch—working in groups of three on
+    real-world challenges using Design Thinking.
+  </p>
+
+  <ul>
+    <li>Finance & Crypto Literacy: Budgeting, saving, Bitcoin & digital assets</li>
+    <li>Sustainability: Grade-wise capstone projects with culmination events</li>
+    <li>Nutrition Curriculum: Age-appropriate lessons developed with SIMS Hospital</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 4. ASSESSMENT -->
+  <h4> Precision Assessments & Reporting: The Data of Growth</h4>
+
+  <h5>The Assessment Architecture</h5>
+  <ul>
+    <li>Unit-wise formative and summative assessments</li>
+    <li>Semester-end examinations aligned to IGCSE rigor</li>
+    <li>Tracking of reasoning, application, analysis & research skills</li>
+  </ul>
+
+  <h5>360-Degree Reporting</h5>
+  <ul>
+    <li>Daily Logs</li>
+    <li>Mid-semester Academic Progress Conferences</li>
+    <li>End-semester Reports & Learner-Led Conferences</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 5 HYPER-PERSONALISATION -->
+  <h4> Hyper-Personalization: Know Your Child (KYC)</h4>
+  <ul>
+    <li>1:3 mentoring model ensuring no child is invisible</li>
+    <li>GenNEST Growth Journal for SOAR goals, reflections, and progress</li>
+    <li>Enrichment & Enhancement hours for Math and Science</li>
+    <li>Project-based learning (CAS-style) across Global Perspectives & Sustainability</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 6. SKILLING -->
+  <h4> Comprehensive Skilling: Building the Complete Professional</h4>
+
+  <h5>Hands-On & Technical Skills</h5>
+  <ul>
+    <li>MakersLab: Carpentry, Plumbing, Electricals, Electronics (PCB & Soldering)</li>
+    <li>Aerobay, Robotics, and Digital Intelligence projects</li>
+  </ul>
+
+  <h5>Life, Soft Skills & Grooming</h5>
+  <ul>
+    <li>Research & self-management curriculum</li>
+    <li>Communication, grooming & etiquette by the Career Development Centre</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 7. CENTRES OF EXCELLENCE -->
+  <h4> The Campus Advantage: Centres of Excellence</h4>
+
+  <ul>
+    <li>
+      <strong>MS-IIC (Innovation & Incubation Cell):</strong>
+      100-seater incubation centre partnered with Wadhwani Foundation & T-Hub
+    </li>
+    <li>
+      <strong>MS-CIIC:</strong>
+      Industry–Institute collaboration for live projects and industrial exposure
+    </li>
+    <li>
+      <strong>SSMSRC:</strong>
+      Research centre supporting publications, IPR, patents & funded research
+    </li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 8. INTERNSHIPS -->
+  <h4> Career Architecture & Mandatory Internships</h4>
+  <p>
+    Students undergo 2–4 week mandatory internships, shadowing real careers
+    and reporting insights—providing clarity most students gain only in college.
+  </p>
+    </div>
+    <div class="col-md-6">
+  <!-- 9. CAREER GUIDANCE -->
+  <h4> MS-CDC & University Guidance (UGCC)</h4>
+  <ul>
+    <li>Psychometric testing for early career clarity</li>
+    <li>Hyper-personalized university roadmaps from Grade 9 onwards</li>
+    <li>Guidance for Olympiads, PSAT, SAT, IELTS, TOEFL, MUN & TEDx Youth</li>
+    <li>Monthly university orientation sessions</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 10. PARENT PARTNERSHIP -->
+  <h4> Parent Engagement: A Sacred Partnership</h4>
+  <ul>
+    <li>NEST Advocacy Hour (NAH)</li>
+    <li>Curriculum Orientation Sessions</li>
+    <li>Parent volunteering & learner expeditions</li>
+    <li>Three-way conferences with learner ownership</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 11. CAMPUS LIFE -->
+  <h4> Vibrant Life & Operations</h4>
+  <ul>
+    <li>Global platforms: TNSMUN, TEDxYouth, NESTival, IMICE</li>
+    <li>Makerspace & Innovation Studio</li>
+    <li>Collaborative pods & independent study zones</li>
+    <li>Green mound & live terrarium</li>
+    <li>Full CCTV, barcode access & infirmary tied to Medway Hospital</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+        <h4> Operational Timings</h4>
+  <p><strong>8:20 am – 2:45 pm</strong> (Saturday project support when required)</p>
+    </div>
+  </div>
+
+  <p class="fw-bold mt-3">
+    The NEST Lower Secondary Programme architects confident, capable leaders.
+    Seats are intentionally limited. Welcome to the future of education.
+  </p>
+
+</div>
+
+
+      <!-- ================= IGCSE ================= -->
+<div class="program-panel" id="igcse">
+
+  <h3>IGCSE PROGRAMME (Cambridge)</h3>
+  <p><strong>Grades 9–10 | Ages 14–16 | Cambridge IGCSE Framework</strong></p>
+
+  <!-- 1. SALES HOOK -->
+  <h4> The NEST Distinction: Why Parents Choose Our High School Programme</h4>
+  <ul>
+    <li>Rigorous, inquiry-driven Cambridge curriculum building disciplined thinkers and articulate communicators</li>
+    <li>Strategic subject architecture aligned to STEM, Medicine, Engineering, Commerce & Liberal Arts</li>
+    <li>Holistic professional growth through Digital Intelligence, Sustainability, EDI, Financial Literacy & PSD</li>
+    <li>Real-world immersion via Deep Dives, competitions, CAS, internships & university guidance</li>
+    <li>Elite mentorship by expert Cambridge-trained faculty with strong wellbeing systems</li>
+    <li>Unrivalled access to innovation labs, incubation centres & industry-linked hubs</li>
+  </ul>
+
+  <!-- 2. VISION -->
+  <h4> Visionary Foundations: The Architecture of Leadership</h4>
+  <p>
+    The IGCSE years form a critical academic bridge. Using the globally benchmarked
+    Cambridge IGCSE framework, we prepare learners for depth, discipline, and
+    readiness for A Levels and beyond.
+  </p>
+
+  <h5>The 7 Implementation Pillars</h5>
+  <ul>
+    <li>Diversity – Respecting differences without hierarchy</li>
+    <li>Acquisition – Retain & acquire rather than rote teaching</li>
+    <li>Real-World Application – Connecting learning to life</li>
+    <li>Strength Identification – Early talent discovery</li>
+    <li>Community Consciousness – Responsible global citizenship</li>
+    <li>Data Intelligence – Research, collection & analysis</li>
+    <li>Self-Management – Mastery over body, mind & emotions</li>
+  </ul>
+
+  <!-- 3. ACADEMIC RIGOUR -->
+  <h4> Uncompromising Academic Rigor & Board Exam Strategy</h4>
+  <ul>
+    <li>Prior Knowledge Assessment (PKA) at the start of every semester</li>
+    <li>Strict adherence to drafted course outlines</li>
+    <li>High-demand subject combinations aligned to career outcomes</li>
+  </ul>
+
+  <h5>Strategic Subject Pathways</h5>
+  <ul>
+    <li><strong>Group I – Languages:</strong> English FL + Hindi / French / Tamil</li>
+    <li><strong>Group II – Humanities:</strong> Global Perspectives, Economics, Business Studies</li>
+    <li><strong>Group III – Sciences:</strong> Physics, Chemistry, Biology</li>
+    <li><strong>Group IV – Mathematics:</strong> Mathematics & Additional Mathematics</li>
+    <li><strong>Group V – Professional:</strong> Computer Science, ICT, Art & Design, Design & Technology</li>
+  </ul>
+
+  <p>
+    Students execute hands-on practicals in fully equipped Physics, Chemistry and
+    Biology laboratories—no demonstrations, only real experimentation.
+  </p>
+
+  <!-- 4. CAREER LAUNCHPAD -->
+  <h4> The Career Launchpad: MS-CDC (Career Development Cell)</h4>
+  <ul>
+    <li>Phased University Guidance (UGCC) roadmap from Grade 9 onwards</li>
+    <li>Psychometric testing for early career mapping</li>
+    <li>Hyper-personalised profile building for Ivy League & top universities</li>
+    <li>Guidance for Olympiads, PSAT, SAT, IELTS & TOEFL</li>
+    <li>Monthly Deep Dives on careers, subjects & global universities</li>
+    <li>Annual University Fair with national & international institutions</li>
+  </ul>
+
+  <!-- 5. CENTRES OF EXCELLENCE -->
+  <h4>The Campus Privilege: Centres of Excellence</h4>
+  <ul>
+    <li>
+      <strong>MS-IIC (Innovation & Incubation Cell):</strong>
+      100-seater incubation hub partnered with Wadhwani Foundation & T-Hub
+    </li>
+    <li>
+      <strong>MS-CIIC:</strong>
+      Industry–Institute collaboration for live projects & industrial exposure
+    </li>
+    <li>
+      <strong>SSMSRC:</strong>
+      Centralised research centre for publications, patents & funded research
+    </li>
+  </ul>
+
+  <!-- 6. FUTURE-PROOFING -->
+  <h4> Future-Proofing: Digital & Innovation Matrix</h4>
+  <div class="row">
+    <div class="col-md-6">
+  <h5>Digital Intelligence</h5>
+  <ul>
+    <li>Vibe Coding – Python & Java</li>
+    <li>AI, ML, App & Game Development</li>
+    <li>Cybersecurity & Website Design</li>
+    <li>New Media: Vlogging, Podcasting & Video Production</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <h5>Engineering & Makers</h5>
+  <ul>
+    <li>Robotics & Aero Modelling (Drones)</li>
+    <li>MakersLab: Carpentry, Plumbing, Electricals, PCB & Soldering</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <h5>Entrepreneurship & Finance</h5>
+  <ul>
+    <li>EDI: From problem definition to market launch</li>
+    <li>Financial literacy & crypto awareness (Bitcoin & fintech)</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 7. ASSESSMENT -->
+  <h4> Precision Performance Tracking</h4>
+  <ul>
+    <li>Unit-wise formative & summative assessments</li>
+    <li>Semester exams aligned to IGCSE board expectations</li>
+    <li>Skill tracking in reasoning, application, analysis & research</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <h5>Tech-Enabled Reporting</h5>
+  <ul>
+    <li>Daily classroom logs</li>
+    <li>Mid-semester progress conferences</li>
+    <li>Learner-Led Conferences with GenNEST Growth Journal</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 8. INTERNSHIPS -->
+  <h4> Beyond the Classroom: Internships & Vocational Mastery</h4>
+  <ul>
+    <li>Mandatory 2–4 week internships before Grade 11</li>
+    <li>Hands-on skilling through MakersLab</li>
+    <li>Research, self-management & grooming modules</li>
+    <li>Sustainability capstone projects</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 9. FACULTY -->
+  <h4> The Academic Guardians: World-Class Faculty</h4>
+  <ul>
+    <li>Expert Cambridge-trained subject specialists</li>
+    <li>45 days (370 hours) of annual professional development</li>
+    <li>Daily collaborative planning & assessment alignment</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 10. HYPER-PERSONALISATION -->
+  <h4> Hyper-Personalisation & Student Agency</h4>
+  <ul>
+    <li>1:3 mentoring through the KYC model</li>
+    <li>Enrichment hours for Math, Science & Literacy</li>
+    <li>Student-owned GenNEST Growth Journal</li>
+    <li>Project-based learning across CAS-aligned subjects</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+        <!-- 11. GLOBAL EXPERIENCES -->
+  <h4> Global Citizenship & Signature Experiences</h4>
+  <ul>
+    <li>TNSMUN – Model United Nations</li>
+    <li>TEDxYouth @ TNS</li>
+    <li>NESTival – Interschool Arts & Tech Festival</li>
+    <li>IMICE – International Cultural Experience</li>
+    <li>Annual Day & Sports Day</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 11. GLOBAL EXPERIENCES -->
+  <h4> Global Citizenship & Signature Experiences</h4>
+  <ul>
+    <li>TNSMUN – Model United Nations</li>
+    <li>TEDxYouth @ TNS</li>
+    <li>NESTival – Interschool Arts & Tech Festival</li>
+    <li>IMICE – International Cultural Experience</li>
+    <li>Annual Day & Sports Day</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 12. PARENT PARTNERSHIP -->
+  <h4>Strategic Parent Engagement</h4>
+  <ul>
+    <li>Curriculum orientation sessions</li>
+    <li>NEST Advocacy Hour (NAH)</li>
+    <li>Parent volunteering & learner expeditions</li>
+    <li>Mid-term & three-way conferences</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 13. INFRASTRUCTURE & SAFETY -->
+  <h4> World-Class Infrastructure & Safety</h4>
+  <ul>
+    <li>Makerspace, Innovation Studio & collaborative pods</li>
+    <li>Independent study zones & green learning spaces</li>
+    <li>Full CCTV, barcode access & infirmary tied with Medway Hospital</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 14. OPERATIONS -->
+  <h4> Operational Excellence</h4>
+  <ul>
+    <li>School Timings: <strong>8:20 am – 2:45 pm</strong></li>
+    <li>Club activities integrated into the timetable</li>
+    <li>Saturday academic & project support when required</li>
+  </ul>
+    </div>
+  </div>
+
+
+  <p class="fw-bold mt-3">
+    The NEST IGCSE Programme is not preparation for exams alone—it is preparation
+    for life, leadership, and global success.
+  </p>
+
+</div>
+
+      <!-- ================= AS / A LEVELS ================= -->
+<div class="program-panel" id="alevels">
+
+  <h3>AS / A LEVEL PROGRAMME</h3>
+  <p><strong>Grades 11–12 | Ages 16–18 | Cambridge AS & A Levels</strong></p>
+
+  <!-- 1. SALES HOOK -->
+  <h4> The NEST Distinction: Why Elite Parents Choose Our AS / A Level Programme</h4>
+  <ul>
+    <li>
+      A defining academic stage that acts as a direct launchpad to Indian and global universities
+    </li>
+    <li>
+      Carefully curated subject pathways across STEM, Medicine, Engineering, Commerce,
+      Economics and interdisciplinary domains
+    </li>
+    <li>
+      Unmatched access to a higher-education ecosystem including innovation labs, incubation
+      centres and industry-linked hubs
+    </li>
+    <li>
+      Integrated Digital Intelligence, Sustainability, Financial Literacy and Entrepreneurship
+      embedded into the academic structure
+    </li>
+    <li>
+      University readiness supported through personalised counselling, internships, capstone
+      projects and profile building
+    </li>
+    <li>
+      Expert Cambridge-trained faculty guiding learners within small, high-support academic
+      communities
+    </li>
+  </ul>
+
+  <!-- 2. VISION -->
+  <h4> Visionary Foundations: The Architecture of Future Leadership</h4>
+  <p>
+    Our goal is to develop academically strong, intellectually curious and globally competent
+    young adults prepared for lifelong leadership.
+  </p>
+
+  <h5>The 7 Implementation Pillars</h5>
+  <ul>
+    <li>Diversity – Respecting differences without hierarchy</li>
+    <li>Acquisition – Retaining and acquiring knowledge, not rote learning</li>
+    <li>Real-World Application – Connecting academics to life and careers</li>
+    <li>Strength Identification – Recognising and nurturing individual talents</li>
+    <li>Community Consciousness – Building societal responsibility</li>
+    <li>Data Intelligence – Research, data collection and analysis</li>
+    <li>Self-Management – Mastery over body, mind, emotions and life</li>
+  </ul>
+
+  <!-- 3. ACADEMIC RIGOUR -->
+  <h4> Uncompromising Academic Rigour & Subject Mastery</h4>
+  <ul>
+    <li>
+      Strict academic discipline beginning each semester with a Prior Knowledge Assessment (PKA)
+    </li>
+    <li>
+      Adherence to structured Cambridge course outlines ensuring depth and exam readiness
+    </li>
+    <li>
+      Students pursue 3–4 subjects to ensure true academic mastery
+    </li>
+  </ul>
+
+  <h5>Cambridge A Level Subjects Offered</h5>
+  <ul>
+    <li><strong>Sciences:</strong> Physics (9702), Chemistry (9701), Biology (9700)</li>
+    <li><strong>Math & Tech:</strong> Mathematics (9709), Computer Science (9618)</li>
+    <li>
+      <strong>Commerce & Humanities:</strong> Business (9609), Economics (9708),
+      Psychology (9990), English Language & Literature
+    </li>
+    <li><strong>Creative:</strong> Art & Design (9479)</li>
+  </ul>
+
+  <p>
+    Students execute hands-on practicals in fully equipped Physics, Chemistry and Biology labs —
+    not demonstrations, but real experimentation.
+  </p>
+  <div class="row">
+    <div class="col-md-6">
+  <!-- 4. ADVANCED DIFFERENTIATORS -->
+  <h4>The Academic Edge: Advanced Differentiators</h4>
+  <ul>
+    <li>Auditing additional courses on a case-to-case basis</li>
+    <li>Choice-based minors creating a university-style multidisciplinary profile</li>
+    <li>
+      Capstone Projects and EPQ undertaken with university professors across the shared campus —
+      a powerful admissions advantage
+    </li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 5. CAREER LAUNCHPAD -->
+  <h4> The Career Launchpad: MS-CDC (University Guidance & Career Counselling)</h4>
+  <ul>
+    <li>
+      Individualised Career Portfolio (ICP) with a phased university guidance roadmap
+    </li>
+    <li>
+      Psychometric testing combined with SOAR analysis, time management and goal setting
+    </li>
+    <li>
+      Competitive exam guidance for Olympiads, PSAT, SAT, IELTS and TOEFL
+    </li>
+    <li>
+      Mentorship for TEDxYouth and MUN to strengthen academic profiles
+    </li>
+    <li>
+      Two expert talks per month exposing learners to careers and university expectations
+    </li>
+    <li>
+      Annual University Fair featuring national and international universities
+    </li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 6. ECOSYSTEM -->
+  <h4> The Campus Privilege: Access to an Elite Ecosystem</h4>
+  <ul>
+    <li>
+      Shared campus with Engineering, Arts, Science and Management programs,
+      offering access to 100+ advanced laboratories
+    </li>
+    <li>
+      <strong>MS-IIC:</strong> 100-seater live incubation centre mentored by industry
+      advisory boards, Wadhwani Foundation and T-Hub
+    </li>
+    <li>
+      <strong>MS-CIIC:</strong> Direct industry collaborations, live projects and
+      micro-credential certifications
+    </li>
+    <li>
+      Centres of Excellence in AR/VR, Drones, IoT and Advanced Robotics
+    </li>
+    <li>
+      <strong>SSMSRC:</strong> Centralised research centre for publications, patents
+      and funded research with faculty guidance
+    </li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 7. EDI -->
+  <h4> Entrepreneurship, Design & Innovation (EDI)</h4>
+  <p>
+    Students run the full product lifecycle — problem definition, ideation,
+    prototyping and market launch — guided by industry experts and reviewed
+    by advisory boards.
+  </p>
+    </div>
+    <div class="col-md-6">
+  <!-- 8. FUTURE-PROOFING -->
+  <h4> Future-Proofing: Digital, Financial & Innovation Matrix</h4>
+  <ul>
+    <li>
+      <strong>Digital Intelligence:</strong> Python/Java coding, AI, ML,
+      cybersecurity, app & game development
+    </li>
+    <li>
+      <strong>Media:</strong> Video and sound editing, vlogging and podcasting
+    </li>
+    <li>
+      <strong>Makers & Engineering:</strong> Robotics, aero-modelling,
+      carpentry, plumbing, PCB and soldering
+    </li>
+    <li>
+      <strong>Finance & Crypto:</strong> Budgeting, decision-making and
+      cryptocurrency awareness
+    </li>
+    <li>
+      Sustainability capstone projects and a graded nutrition curriculum
+      developed with SIMS Hospital
+    </li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 9. ASSESSMENT -->
+  <h4> Precision Performance Tracking</h4>
+  <ul>
+    <li>
+      Unit-wise assessment structure with formative and summative evaluations
+    </li>
+    <li>
+      Semester exams aligned to Cambridge A Level expectations
+    </li>
+    <li>
+      Tracking of reasoning, application, analysis and research skills
+    </li>
+    <li>
+      ERP stack: ManageBac, Google Classroom and MCB
+    </li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 10. FACULTY -->
+  <h4> The Academic Guardians: World-Class Faculty</h4>
+  <ul>
+    <li>Expert Cambridge-trained subject specialists</li>
+    <li>45 days (370 hours) of annual professional development</li>
+    <li>Daily collaborative planning and assessment alignment</li>
+  </ul>
+
+    </div>
+    <div class="col-md-6">
+  <!-- 11. WELLBEING -->
+  <h4> Hyper-Personalisation & Holistic Wellbeing</h4>
+  <ul>
+    <li>1:3 mentoring through the KYC model</li>
+    <li>Assessment-based enrichment hours for Math and Science</li>
+    <li>Dedicated wellness team and full-fledged infirmary</li>
+    <li>Relaxation and emotional regulation spaces on campus</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 12. GLOBAL & PARENT -->
+  <h4> Global Citizenship & Parent Partnership</h4>
+  <ul>
+    <li>TNSMUN, TEDxYouth @ TNS, NESTival and IMICE</li>
+    <li>Curriculum orientations, advocacy hours and learner expeditions</li>
+    <li>Mid-term academic reviews and term-end three-way conferences</li>
+  </ul>
+    </div>
+    <div class="col-md-6">
+  <!-- 13. INFRASTRUCTURE & OPERATIONS -->
+  <h4> Infrastructure, Safety & Operations</h4>
+  <ul>
+    <li>Innovation studios, collaborative pods and independent study zones</li>
+    <li>Green learning spaces and live terrariums</li>
+    <li>Full CCTV surveillance, barcode access and Medway Hospital tie-up</li>
+    <li><strong>Timings:</strong> 8:20 am – 2:45 pm</li>
+    <li>Saturday academic and project support as required</li>
+  </ul>
+    </div>
+
+  </div>
+
+  <p class="fw-bold mt-3">
+    We are not just preparing students for exams — we are preparing them for
+    university, leadership and life’s biggest stages.
+  </p>
+
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+  </section>
+
+  <!-- ARCHITECTING FUTURE LEADERSHIP -->
+<section id="pathways" class="section-pad">
+  <div class="container">
+
+    <h2 class="h1 text-center fw-bold mb-4">
+      Architecting Future <span style="color: #002775;">Leadership</span> 
+    </h2>
+
+    <p class="text-center mx-auto mb-5" style="max-width: 900px;">
+      At The NEST, leadership is not an outcome we hope for—it is a capability we
+      systematically design through advanced curriculum architecture,
+      personalised mentoring, innovation-driven learning, and teaching excellence.
+    </p>
+
+   <div class="row g-4 justify-content-center">
+
+      <!-- CARD 1 -->
+      <div class="col-10">
+        <div class="insight-card">
+
+          <div class="card-body">
+            <!-- <small class="text-uppercase fw-semibold text-muted">International</small> -->
+            <h5 style="color: #002775;" class="mt-2 h3">Specialised & Superior Curriculum (Future-Ready)</h5>
+            <p>
+             <strong>Beyond Compliance:</strong> At The NEST, we do not merely complete syllabi. Learning is designed
+              as deep-dive, structured engagement that builds understanding, application, and long-term retention.
+            </p>
+
+            <h5 class="mt-4">Digital Intelligence & Robotics</h5>
+            <ul>
+              <li>Graded exposure to technology starting from Grade 1</li>
+              <li>Curriculum includes AI, Machine Learning, Cybersecurity, App Development, and Coding</li>
+              <li>Dedicated Robotics and Aero-Modelling (Drone) laboratories</li>
+              <li>Capstone projects where students work in focused groups of three on real-world tech solutions</li>
+            </ul>
+
+            <h5 class="mt-4">Financial Literacy</h5>
+            <ul>
+              <li>Early development of responsible money habits: budgeting, saving, needs vs wants</li>
+              <li>Exposure to future finance concepts including Cryptocurrency and Bitcoin</li>
+            </ul>
+
+            <h5 class="mt-4">Entrepreneurship (EDI)</h5>
+            <ul>
+              <li>Experience the complete product lifecycle: Ideation → Prototyping → Market Launch</li>
+              <li>Designed to nurture job creators, not just job seekers</li>
+            </ul>
+
+            <h5 class="mt-4">Sustainability</h5>
+            <ul>
+              <li>Grade-wise sustainability themes including Organic Farming, Rainwater Harvesting, and Recycling</li>
+              <li>Culminates in a year-end Sustainability Capstone Project</li>
+            </ul>
+
+            <h5 class="mt-4">Holistic Core</h5>
+            <ul>
+              <li>Nutrition curriculum developed with SIMS Hospital and delivered via Physical Education</li>
+              <li>Equal emphasis on Visual Arts, Performing Arts, Yoga, Dance, Music, and Physical Education</li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+  <!-- ECOSYSTEM, SKILLS & REAL-WORLD EXPOSURE -->
+<section id="ecosystem" class="section-pad" style="background-color: #fff4f4;">
+  <div class="container">
+
+    <h2 class="h1 text-center fw-bold mb-4">
+      Ecosystem, Skills & <span style="color: #002775;">Real-World Exposure</span>
+    </h2>
+
+    <p class="text-center mx-auto mb-5" style="max-width: 900px;">
+      At The NEST, academic programmes do not function in isolation. They are
+      supported by a <strong class="text-danger h5">connected ecosystem of skills, exposure, and
+      real-world learning</strong> that runs across every grade level. This ecosystem
+      ensures that learning progresses from curiosity to capability, clarity, and
+      confidence — preparing learners not just for examinations, but for life
+      beyond school.
+    </p>
+
+    <div class="row g-4">
+              <h2 class="h1 fw-bold mb-3 text-center">
+           <span style="color:#002775;">A Complete Academic, Innovation & Industry Ecosystem</span>
+        </h2>
+      <div class="col-12">
+                <ul class="mt-4">
+          <li>
+            <strong>Access to 100+ Advanced Labs:</strong>
+            Students benefit from cutting-edge Innovation, Science, Engineering, and
+            Technology laboratories across the campus.
+          </li>
+
+          <li>
+            <strong>TNS Incubation Center (MS-IIC):</strong>
+            <ul>
+              <li>A live 100-seater Incubation Center staffed with active student startups.</li>
+              <li>
+                Mentoring from a <strong>Technical Industry Advisory Board</strong> and the
+                <strong>Wadhwani Entrepreneurial Network</strong>.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>University Guidance (UGCC):</strong>
+            <ul>
+              <li>Hyper-personalized university roadmap beginning from <strong>Grade 9</strong>.</li>
+              <li>
+                Structured guidance for <strong>SAT, IELTS, Olympiads, TEDx, MUN</strong>,
+                and long-term profile building.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <strong>Industry Linkages (MS-CIIC):</strong>
+            Direct engagement with industry partners for live projects, mentoring,
+            and structured internships.
+          </li>
+
+          <li>
+            <strong>Centers of Excellence:</strong>
+            Exclusive access to advanced facilities in <strong>AR/VR, IoT, Drones,
+            Robotics, and Manufacturing</strong>—resources rarely available to school students.
+          </li>
+
+          <li>
+            <strong>Research Center (SSMSRC):</strong>
+            A centralized research facility supporting <strong>Publications, IPR, Patents,
+            and Faculty-guided Research Projects</strong>.
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h5>Digital Intelligence & Technology</h5>
+        <p>
+          A graded digital curriculum introduces learners to responsible digital
+          citizenship, coding, AI/ML foundations, cybersecurity awareness, and
+          app and game development. Learning is project-driven and supported by
+          advanced technology labs.
+        </p>
+      </div>
+
+      <div class="col-md-6">
+        <h5>Makers, Engineering & Applied Learning</h5>
+        <p>
+          Through makerspaces, robotics labs, aero-modelling (drones), carpentry,
+          PCB design, soldering benches, and IoT labs, students develop design
+          thinking, technical confidence, and real-world problem-solving skills.
+        </p>
+      </div>
+
+      <div class="col-md-6">
+        <h5>Entrepreneurship & Innovation (EDI)</h5>
+        <p>
+          Entrepreneurship is embedded as a discipline. Students experience the
+          full lifecycle of innovation — ideation, prototyping, validation, and
+          market exposure — building leadership, ownership, and value-creation
+          skills.
+        </p>
+      </div>
+
+      <div class="col-md-6">
+        <h5>Research, Incubation & Industry Exposure</h5>
+        <p>
+          Research skills are developed across subjects and supported through
+          access to research centres, incubation facilities (MS-IIC), industry
+          mentoring, capstone projects, and real-world problem statements.
+        </p>
+      </div>
+
+      <div class="col-md-6">
+        <h5>Internships, Career Readiness & University Guidance</h5>
+        <p>
+          Mandatory internships, career-shadowing, psychometrics, and structured
+          guidance through MS-CDC ensure early clarity. University counselling
+          (UGCC) supports profile building, test preparation, and global
+          application strategy.
+        </p>
+      </div>
+
+      <div class="col-md-6">
+        <h5>Life Skills, Financial Literacy & Sustainability</h5>
+        <p>
+          Learners build essential life capabilities through financial literacy,
+          sustainability education, nutrition curriculum (hospital-linked),
+          leadership development, socio-emotional learning, and wellbeing support.
+        </p>
+      </div>
+
+    </div>
+
+    <p class="text-center mt-5 mx-auto" style="max-width: 900px;">
+      <strong class=" fw-bold h4" style="color: #002775;">
+        Together, this ecosystem ensures that education at The NEST is not confined
+        to classrooms or syllabi. It is a deliberately designed system that
+        transforms learning into skills, exposure, and real-world readiness at
+        every stage of a learner’s journey.
+      </strong>
+    </p>
+
+  </div>
+  <div class="container mx-auto text-center" >
+    <div class="row justify-content-center" >
+      <a target="_blank" href="https://thenest.school/about.html">
+        <button class="px-3 py-2 border-0 rounded-4 text-white fw-bold" style="background-color: #002775;">
+            know more about Us
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
+
+  <section class="py-4 overflow-hidden">
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <img src="./assets/img/ticker1.jpg" alt="">
+      <img src="./assets/img/aerobay-modified-1-768x827.webp" alt="">
+      <img src="./assets/img/Counselling.png" alt="">
+      <img src="./assets/img/eyp-llc.webp" alt="">
+      <img src="./assets/img/labs2.jpg" alt="">
+      <img src="./assets/img/lib reading.webp" alt="">
+
+      <img src="./assets/img/ticker1.jpg" alt="">
+      <img src="./assets/img/aerobay-modified-1-768x827.webp" alt="">
+      <img src="./assets/img/Counselling.png" alt="">
+      <img src="./assets/img/eyp-llc.webp" alt="">
+      <img src="./assets/img/labs2.jpg" alt="">
+      <img src="./assets/img/lib reading.webp" alt="">   </div>
+  </div>
+</section>
+
+<section id="ms-cdc" class="section-pad bg-light py-5">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="color: #002775;"> University Guidance & Career Counselling (UGCC)</h2>
+
+    </div>
+
+    <!-- Main Card -->
+    <div class="card shadow-lg border-0 p-4">
+      <div class="card-body">
+
+        <!-- Intro -->
+        <p class="mb-5 text-center">
+          The <strong> (MS-CDC)</strong>
+          serves as the critical bridge between school and university, offering
+          structured, hyper-personalized guidance for students from
+          <strong>Grade 9 to Grade 12</strong>.
+        </p>
+
+        <!-- Sub Cards Grid -->
+        <div class="row g-4">
+
+          <!-- Differentiator -->
+          <div class="col-md-6 col-lg-4" >
+            <div class="card h-100 text-center shadow-sm border-0" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <h5 class="fw-semibold">UGCC – Major Differentiator</h5>
+                <p class="small">
+                  A detailed, phased-out university guidance roadmap that helps
+                  students plan ahead, engage meaningfully, and build compelling
+                  academic and extracurricular profiles.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ICP -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 text-center shadow-sm border-0" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-diagram-3-fill"></i>
+                </div>
+                <h5 class="fw-semibold">Individualised Career Portfolio (ICP)</h5>
+                <p class="small">
+                  A hyper-personalized roadmap from Grade 9 onwards supporting
+                  subject choices, activity planning, and long-term university goals.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Psychometric -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 text-center shadow-sm border-0" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-clipboard-data-fill"></i>
+                </div>
+                <h5 class="fw-semibold">Psychometric & Career Mapping</h5>
+                <p class="small">
+                  Regular psychometric assessments combined with SOAR analysis,
+                  goal setting, and time management to evaluate career options early.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Exams -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 text-center shadow-sm border-0" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-journal-text"></i>
+                </div>
+                <h5 class="fw-semibold">Competitive Exam Guidance</h5>
+                <p class="small">
+                  Structured preparation guidance for Olympiads, PSAT, SAT,
+                  IELTS, and TOEFL aligned with academic planning.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 text-center shadow-sm border-0" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-award-fill"></i>
+                </div>
+                <h5 class="fw-semibold">Profile Building & Achievements</h5>
+                <p class="small">
+                  Mentoring for Ivy League and top global universities through
+                  research, internships, service learning, TEDxYouth, and MUN.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Expert Talks -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 text-center shadow-sm border-0" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-mic-fill"></i>
+                </div>
+                <h5 class="fw-semibold">Expert Talks & Deep Dives</h5>
+                <p class="small">
+                  At least two expert sessions every month exposing students to
+                  career pathways, subject combinations, and university expectations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- University Fair -->
+          <div class="col-md-6 col-lg-4 mx-auto">
+            <div class="card h-100 text-center shadow-sm border-0" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-globe2"></i>
+                </div>
+                <h5 class="fw-semibold">Global Exposure & University Fair</h5>
+                <p class="small">
+                  An annual university fair bringing national and international
+                  universities to campus for admissions clarity and scholarships.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="incubation" class="section-pad bg-light py-5">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold h1" style="color: #002775;">Incubation & Innovation Ecosystem</h2>
+    </div>
+
+    <!-- Main Card -->
+    <div class="card shadow-lg border-0 p-4">
+      <div class="card-body">
+
+        <p class="text-center mb-5">
+          A university-powered incubation ecosystem that takes students
+          from <strong>ideas to impact</strong> through structured innovation,
+          elite mentoring, and real start-up exposure.
+        </p>
+
+        <div class="row g-4 justify-content-center">
+
+          <!-- EDI -->
+          <div class="col-md-6 col-lg-4" >
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-lightbulb-fill"></i>
+                </div>
+                <h5>Entrepreneurship Development & Innovation (EDI)</h5>
+                <p class="small">
+                  From Grades 5+, students progress through ideation,
+                  prototyping, testing, and market readiness—leading
+                  directly into the Incubation Centre.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Incubation Center -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-building-fill-gear"></i>
+                </div>
+                <h5>100-Seater Live Incubation Centre</h5>
+                <p class="small">
+                  A fully functional incubation centre staffed by
+                  real student startups within a university ecosystem.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mentoring -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <h5>Elite Mentoring Network</h5>
+                <p class="small">
+                  Mentoring from a Technical Industry Advisory Board,
+                  Wadhwani Foundation, Wadhwani Network, and T-Hub.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Selection -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-check-circle-fill"></i>
+                </div>
+                <h5>Selection-Only Incubation</h5>
+                <p class="small">
+                  High-potential projects are hand-picked through a
+                  stringent selection process to ensure excellence
+                  and real-world impact.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ecosystem -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-diagram-3-fill"></i>
+                </div>
+                <h5>Unrivalled Ecosystem Access</h5>
+                <p class="small">
+                  Exclusive access to innovation labs, incubation centres,
+                  and industry-linked hubs within a higher-education ecosystem.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="centres-of-excellence" class="section-pad bg-light py-5">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold h1" style="color: #002775;">Centres of Excellence</h2>
+      <p class="text-muted">
+        An Unrivalled Higher-Education Ecosystem for Future Readiness
+      </p>
+    </div>
+
+    <!-- Main Card -->
+    <div class="card shadow-lg border-0 p-4">
+      <div class="card-body">
+
+        <!-- Intro -->
+        <p class="text-center mb-5">
+          Our Centres of Excellence provide students with <strong>exclusive access to
+          university-level infrastructure, innovation hubs, incubation centres, and
+          industry-linked platforms</strong>—resources rarely available to high school
+          learners. This ecosystem strengthens academic depth, real-world exposure,
+          and career clarity.
+        </p>
+
+        <!-- Sub Cards -->
+        <div class="row g-4">
+
+          <!-- Advanced Labs -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-cpu-fill"></i>
+                </div>
+                <h5 class="fw-semibold">Advanced Technology Labs</h5>
+                <p class="small">
+                  Cutting-edge laboratories for <strong>AR/VR, Drones, IoT, and Advanced Robotics</strong>.
+                  AS & A Level students use these labs to build specialized knowledge
+                  and develop advanced academic and project work.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- MS-IIC -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-building-fill-gear"></i>
+                </div>
+                <h5 class="fw-semibold">MS-IIC – Innovation & Incubation</h5>
+                <p class="small">
+                  A <strong>100-seater live Incubation Centre</strong> staffed by real student
+                  startups. Partnered with the <strong>Wadhwani Foundation</strong> and
+                  <strong>T-Hub</strong>, with only high-potential projects hand-picked
+                  through a stringent selection process.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- MS-CIIC -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-briefcase-fill"></i>
+                </div>
+                <h5 class="fw-semibold">MS-CIIC – Industry Collaboration</h5>
+                <p class="small">
+                  The <strong>Centre for Industry–Institute Collaboration</strong>
+                  provides direct industry linkages through <strong>industrial visits,
+                  live projects, and corporate exposure</strong>, bridging classroom
+                  learning with real-world application.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- MS-CDC -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-compass-fill"></i>
+                </div>
+                <h5 class="fw-semibold">MS-CDC – University Guidance</h5>
+                <p class="small">
+                  The <strong>Career Development Centre (UGCC)</strong> conducts
+                  psychometric testing, provides hyper-personalized university
+                  roadmaps from <strong>Grade 9 onwards</strong>, and guides students
+                  for <strong>Olympiads, PSAT, SAT, IELTS, TOEFL, MUN, and TEDx Youth</strong>.
+                  Monthly orientation sessions introduce evolving fields and ensure
+                  a confident transition to IGCSE.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="advanced-labs" class="section-pad bg-light py-5">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold h1" style="color: #002775;">Advanced Labs & Experiential Learning</h2>
+      <p class="text-muted">
+        Hands-On, University-Grade Infrastructure for Future-Ready Learners
+      </p>
+    </div>
+
+    <!-- Main Card -->
+    <div class="card shadow-lg border-0 p-4" >
+      <div class="card-body">
+
+        <p class="text-center mb-5">
+          Unlike standard middle schools, our labs are designed for
+          <strong>active experimentation, innovation, and discovery</strong>.
+          Students gain access to <strong>100+ advanced Innovation, Science,
+          and Engineering laboratories</strong> within a higher-education ecosystem
+          that strengthens academic depth and career clarity.
+        </p>
+
+        <div class="row g-4">
+
+          <!-- Core Science Labs -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-flask-fill"></i>
+                </div>
+                <h5 class="fw-semibold">State-of-the-Art Science Labs</h5>
+                <p class="small">
+                  Dedicated <strong>Physics, Chemistry, and Biology</strong> laboratories
+                  where students perform full-scale hands-on practicals—
+                  not demonstrations—building deep conceptual understanding.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Robotics & Aero -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;"> 
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-robot"></i>
+                </div>
+                <h5 class="fw-semibold">Robotics & Aero-Modelling Labs</h5>
+                <p class="small">
+                  Specialized labs for <strong>Robotics and Aero-Modelling (Drones)</strong>,
+                  enabling students to design, build, and test mechanical and
+                  aerial systems through hands-on learning.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Emerging Tech -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-vr"></i>
+                </div>
+                <h5 class="fw-semibold">Emerging Technology Labs</h5>
+                <p class="small">
+                  Cutting-edge labs for <strong>AR/VR, IoT, Drones, and Advanced Robotics</strong>—
+                  spaces rarely accessible to high school learners. AS & A Level students
+                  use these labs for specialized projects and research.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ecosystem -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-diagram-3-fill"></i>
+                </div>
+                <h5 class="fw-semibold">Unmatched Ecosystem Access</h5>
+                <p class="small">
+                  Students benefit from a <strong>higher-education ecosystem</strong>
+                  that includes innovation labs, incubation centres, and
+                  industry-linked hubs—providing early clarity on future careers.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="hyper-personalization" class="section-pad" style="background-color: #fff4f4;;">
+  <div class="container">
+
+    <div class="section-header text-center mb-5">
+      <h2 class="h1 fw-bold"> <span style="color: #002775;">Hyper-Personalization</span> & Skilling</h2>
+      <p class="text-muted">The “Know Your Child” (KYC) Learning Model</p>
+    </div>
+
+    <!-- Intro -->
+    <div class="row mb-4">
+      <div class="col-lg-10 mx-auto">
+        <p>
+          At The NEST School, hyper-personalization is not a feature—it is our foundation.
+          Through our <strong>Know Your Child (KYC)</strong> model, every learner is seen,
+          understood, and guided through a carefully structured academic and skills journey.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6">
+            <!-- 1:3 Mentoring -->
+    <div class="row mb-4">
+      <div class="col-lg-10 mx-auto">
+        <h4>1:3 Mentoring Advantage</h4>
+        <p>
+          A unique <strong>1:3 personalized mentoring model</strong> ensures deep, meaningful
+          relationships between facilitators and learners. Weekly, curated mentoring conversations
+          help educators understand each child’s strengths, interests, learning pace, and aspirations—
+          ensuring <strong>no child is invisible</strong>.
+        </p>
+      </div>
+    </div>
+      </div>
+      <div class="col-md-6">
+    <!-- GenNEST Growth Journal -->
+    <div class="row mb-4">
+      <div class="col-lg-10 mx-auto">
+        <h4>GenNEST Growth Journal (Student-Owned)</h4>
+        <p>
+          The <strong>GenNEST Growth Journal</strong> is the crown jewel of student agency.
+          This personalized, student-owned journal documents:
+        </p>
+        <ul>
+          <li><strong class="h5 fw-bold text-danger">SOAR</strong> goals and self-assessment</li>
+          <li>Academic progress and skill development</li>
+          <li>Reflections and growth milestones</li>
+        </ul>
+        <p>
+          The journal drives <strong>Learner-Led Conferences</strong>, where students confidently
+          present their learning journey and progress to parents.
+        </p>
+      </div>
+    </div>
+      </div>
+      <div class="col-md-6">
+    <!-- Project Driven Learning -->
+    <div class="row mb-4">
+      <div class="col-lg-10 mx-auto">
+        <h4>Project-Driven & Collaborative Learning</h4>
+        <p>
+          Learning at NEST is powered by projects, not textbooks alone.
+          Courses such as <strong>EDI (Entrepreneurship, Design & Innovation), Digital Intelligence,
+          Global Perspectives, and Sustainability</strong> are entirely project-led.
+        </p>
+        <p>
+          Students work in <strong>small groups of three</strong>, choosing areas of interest and
+          applying learning through collaboration, creativity, and real-world problem-solving.
+        </p>
+      </div>
+    </div>
+      </div>
+      <div class="col-md-6">
+    <!-- Enrichment -->
+    <div class="row mb-4">
+      <div class="col-lg-10 mx-auto">
+        <h4>Enrichment & Enhancement (Personalized Support)</h4>
+        <p>
+          We do not believe in a “one-size-fits-all” approach. Dedicated
+          <strong>Enrichment & Enhancement hours every week</strong> provide:
+        </p>
+        <ul>
+          <li>Assessment-based additional academic support</li>
+          <li>Seamless differentiation in key subjects like Math and Science</li>
+          <li>Conceptual reinforcement at the pace and comfort of each learner</li>
+        </ul>
+      </div>
+    </div>
+      </div>
+      <div class="col-md-6">
+    <!-- Skilling Programs -->
+    <div class="row mb-4">
+      <div class="col-lg-10 mx-auto">
+        <h4>Skilling Programs for Life & Careers</h4>
+        <ul>
+          <li>
+            <strong>MakersLab:</strong> Hands-on training in Carpentry, Plumbing, and Electricals,
+            nurturing practical intelligence and problem-solving.
+          </li>
+          <li>
+            <strong>Soft Skills:</strong> Communication, Grooming, and Etiquette curriculum
+            developed by the Career Development Center.
+          </li>
+          <li>
+            <strong>Research Skills:</strong> Embedded across all subjects and monitored by the
+            Research Department to build inquiry and academic rigor.
+          </li>
+        </ul>
+      </div>
+    </div>
+      </div>
+      <div class="col-md-6">
+    <!-- Internships -->
+    <div class="row mb-4">
+      <div class="col-lg-10 mx-auto">
+        <h4>Internships & Career Shadowing</h4>
+        <p>
+          From <strong>Grade 4 onwards</strong>, students participate in
+          <strong>mandatory internships and career shadowing</strong>,
+          gaining early exposure to real-world professions and informed career awareness.
+        </p>
+      </div>
+    </div>
+      </div>
+      <div class="col-md-6">
+    <!-- Flagship Initiatives -->
+    <div class="row mb-4">
+      <div class="col-lg-10 mx-auto">
+        <h4>Flagship Learner Initiatives</h4>
+        <h5>Strategic Backward Integration: The PYP–Cambridge Bridge</h5>
+        <ul>
+          <li>
+            <strong>Engineered Continuity:</strong> Cambridge rigor is backward-integrated
+            from Grade 1, creating a seamless academic continuum.
+          </li>
+          <li>
+            <strong>Graduated Rigour Protocol:</strong> From Grade 4, assessment frequency
+            and complexity increase systematically, including conceptual pen-and-paper testing.
+          </li>
+          <li>
+            <strong>The Outcome:</strong> A confident, natural transition to the CAIE curriculum.
+          </li>
+        </ul>
+      </div>
+    </div>
+      </div>
+      <div class="col-md-6">
+    <!-- Beyond Classroom -->
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h4>Beyond the Classroom</h4>
+        <ul>
+          <li>Clubs & Competitions to identify and nurture passions and talents</li>
+          <li>Deep Dives – immersive, real-world learning experiences</li>
+          <li>Leadership, service, and exploration opportunities</li>
+        </ul>
+      </div>
+    </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+                  <div class="col-10">
+        <div class="insight-card">
+
+          <div class="card-body">
+            <h5 style="color: #002775;" class="h3 text-center">Teaching Excellence & Global Mindset</h5>
+            <h5>Incentivising Innovation</h5>
+              <ul>
+                <li>Clubs and competitions across STEM, Literature, and Arts</li>
+                <li>International Mindedness (IMICE): semester-long global culture immersion</li>
+              </ul>
+
+              <h5 class="mt-4">Targeting Teaching Excellence</h5>
+              <ul>
+                <li>NEST-PD: 45 days of annual Professional Development</li>
+                <li>Peer Audit Model (PAM) ensuring classroom quality</li>
+                <li>ICubed – Innovate, Impact, Inspire initiatives</li>
+                <li>Academic Review Meetings (ARM) led monthly by management</li>
+              </ul>
+
+              <h5 class="mt-4">Community & Wellness</h5>
+              <ul>
+                <li>Parent Champion Program strengthening school–community partnership</li>
+                <li>Community Wellness Department with monthly de-stressing programs</li>
+                <li>After-School Program offering sports, martial arts, theatre, and creative learning</li>
+              </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</section>
+
+
+
+
+
+<!-- MENTORING, SAFETY, HEALTH & OPERATIONS -->
+<section id="mentoring-safety" class="section-pad" style="background-color: #fff4f4;">
+  <div class="container">
+
+    <h2 class="h1 text-center fw-bold mb-4">
+      A Secure, Well-Governed and  <span style="color: #002775;"> Child-Focused  Environment</span>
+    </h2>
+
+
+
+    <div class="row g-4 my-5">
+
+
+      <!-- ================= BLOCK 2 ================= -->
+      <div class="col-md-6">
+  <div class="feature-card h-100">
+    <h5>Campus Safety, Health & Wellbeing</h5>
+
+    <p>
+      The school operates from a <strong>state-of-the-art 1.5 lakh sq. ft. campus</strong>,
+      purpose-built for elite learning and designed with uncompromised safety,
+      health, and student wellbeing at its core.
+    </p>
+
+    <p class="fw-semibold mt-2">
+      <span class="text-danger">Uncompromised Safety & Security</span> is not an add-on —
+      it is foundational to the learning environment.
+    </p>
+
+    <ul>
+      <li>
+        <strong>Real-time CCTV surveillance</strong> covering the entire campus,
+        monitored continuously
+      </li>
+      <li>
+        <strong>Two-level access control system</strong> with barcode-based monitoring
+        for student entry and exit
+      </li>
+      <li>
+        Dedicated, trained security personnel supervising campus activity
+      </li>
+      <li>
+        Clearly defined entry, exit, and transition movement protocols
+      </li>
+      <li>
+        Regular safety audits and proactive risk assessments
+      </li>
+      <li>
+        <strong>On-site qualified nurse</strong> available during school hours
+      </li>
+      <li>
+        Hospital tie-ups with nearby medical facilities for emergency care
+      </li>
+      <li>
+        Established emergency response and evacuation procedures
+      </li>
+      <li>
+        Routine health checks and wellbeing monitoring where required
+      </li>
+    </ul>
+
+    <p>
+      Student safety, health, and emotional security are treated as
+      <strong>non-negotiable priorities</strong> at every level of campus operations.
+    </p>
+  </div>
+</div>
+
+<!-- ================= BLOCK 3 ================= -->
+<div class="col-md-6">
+  <div class="feature-card h-100">
+    <h5>Operations You Can Trust</h5>
+
+    <p>
+      Day-to-day school operations are governed by clear systems,
+      disciplined routines, and professional oversight, ensuring a calm,
+      predictable, and well-managed learning environment.
+    </p>
+
+    <ul>
+      <li>
+        Clean, hygienic, and well-maintained campus throughout the day
+      </li>
+      <li>
+        Dedicated and trained housekeeping staff maintaining high sanitation standards
+      </li>
+      <li>
+        Clearly defined daily routines, schedules, and movement protocols
+      </li>
+      <li>
+        <strong>Strong adult-to-student supervision ratios</strong> inside and outside classrooms
+      </li>
+      <li>
+        Structured arrival, dispersal, and transition management
+      </li>
+      <li>
+        Clearly defined operational roles and accountability across staff
+      </li>
+      <li>
+        Consistent enforcement of safety policies, procedures, and discipline norms
+      </li>
+      <li>
+        Operational discipline that directly supports focus, learning, and wellbeing
+      </li>
+    </ul>
+
+    <p>
+      These systems ensure that parents can trust the school not just
+      academically, but <strong>operationally, administratively, and ethically</strong>.
+    </p>
+  </div>
+</div>
+
+
+    </div>
+
+    <p class="text-center mt-5 mx-auto" style="max-width: 960px;">
+      <strong class="text-danger h4">
+        Together, mentoring, safety, health, and operational excellence form the
+        backbone of The NEST’s learning environment — ensuring that every child
+        is known, supported, protected, and able to thrive with confidence.
+      </strong>
+    </p>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- CAMPUS & FACILITIES -->
+<section id="campus" class="section-pad bg-light">
+  <div class="container">
+    <h2 class="text-center h1 fw-bold" data-aos="fade-up ">Learning Environments <span style="color: #002775;">That Power Real-World Excellence</span></h2>
+
+    <!-- Facility Buttons -->
+         <div class="facility-tabs mt-4 text-center" data-aos="fade-up">
+        <button class="facility-btn active" data-target="facility-campus">Campus</button>
+        <button class="facility-btn" data-target="facility-science">Science Labs</button>
+        <!-- <button class="facility-btn" data-target="facility-tech">Technology Labs</button> -->
+        <button class="facility-btn" data-target="facility-makers">Makerspace & Workshops</button>
+        <button class="facility-btn" data-target="facility-incubation">Incubation & Research</button>
+        <button class="facility-btn" data-target="facility-sports">Sports</button>
+</div>
+
+    <!-- Facility Content -->
+    <div class="facility-content mt-5">
+
+      <!-- CAMPUS -->
+      <div class="facility-panel active" id="facility-campus">
+        <p class="facility-desc">
+          A sprawling <strong>15-acre green campus</strong> designed for learning, sport and community,
+          featuring an amphitheatre, aerobay, library,  cricket & football grounds, archery, pickleball courts,
+          library spaces and quiet study coves.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-4"><img style="height: 350px;" src="./assets/img/ampi-modified-1-768x827 (1).webp" class="img-fluid rounded"></div>
+          <div class="col-md-4"><img style="height: 350px;" src="./assets/img/lib reading.webp" class="img-fluid rounded"></div>
+          <div class="col-md-4"><img style="height: 350px;" src="./assets/img/mound-01-modified-768x827.webp" class="img-fluid rounded"></div>
+        </div>
+      </div>
+
+      <!-- SCIENCE LABS -->
+      <div class="facility-panel" id="facility-science">
+        <p class="facility-desc">
+          Dedicated <strong>Physics, Chemistry and Biology laboratories</strong> built for inquiry-led
+          experimentation, hands-on practicals and safe scientific exploration.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-4"><img src="./assets/img/labs.png" class="img-fluid rounded"></div>
+          <div class="col-md-4"><img src="./assets/img/labs2.jpg" class="img-fluid rounded"></div>
+          <div class="col-md-4"><img  src="./assets/img/labs3.png" class="img-fluid rounded"></div>
+        </div>
+      </div>
+
+      <!-- TECHNOLOGY LABS -->
+      <!-- <div class="facility-panel" id="facility-tech">
+        <p class="facility-desc">
+          Advanced technology labs featuring <strong>AR/VR setups, IoT benches, robotics systems</strong>
+          and secure drone testing zones for applied digital learning.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-4"><img src="./assets/img/arvr.png" class="img-fluid rounded"></div>
+          <div class="col-md-4"><img src="./assets/img/arvr2.png" class="img-fluid rounded"></div>
+          <div class="col-md-4"><img src="./assets/img/ticker4.jpg" class="img-fluid rounded"></div>
+        </div>
+      </div> -->
+
+      <!-- MAKERSPACE -->
+      <div class="facility-panel" id="facility-makers">
+        <p class="facility-desc">
+          Fully equipped makerspaces enabling <strong>carpentry, PCB design, soldering,
+          3D printing</strong> and rapid prototyping across engineering disciplines.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-4"><img src="./assets/img/aerobay-modified-1-768x827.webp" class="img-fluid rounded"></div>
+          <div class="col-md-4"><img src="./assets/img/ticker5.jpg" class="img-fluid rounded"></div>
+          <div class="col-md-4"><img src="./assets/img/skills.png" class="img-fluid rounded"></div>
+        </div>
+      </div>
+
+      <!-- INCUBATION -->
+      <div class="facility-panel" id="facility-incubation">
+        <p class="facility-desc">
+          The <strong>MS-IIC Incubation & Research Centre</strong> supports student startups,
+          faculty-led research, industry collaborations and real-world innovation projects.
+        </p>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6"><img style="height: 400px;" src="./assets/img/caie.webp" class="img-fluid rounded"></div>
+          <div class="col-md-4"><img style="height: 400px;" src="./assets/img/pyp-llc.webp" class="img-fluid rounded"></div>
+        </div>
+      </div>
+            <!-- INCUBATION -->
+      <div class="facility-panel" id="facility-sports">
+        <!-- <p class="facility-desc">
+          The <strong>MS-IIC Incubation & Research Centre</strong> supports student startups,
+          faculty-led research, industry collaborations and real-world innovation projects.
+        </p> -->
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4"><img src="./assets/img/sport1.jpg" class="img-fluid rounded"></div>
+          <div class="col-md-4"><img src="./assets/img/sport2.jpg" class="img-fluid rounded"></div>
+          <div class="col-md-4"><img src="./assets/img/sport3.jpg" class="img-fluid rounded"></div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="container">
+      <div class="row justify-content-center my-3">
+        <a target="_blank" class="text-center" href="https://thenest.school/thenestschoolcampus.html"><button class="px-3 mx-auto py-2 border-0 text-white fw-bold bg-primary rounded-4">Know More</button></a>
+    </div>
+
+  </div>
+</section>
+<section id="after-school" class="section-pad bg-light py-5">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold h1" style="color: #002775;">After School Program</h2>
+      <p class="text-muted">
+        A Safe, Structured Extension for Holistic Growth
+      </p>
+    </div>
+
+    <!-- Main Card -->
+    <div class="card shadow-lg border-0 p-4">
+      <div class="card-body">
+
+        <!-- Intro -->
+        <p class="text-center mb-5">
+          Our After School Program offers a <strong>safe and structured extension
+          beyond school hours</strong>, enabling students to explore interests,
+          build skills, and grow holistically in a supervised environment.
+        </p>
+
+        <!-- Sub Cards -->
+        <div class="row g-4">
+
+          <!-- Sports -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-trophy-fill"></i>
+                </div>
+                <h5 class="fw-semibold">Sports & Fitness</h5>
+                <p class="small">
+                  Structured sports programs that promote physical fitness,
+                  teamwork, discipline, and healthy competition.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Martial Arts -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-shield-fill"></i>
+                </div>
+                <h5 class="fw-semibold">Martial Arts</h5>
+                <p class="small">
+                  Training in martial arts to build confidence, focus,
+                  self-discipline, and physical resilience.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Theatre -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-mic-fill"></i>
+                </div>
+                <h5 class="fw-semibold">Theatre & Performing Arts</h5>
+                <p class="small">
+                  Theatre-based activities that enhance creativity,
+                  communication skills, confidence, and self-expression.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Music -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center border-0 shadow-sm" style="background-color: #dff7f6;">
+              <div class="card-body">
+                <div class="icon-circle mx-auto mb-3">
+                  <i class="bi bi-music-note-beamed"></i>
+                </div>
+                <h5 class="fw-semibold">Music & Creative Exploration</h5>
+                <p class="small">
+                  Music programs that nurture creativity, emotional expression,
+                  and appreciation of the performing arts.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+        <section class="py-4 overflow-hidden">
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <img src="./assets/img/aftsch1.webp" alt="">
+      <img src="./assets/img/aftsch2.webp" alt="">
+      <img src="./assets/img/aftsch3.webp" alt="">
+      <img src="./assets/img/aftsch5.webp" alt="">
+      <img src="./assets/img/aftsch4.webp" alt="">
+      <img src="./assets/img/aftsch6.webp" alt="">
+      <img src="./assets/img/aftsch7.webp" alt="">
+      <img src="./assets/img/aftsch8.webp" alt="">
+      <img src="./assets/img/aftsch9.webp" alt="">
+  </div>
+</section>
+
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- ADMISSIONS -->
+  <!-- <section id="admissions" class="section-pad bg-light">
+    <div class="container">
+      <h2 data-aos="fade-up">Admissions</h2>
+      <p data-aos="fade-up" data-aos-delay="60">Admissions information, application process, selection criteria and intake dates are published here. (Replace this paragraph with exact fee structure & intake dates as required.)</p>
+
+      <div class="row mt-3">
+        <div class="col-md-6" data-aos="fade-up">
+          <h5>How to Apply</h5>
+          <ol>
+            <li>Complete the online application form</li>
+            <li>Submit documents & prospectus fee</li>
+            <li>Schedule assessment / interaction</li>
+            <li>Receive decision & complete enrollment</li>
+          </ol>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="80">
+          <h5>Documents Required</h5>
+          <ul>
+            <li>Birth certificate</li>
+            <li>Previous school records (if applicable)</li>
+            <li>Proof of residence & medical records</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-md-12 text-center" data-aos="zoom-in">
+          <a id="apply" href="#applicationForm" class="btn btn-primary btn-lg">Start Application</a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- FAQ -->
+<!-- FAQ SECTION -->
+<section id="faq" class="section-pad bg-light">
+  <div class="container">
+
+    <h2 class="h1 text-center fw-bold mb-4" data-aos="fade-up">
+      Frequently Asked Questions
+    </h2>
+
+    <p class="text-center mx-auto mb-5" style="max-width: 900px;" data-aos="fade-up" data-aos-delay="60">
+      Answers to the most common questions parents ask while considering The NEST School.
+    </p>
+
+    <div class="accordion" id="faqAcc">
+
+      <!-- FAQ 1 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            What curriculum does The NEST School follow?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+          <div class="accordion-body">
+            The NEST offers an integrated academic pathway with IB PYP for Early Years and Primary,
+            followed by Cambridge Lower Secondary, IGCSE, and AS/A Levels. Pre-university students
+            also receive specialised mentoring and pathway options aligned with global universities.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            What makes The NEST different from other international schools?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div class="accordion-body">
+            The NEST is built on a 75+ year educational legacy and operates as a complete learning ecosystem.
+            Beyond curriculum compliance, the school integrates mentoring, research, entrepreneurship,
+            digital intelligence, internships, and university preparation into one coherent system.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+            How does personalised mentoring work?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div class="accordion-body">
+            Every learner is supported through the Know Your Child (KYC) model with a 1:3 mentoring ratio.
+            Weekly mentoring conversations focus on academic progress, emotional wellbeing, and goal setting,
+            supported by GenNEST Growth Journals and parent alignment meetings.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+            What are the school timings?
+          </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div class="accordion-body">
+            General school timings are 8:20 am – 2:45 pm. Early Years timings are stage-specific:
+            Pre-KG (9:00–12:00), LKG (8:30–12:30), UKG (8:30–1:00). Saturday project sessions are scheduled
+            when required.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+            How early does career guidance begin?
+          </button>
+        </h2>
+        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div class="accordion-body">
+            Career awareness begins in Lower Secondary through projects and mentoring.
+            Structured internships, career shadowing, psychometrics, and counselling through
+            MS-CDC and UGCC become mandatory as students progress.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+            Are internships compulsory?
+          </button>
+        </h2>
+        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div class="accordion-body">
+            Yes. Mandatory 2–4 week internships and career-shadowing placements are integrated
+            into the curriculum, along with project reports and mentor-guided reflections.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 7 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+            What technology education does the school offer?
+          </button>
+        </h2>
+        <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div class="accordion-body">
+            Students follow a graded Digital Intelligence curriculum including coding,
+            AI/ML basics, cybersecurity, robotics, app and game development, and responsible
+            digital citizenship.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 8 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+            How is student progress assessed?
+          </button>
+        </h2>
+        <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div class="accordion-body">
+            Assessment is continuous and holistic through weekly logs, mid-semester reviews,
+            GenNEST Growth Journals, and learner-led conferences that document both academic
+            and personal growth.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 9 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+            How safe is the campus?
+          </button>
+        </h2>
+        <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div class="accordion-body">
+            The campus is fully secured with CCTV coverage, barcode-based entry and exit,
+            two-level access control, trained security personnel, and proactive safety audits.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 10 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10">
+            What health facilities are available on campus?
+          </button>
+        </h2>
+        <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div class="accordion-body">
+            The school has an on-site infirmary with a qualified nurse, hospital tie-ups
+            for emergencies, routine health checks, and clearly defined emergency protocols.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 11 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq11">
+            Are class sizes limited?
+          </button>
+        </h2>
+        <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div class="accordion-body">
+            Yes. spacious class sizes are maintained across programmes, with a maximum of
+            24 students and strong facilitator-to-student ratios to ensure personalised attention.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 12 -->
+      <div class="accordion-item" data-aos="fade-up">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq12">
+            How involved are parents in the learning journey?
+          </button>
+        </h2>
+        <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+          <div class="accordion-body">
+            Parents are active partners through curriculum orientations, learner-led conferences,
+            mentoring reviews, NEST Parent Hour sessions, and community events.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="container">
+      <div class="row justify-content-center my-3">
+        <a target="_blank" class="text-center" href="https://thenest.school/"><button class="px-3 mx-auto py-2 border-0 text-white fw-bold bg-primary rounded-4">More FAQ's</button></a>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+  <!-- PARTNERS & UNIVERSITIES -->
+  <!-- <section id="partners" class="section-pad">
+    <div class="container">
+      <h2 data-aos="fade-up">University & Industry Partnerships</h2>
+      <p data-aos="fade-up" data-aos-delay="60">Collaborations with local universities, research centres and industry partners for mentorship, labs access and internships.</p>
+      <div class="row mt-3 g-3" data-aos="fade-up">
+        <div class="col-6 col-md-3"><img src="./assets/img/industry1.png" alt="Partner" class="img-fluid"></div>
+        <div class="col-6 col-md-3"><img src="./assets/img/ticker6.jpg" alt="Partner" class="img-fluid"></div>
+        <div class="col-6 col-md-3"><img src="./assets/img/incubation.jpg" alt="Partner" class="img-fluid"></div>
+        <div class="col-6 col-md-3"><img src="./assets/img/internship.jpg" alt="Partner" class="img-fluid"></div>
+      </div>
+    </div>
+  </section> -->
+
+
+
+
+
+  <!-- CONTACT & LOCATION -->
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+
+      <div class="col-md-6" data-aos="fade-up">
+        <h2>The NEST School</h2>
+
+        <p class="mb-2">
+          363, Arcot Road (NSK Salai),<br>
+          Kodambakkam, Chennai,<br>
+          Tamil Nadu 600 024
+        </p>
+
+        <div class="mt-4">
+          <p class="mb-1"><strong>For Admission Enquiries:</strong></p>
+          <p class="fs-5 fw-semibold">994-010-6378</p>
+        </div>
+
+        <div class="mt-3">
+          <p class="mb-1"><strong>For Other Enquiries:</strong></p>
+          <p class="fs-5 fw-semibold">994-010-6358</p>
+        </div>
+      </div>
+
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="ratio ratio-16x9">
+          <iframe
+            src="https://www.google.com/maps?q=363,Arcot+Road,Kodambakkam,Chennai+600024&output=embed"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="container">
+        <div class="row justify-content-center my-3">
+        <a  class="text-center" href="#applicationForm"><button class="px-3 mx-auto py-2 border-0 text-white fw-bold bg-primary rounded-4">Schedule a Campus Tour</button></a>
+    </div>
+  </div>
+
+</section>
+
+
+  <!-- NEWS & BLOG -->
+  <!-- <section id="news" class="section-pad bg-light">
+    <div class="container">
+      <h2 data-aos="fade-up">News & Insights</h2>
+      <div class="row mt-3">
+        <div class="col-md-4" data-aos="fade-up"><article class="card p-3"><h6>Campus Launch</h6><p class="small text-muted">Latest campus news & launch updates.</p></article></div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="80"><article class="card p-3"><h6>Student Achievements</h6><p class="small text-muted">Highlights from competitions & events.</p></article></div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="160"><article class="card p-3"><h6>Research Updates</h6><p class="small text-muted">Faculty & student research showcases.</p></article></div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- CTA FLOAT -->
+  <div class="sticky-cta" data-aos="fade-up"><a class="btn btn-logo btn-lg" href="#applicationForm">Enquire / Apply</a></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img class="bg-white p-2 rounded-3" src="./assets/img/Cambridge logo.webp" height="110" width="160" alt="logo">
+          <p class="mt-2 small">© 2026 The NEST School. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="text-decoration-none small me-3" href="./">Home</a>
+          <a class="text-decoration-none small me-3" href="./contactus.html">Contact</a>
+          <a class="text-decoration-none small" href="/privacy-policy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS & dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    AOS.init({duration:700,once:true});
+  </script>
+<script>
+  const buttons = document.querySelectorAll('.facility-btn');
+  const panels = document.querySelectorAll('.facility-panel');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.target).classList.add('active');
+    });
+  });
+</script>
+<script>
+  const tabs = document.querySelectorAll(".tab-btn");
+  const panel = document.querySelectorAll(".program-panel");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      panel.forEach(p => p.classList.remove("active"));
+
+      tab.classList.add("active");
+      document.getElementById(tab.dataset.target).classList.add("active");
+    });
+  });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.querySelector("form.text-start");
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  // ---------- CONFIG ----------
+  const RECAPTCHA_SITE_KEY = "6LdDlRssAAAAAFonHfG9Oc9C5Ya0Q3_bT6kWJvdG";
+
+  // ---------- INSERT CAPTCHA CONTAINER ----------
+  const captchaWrap = document.createElement("div");
+  captchaWrap.id = "admission-captcha-wrap";
+  captchaWrap.style.margin = "15px 0";
+  captchaWrap.innerHTML = '<div id="admission-captcha"></div><div id="captcha-error" style="color:#c00;margin-top:6px;font-size:14px;"></div>';
+  submitBtn.parentNode.insertBefore(captchaWrap, submitBtn);
+
+  let captchaWidgetId = null;
+
+  // ---------- LOAD RECAPTCHA ----------
+  function loadRecaptcha() {
+    return new Promise((resolve, reject) => {
+      if (window.grecaptcha && window.grecaptcha.render) return resolve(window.grecaptcha);
+
+      window.__onRecaptchaLoaded = () => resolve(window.grecaptcha);
+
+      const s = document.createElement("script");
+      s.src = "https://www.google.com/recaptcha/api.js?onload=__onRecaptchaLoaded&render=explicit";
+      s.async = true;
+      s.defer = true;
+      s.onerror = () => reject("Failed to load Google reCAPTCHA.");
+      document.head.appendChild(s);
+    });
+  }
+
+  // ---------- RENDER CAPTCHA ----------
+  loadRecaptcha().then(grecaptcha => {
+    captchaWidgetId = grecaptcha.render("admission-captcha", {
+      sitekey: RECAPTCHA_SITE_KEY,
+      theme: "light"
+    });
+  }).catch(err => {
+    document.getElementById("captcha-error").textContent = "Captcha failed to load — please refresh page.";
+  });
+
+  // ---------- CAMPAIGN MAP & URL READER (no storage) ----------
+  const CAMPAIGN_MAP = {
+    "admissions_richard": "Admissions - Richard",
+    "admissions_asa": "Admissions - AS/A",
+    "admissions_caie": "Admissions - CAIE",
+    "admissions_ib": "Admissions - IB",
+    "admissions_nestival": "NESTival - nxt"
+  };
+
+function getUTMCampaignFromURL() {
+  try {
+    // 1) Try normal URLSearchParams first (covers ?utm_campaign=)
+    const params = new URLSearchParams(window.location.search);
+    const variantKeys = ["utm_campaign","utm_Campaign","UTM_CAMPAIGN","utmCampaign"];
+    for (const k of variantKeys) {
+      if (params.has(k)) return params.get(k);
+      // also try with a leading slash (covers your broken URL)
+      if (params.has('/' + k)) return params.get('/' + k);
+    }
+
+    // 2) If not found, try searching the whole href with regex (covers odd placements)
+    const href = window.location.href || '';
+    // look for utm_campaign=VALUE (allow optional leading slash and optional ? or & or #)
+    const m = href.match(/[?&#\/]utm_campaign=([^&#]*)/i) || href.match(/[?&#\/]\/?utm_campaign=([^&#]*)/i);
+    if (m && m[1]) return decodeURIComponent(m[1].replace(/\+/g, ' '));
+
+    // 3) fallback: try to find utm= or campaign= short forms
+    const m2 = href.match(/[?&#\/]utm=([^&#]*)/i) || href.match(/[?&#\/]campaign=([^&#]*)/i);
+    if (m2 && m2[1]) return decodeURIComponent(m2[1].replace(/\+/g, ' '));
+
+  } catch (err) {
+    console.warn('getUTMCampaignFromURL error', err);
+  }
+  return null;
+}
+
+
+  function mapFriendly(raw) {
+    if (!raw) return null;
+    const key = raw.trim().toLowerCase();
+    return CAMPAIGN_MAP[key] || raw;
+  }
+
+  // ---------- FORM SUBMIT ----------
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const captchaError = document.getElementById("captcha-error");
+
+    // ---- CHECK CAPTCHA ----
+    if (!window.grecaptcha) {
+      captchaError.textContent = "Captcha not loaded — please refresh.";
+      return;
+    }
+
+    const token = window.grecaptcha.getResponse(captchaWidgetId);
+    if (!token) {
+      captchaError.textContent = "Please complete the captcha.";
+      return;
+    }
+
+    // Clear error
+    captchaError.textContent = "";
+
+    // Disable button
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting...";
+
+    // Gather fields
+    const name  = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const grade = document.getElementById("grade").value;
+    const source = document.getElementById("source").value;
+
+    if (!name || !email || !phone || grade === "Select Your Option" || source === "Select Your Option") {
+      alert("⚠️ Please fill in all required fields.");
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit";
+      return;
+    }
+
+    // GET campaign values directly from URL (no localStorage/cookie)
+    const utmRaw = getUTMCampaignFromURL();
+    const campaignName = mapFriendly(utmRaw) || "";
+
+    const fd = new FormData();
+    fd.append("name", name);
+    fd.append("email", email);
+    fd.append("phone", phone);
+    fd.append("grade", grade);
+    fd.append("source", source);
+    fd.append("page_url", window.location.href);
+    fd.append("g-recaptcha-response", token); // included but NOT validated backend (your choice)
+
+    // <-- NEW: append raw utm and friendly campaign name -->
+    fd.append("utm_campaign_raw", utmRaw || "");
+    fd.append("campaign_name", campaignName);
+
+    try {
+      const res = await fetch("admission.php", {
+        method: "POST",
+        body: fd,
+        credentials: "same-origin"
+      });
+
+      const raw = await res.text();
+      let data = null;
+      try { data = raw ? JSON.parse(raw) : null; } catch {}
+
+      console.log("admission.php response:", raw);
+
+      if (data && data.success === true) {
+        alert("✅ " + (data.message || "Submitted successfully"));
+        form.reset();
+        window.grecaptcha.reset(captchaWidgetId); // reset captcha
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit";
+        return;
+      }
+
+      if (data && data.success === false) {
+        alert("⚠️ " + (data.message || "Submission failed."));
+        window.grecaptcha.reset(captchaWidgetId);
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit";
+        return;
+      }
+
+      if (res.ok && !data) {
+        alert("✅ Submission received");
+        form.reset();
+        window.grecaptcha.reset(captchaWidgetId);
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit";
+        window.location.href = "./thankyou";
+        return;
+      }
+
+      alert("⚠️ Submission error: " + (data?.message || raw));
+      window.grecaptcha.reset(captchaWidgetId);
+
+    } catch (err) {
+      console.error("Network error:", err);
+      alert("❌ Network error — please try again.");
+      window.grecaptcha.reset(captchaWidgetId);
+    }
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Submit";
+  });
+
+});
+</script>
+
+</body>
+</html>

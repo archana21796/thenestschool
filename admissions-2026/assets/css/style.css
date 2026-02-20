@@ -1,0 +1,1673 @@
+/* BASIC TYPOGRAPHY */
+body, html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "new-atten", sans-serif;
+    color: #000;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+body.modal-open {
+    padding: 0px !important;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    list-style: disc;
+}
+a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+}
+a:hover, a:focus {
+    outline: none;
+    text-decoration: none;
+}
+h2, h3, h4, h5, h6 {
+    font-family: "new-atten", sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+}
+h1 {
+    font-size: 60px;
+    font-weight: 800;
+}
+h2 {
+    font-size: 38px;
+}
+h3 {
+    font-size: 34px;
+    margin-bottom: 0px;
+    letter-spacing: -1.5px;
+}
+h4 {
+   font-size: 22px;
+}
+h5 {
+    font-size: 20px;
+}
+h6 {
+    font-size: 18px;
+}
+p {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+}
+img {
+    border: none;
+    max-width: 100%;
+}
+.container {
+    max-width: 90vw;
+    padding: 0px;
+}
+.padd-left-10 {
+    padding-left: 10px;
+}
+.padd-left-20 {
+    padding-left: 20px;
+}
+.padd-left-30 {
+    padding-left: 30px;
+}
+.padd-left-40 {
+    padding-left: 40px;
+}
+.padd-left-50 {
+    padding-left: 50px;
+}
+.padd-right-10 {
+    padding-right: 10px;
+}
+.padd-right-20 {
+    padding-right: 20px;
+}
+.padd-right-30 {
+    padding-right: 30px;
+}
+.padd-right-40 {
+    padding-right: 40px;
+}
+.padd-right-50 {
+    padding-right: 50px;
+}
+.padd-top-10 {
+    padding-top: 10px;
+}
+.padd-top-20 {
+    padding-top: 20px;
+}
+.padd-top-30 {
+    padding-top: 30px;
+}
+.padd-top-40 {
+    padding-top: 40px;
+}
+.padd-top-50 {
+    padding-top: 50px;
+}
+.padd-bottom-10 {
+    padding-bottom: 10px;
+}
+.padd-bottom-20 {
+    padding-bottom: 20px;
+}
+.padd-bottom-30 {
+    padding-bottom: 30px;
+}
+.padd-bottom-40 {
+    padding-bottom: 40px;
+}
+.padd-bottom-50 {
+    padding-bottom: 50px;
+}
+.mrg-btm-50 {
+    margin-bottom: 50px;
+}
+.mrg-btm-30 {
+    margin-bottom: 30px;
+}
+.mrg-btm-20 {
+    margin-bottom: 20px;
+}
+.mrg-btm-10 {
+    margin-bottom: 10px;
+}
+.no-padd {
+    padding: 0px;
+}
+.no-border {
+    border: none;
+}
+
+/* ----- HEADER -----  */
+nav.navbar {
+    justify-content: space-between;
+    background: #fff;
+    z-index: 999;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.nav-right {
+    text-align: right;
+}
+img.nav-rit-logos {
+    width: 60%;
+}
+.nac-left {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* ----- FOOTER -----  */
+footer {
+    background: #EBEBEB;
+    padding: 2rem 0;
+}
+.footer-wrap {
+    justify-content: space-between;
+    align-items: end;
+}
+.address-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0px 0px;
+}
+.phone-numbers {
+    text-align: right;
+}
+.wrap-logo-sm {
+    display: flex;
+    justify-content: space-between;
+    align-items: self-end;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #70707070;
+}
+.footer-wrap .col-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* ----- Banner -----  */
+section.iim-banner-sec {
+    position: relative;
+}
+.desktop-banner {
+    cursor: pointer;
+}
+.desktop-banner img {
+    width: 100%;
+}
+.bnr-copy-part {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+}
+span.orange {
+    color: #ff6c00;
+}
+.bnr-copy-part h1 {
+    color: #fff;
+}
+.bnr-copy-part p {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #fff;
+}
+.logo-group img {
+    margin: 10px 0px 40px;
+}
+.mobile-banner, .logo-group-mobile, .mobile-sticky-cta {
+    display: none;
+}
+.banner-cta {
+    position: relative;
+    background: #F6821F;
+    padding: 12px 80px 12px 21px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px 0px 30px;
+    display: inline-block;
+}
+.banner-cta:after {
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(45deg) translateY(-50%);
+    top: 50%;
+    right: 20px;
+}
+a.navbar-brand {
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #70707070;
+}
+
+.banner-cta:hover {
+    color: #000;
+}
+
+/* ----- Programme Highlights -----  */
+.prog-high-sec {
+    padding: 80px 0px 0px;
+}
+.hilit-boxes {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+.hilit-single-box {
+    background: #FFF7E8;
+    width: 50%;
+    border-radius: 30px;
+    padding: 30px;
+}
+.wrap-icon-title {
+    display: flex;
+    margin-bottom: 20px;
+}
+.wrap-icon-title img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+.ph-title h2 {
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+.hilit-single-box p {
+    font-size: 22px;
+    font-weight: 400;
+    width: 85%;
+}
+
+/* ----- Form Section -----  */
+.wrap-form-featr {
+    display: flex;
+    align-items: flex-start;
+}
+.features-wrap {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding-top: 20px;
+}
+.timeline {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    column-gap: 40px;
+}
+.feature h4 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #70707060;
+    position: relative;
+    margin-bottom: 20px;
+}
+.feature {
+    width: 80%;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+/*.feature:before {*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    width: 2px;*/
+/*    height: 100%;*/
+/*    top: 5px;*/
+/*    left: 6px;*/
+/*    background: #70707060;*/
+/*}*/
+.feature:last-child:before {
+    display: none;
+}
+.feature h4:before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 4px;
+    left: -30px;
+    background: linear-gradient(223deg, #4BD8FA, #F7DD90);
+    border-radius: 50px;
+}
+/* ----- Form -----  */
+.card{
+    width: 40%;
+    border-radius: 18px;
+    border: 1px solid #70707060;
+    padding: 28px 30px;
+    background: #fff;
+    margin-left: auto;
+ }
+ .card form{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+ }
+.form-row{
+    display:flex;
+    flex-direction:column;
+    gap:0px;
+}
+label{
+    font-size: 16px;
+    color: #6E6E6E;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select{
+    font-family: inherit;
+    font-size: 15px;
+    padding: 0px 4px 0px 4px;
+    border: none;
+    border-bottom: 1px solid #70707060;
+    outline: none;
+    color: var(--text);
+    background: transparent;
+}
+input::placeholder { 
+    color: #aaa; 
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #777 50%),
+                      linear-gradient(135deg, #777 50%, transparent 50%);
+    background-position: calc(100% - 12px) calc(1em + 2px), calc(100% - 7px) calc(1em + 2px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 36px;
+}
+.small{
+    font-size:13px;
+    color:#8a8a8a;
+    margin-bottom: 0px;
+}
+.checkbox-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:6px;
+    margin-bottom:8px;
+}
+.checkbox-row input[type="checkbox"]{
+    width:14px;
+    height:14px;
+    accent-color: #888;
+}
+.btn-wrap{
+    display:flex;
+    justify-content:center;
+    margin-top:12px;
+}
+.btn{
+    cursor:pointer;
+    border-radius:10px;
+    padding:12px 28px;
+    font-weight:600;
+    background: #fff;
+    border: 1px solid #bcbcbc;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+    font-size:16px;
+}
+.form-title{
+    font-family: Georgia, serif;
+    font-size: 18px;
+    margin-bottom:6px;
+}
+
+/* ----- Programme Information -----  */
+
+.prg-info-sec {
+    padding: 50px 0px 40px;
+}
+.pi-title {
+    text-align: center;
+}
+.pi-info-wrap {
+    display: flex;
+    padding-top: 30px;
+}
+.pi-info {
+    width: 25%;
+    padding: 0px 30px;
+    border-right: 2px solid #70707060;
+}
+.pi-info:last-child {
+    border-right: none;
+}
+.pi-info h5 {
+    background: #FFF7E8;
+    padding: 8px;
+    display: inline-block;
+}
+.pi-info p {
+    line-height: 24px;
+}
+
+/* ----- Date Section -----  */
+.prg-date-sec {
+    padding: 50px 0px 40px;
+}
+.prg-date-wrap {
+    display: flex;
+    justify-content: center;
+}
+.prg-date-step {
+    position: relative;
+    width: 25%;
+    margin: 0px 30px;
+    padding: 30px 30px 20px;
+    border: 1px solid #70707060;
+    border-radius: 15px;
+}
+.date-box {
+    max-width: 90%;
+    background-color: white;
+    width: max-content;
+    text-align: center;
+    padding: 10px 20px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.content-box {
+    padding-top: 30px;
+}
+
+/* ----- Meet the Faculty -----  */
+.faculty-section {
+    padding: 40px 20px 80px;
+}
+.faculty-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f0f0f0; 
+    border-radius: 5px;
+    position: relative; 
+}
+.faculty-heading {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.faculty-outer-wrap {
+    display: flex !important; /* Important for Slick */
+    gap: 40px;
+    align-items: stretch;
+}
+.faculty-profile-panel {
+    flex: 1;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    padding-right: 20px;
+}
+.faculty-photo-container {
+    flex-shrink: 0;
+    width: 30%;
+}
+.faculty-video-panel {
+    width: 50%;
+    flex: 1;
+    text-align: left;
+}
+.video-placeholder-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.faculty-indicators {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    display: flex;
+    gap: 8px;
+}
+.faculty-slider {
+    width: 50%;
+    padding-right: 40px;
+    border-right: 1px solid #70707060;
+}
+.owl-dots {
+    text-align: right;
+    margin-top: 0px;
+}
+.owl-dot span {
+    background: #000 !important;
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    display: block;
+}
+.owl-dot.active span {
+    background: #f7931e !important;
+    width: 15px;
+}
+
+
+/* ----- FAQ ----- */
+.faqs-section {
+    padding: 0px 20px 80px;
+    text-align: center;
+}
+.faqs-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.faqs-section .section-title {
+    margin-bottom: 50px;
+}
+.faq-accordion {
+    width: 100%;
+}
+.faq-item {
+    border-bottom: 1px solid #e0e0e0; 
+    text-align: left;
+}
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+.toggle-icon {
+    font-size: 1.5em;
+    font-weight: 300; 
+    color: #333;
+    transition: transform 0.3s;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+}
+.faq-item:first-child .faq-answer {
+    /* Initially open state for the first item shown in the design */
+    padding-bottom: 20px;
+}
+.faq-item:first-child .toggle-icon {
+    transform: rotate(45deg); 
+}
+.faq-answer p {
+    font-size: 1em;
+    color: #555;
+}
+button:focus {
+    outline: none;
+}
+
+/* ----- CTA Ribbon ----- */
+.cta-bar-sec {
+    background: #4BD8FA;
+    text-align: center;
+    padding: 50px 0px;
+}
+.wrap-ctas {
+    display: flex;
+    justify-content: center;
+}
+.connect-icon a {
+    display: flex;
+    flex-flow: column;
+}
+.connect-icon {
+    padding: 0px 50px;
+    border-right: 2px solid #70707060;
+}
+span.cta-text {
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 25px;
+}
+span.cta-text:hover {
+    color: #000;
+}
+.connect-icon:last-child {
+    border-right: none;
+}
+a.cta-item:hover {
+    color: #000;
+}
+
+
+/*==== Author Roghith ====*/
+/* ----- Alumini Speak ----- */
+section.alumni-sec {
+    padding-top: 10px;
+}
+.alumni-sec .section-title {
+  margin-bottom: 20px;
+}
+.alumni-sec .section-subtitle {
+    font-size: 22px;
+    font-weight: 400;
+    width: 85%;
+    color: #000000;
+    margin-bottom: 25px;
+}
+.alumni-sec .container{
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  align-items: stretch;
+}
+.alumni-wrapper{
+  width: 49.5%;
+  padding:50px;
+}
+.alumni-wrapper.right{
+  display: block;
+  position: relative;
+  padding-bottom: 30px;
+}
+button.connect-link.connect-btn {
+    position: absolute;
+    bottom: 60px;
+}
+.alumni-right-carousel{
+    z-index:1;
+    position:relative;
+}
+.alumni-sec  .alumni-right-carousel .owl-dots {
+    bottom: -30px;
+}
+.alumni-quote blockquote {
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+.owl-stage-outer,.owl-stage{
+  height:100%;
+}
+/* Left Carousel */
+.alumni-left-card {
+  background: #f5f3ef;
+  border-radius: 4px;
+  width: 75%;
+  overflow: hidden;
+}
+.owl-carousel .owl-item{
+  height:100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+.alumni-image {
+  position: relative;
+}
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.play-icon {
+  background: #d3d3d3;
+  color: #ffffff;
+  border-radius: 50%;
+  line-height: 35px;
+  font-size: 32px;
+  padding: 10px 13px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.play-icon:hover {
+  transform: scale(1.1);
+}
+.alumni-info {
+  margin-top: 20px;
+}
+.alumni-info h4 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  width: 85%;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.alumni-info p {
+  width: 50%;
+}
+/* Right Carousel */
+.alumni-right-card {
+  border-radius: 4px;
+  padding: 10px;
+}
+.alumni-right-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.alumni-profile {
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  gap: 20px;
+}
+.alumni-profile img {
+  width: 250px !important;
+  height: 250px;
+  object-fit: cover;
+}
+.alumni-profile h4 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+.alumni-profile .year {
+  color: #000000;
+  font-size: 28px;
+  font-weight: 700;
+}
+.alumni-profile .role {
+ 
+}
+.faculty-quote-text blockquote {
+  margin: 0px;
+  color: #000000;
+  line-height: 1.6;
+  position: relative;
+  margin-bottom: 40px;
+  max-height: 200px;
+  overflow: auto;
+  padding: 30px 20px 0px 0px;
+}
+blockquote {
+   position: relative;
+}
+blockquote::-webkit-scrollbar {
+  width: 8px;
+}
+blockquote::-webkit-scrollbar-track {
+  background: #C9C9C9;
+  border-radius: 8px;
+}
+blockquote::-webkit-scrollbar-thumb {
+  background: #fff;
+  border: 1px solid #c9c9c9;
+  border-radius: 4px;
+}
+blockquote:before {
+  position:absolute;
+  top: -30px;
+  content: '"';
+  font-style:italic;
+  font-weight:800;
+  font-size:50px;
+  line-height: 40px;
+  color: #000000;
+}
+.connect-btn {
+  font-weight: 700;
+  align-self: flex-start;
+  background: #fff;
+  color: #222;
+  border: 1px solid #FFFFFF;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.connect-btn i{
+  text-align:right;
+  font-size: 22px;
+  margin-left: 20px;
+}
+.connect-btn:hover i {
+  transform: scale(1.2);
+}
+.connect-btn:hover {
+  background: #f0f0f0;
+}
+.alumni-sec .owl-dots {
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    margin-top: 0px;
+}
+
+
+/* Social Media */
+.social_block {
+	display: flex;
+	justify-content: flex-end;
+}
+.social_icon img {
+    margin: 0px 5px;
+}
+
+
+p.acchiv {
+    font-size: 24px;
+    position: relative;
+}
+p.acchiv:before {
+    position: absolute;
+    content: "";
+    background: #F6821F;
+    height: 3px;
+    width: 80px;
+    left: 0;
+    top: -8px;
+}
+.feature p {
+    padding-left: 20px;
+    position: relative;
+}
+.feature p:before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 30px;
+    background: #000;
+    left: 5px;
+    top: 10px;
+}
+.faculty-quote-text blockquote:before {
+    top: 0px;
+}
+.pi-info-wrap a {
+    text-decoration: underline;
+    color: #f6821f;
+}
+section.features-sec {
+    background: #F2F2F2;
+    padding: 50px 0px 30px;
+}
+.phone-numbers br {
+    display: none;
+}
+
+/* roghithsam 17-12-2025*/
+/* gallery */
+.alumni-sec .owl-dots {
+    margin-bottom: -40px;
+}
+.mobile-testi-btm-adjmt {
+    position: relative;
+}
+#counter {
+    margin-bottom: -40px;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+}
+.event-image {
+    cursor: pointer;
+}
+#event-slider button.owl-prev, #event-slider button.owl-next {
+    color: #ff6e00 !important;
+    font-size: 25px !important;
+    -webkit-text-stroke: 2px #fffcf0;
+}
+.nest-event-slider .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 70px);
+  display: flex;
+  justify-content: space-between;
+}
+.nest-event-slider.logo-slider button.owl-next {
+    right: -80px;
+}
+#event-slider.owl-carousel {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+.nest-event-slider.logo-slider button.owl-next {
+    right: -80px;
+}
+.sl-overlay {
+    opacity: 0.9 !important;
+}
+.cta-in-prgtab {
+    text-align: center;
+}
+.cta-bar-sec {
+    background-image: url(../images/pen-outline.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+}
+
+
+/* Floating Images*/
+
+/* Desktop */
+.floating-image{
+    display:none;
+}
+
+/* mobile */
+.alumni-sec, .features-sec, .alumni-wrapper.right, .alumni-wrapper.left {
+    position: relative;
+}
+
+.floating-image.rainbow {
+    right:0px;
+    top:80px;
+}
+
+img.floating-image{
+    position:absolute;
+    z-index: 0;
+}
+img.floating-image.sketch-sun {
+     right: -10px;
+     top: 30px;
+}
+.alumni-profile {
+    padding-top: 15px;
+}
+
+img.floating-image.sketch-jupiter {
+     right: -10px;
+     top:50%;
+}
+
+img.floating-image.sketch-rocket {
+    bottom: -50px;
+    right: 0px;
+}
+
+img.floating-image.star-sun {
+    top: -105px;
+    left: 0px;
+}
+
+span.cta-icon img {
+    height: 105px;
+}
+img.float-img-in-desk {
+    position: absolute;
+    right: 0;
+    top: 60px;
+}
+section.grade-tab-sec {
+    position: sticky;
+    top: 0;
+    height: 90px;
+    z-index: 999;
+    background: #fff;
+}
+
+@media (max-width: 1024px) {
+  .alumni-wrapper {
+    flex-direction: column;
+  }
+  .alumni-left-carousel, .alumni-right-carousel {
+    width: 100%;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 992px) {
+    .navbar>.container {
+        flex-wrap: nowrap;
+    }
+    .nac-left {
+        width: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100vw;
+        padding: 30px;
+    }
+    .timeline {
+        width: 100%;
+        display: block;
+    }
+    section.features-sec {
+        padding: 30px 0px 10px;
+        margin-top: 30px;
+    }
+    section.features-sec .container {
+        padding-bottom: 0px;
+    }
+    .alumni-wrapper.right {
+        padding-bottom: 0px;
+        order: 0;
+    }
+    .alumni-sec .container {
+        display: flex;
+        padding: 0px;
+        gap: 0px;
+        flex-direction: column;
+    }
+    .alumni-wrapper.left {
+        border-bottom: 1px solid #C9C9C9;
+        order: 1;
+        background: #F2F2F2;
+        margin-top: 70px;
+    }
+    .alumni-wrapper {
+        width: 100%;
+        padding: 40px 30px 50px;
+    }
+    .alumni-left-carousel .owl-stage-outer, .alumni-left-carousel .owl-stage {
+        padding-bottom: 15px;
+    }
+    .alumni-profile img {
+        width: 350px !important;
+        height: 350px;
+        object-fit: cover;
+    }
+    img.float-img-in-desk {
+        display: none;
+    }
+    span.cta-icon {
+        display: none;
+    }
+    span.cta-text {
+        font-size: 22px;
+        text-decoration: underline;
+        padding-right: 20px;
+        position: relative;
+    }
+    span.cta-text:after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid #000;
+        border-right: 2px solid #000;
+        transform: rotate(45deg);
+        bottom: 10px;
+        right: 0;
+    }
+    .wrap-ctas {
+        flex-flow: column;
+        align-items: flex-start;
+    }
+    .connect-icon {
+        padding: 0px 0px;
+        border-right: none;
+    }
+
+    /* gallery */
+    .nest-event-slider .owl-nav {
+        display: none;
+    }
+    .alumni-sec .owl-dots, #counter {
+        margin-bottom: -20px !important;
+    }
+    /* tab */
+    .grades-dropdown {
+        font-size: 20px;
+        padding: 10px 20px 10px 10px;
+        border-radius: 10px;
+        background: #606060;
+        color: #fff;
+        outline: none;
+    }
+    .grades_filter_container {
+        position: relative;
+        padding: 25px 0px;
+        margin: 0px 30px;
+    }
+    .grades_filter {
+        background: #1C4791;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 15px 40px 15px 15px;
+        border-radius: 7px;
+        position: relative;
+        cursor: pointer;
+        letter-spacing: 0px;
+    }
+    .grades_filter_menu {
+        list-style: none;
+        padding: 20px 15px;
+        position: absolute;
+        background: #1C4791;
+        width: 100%;
+        z-index: 9;
+        color: #fff;
+        margin-top: -10px;
+        border-radius: 0px 0px 7px 7px;
+    }
+    .grades_filter_menu li {
+        list-style:none;
+        font-size: 18px;
+        margin-bottom: 5px;
+        padding: 8px 0px 10px;
+        border-bottom: 1px solid #fff;
+        cursor: pointer;
+    }
+    .grades_filter_menu li:last-child {
+        border-right: none;
+        border-bottom:none;
+        margin-bottom:0px;
+        padding-bottom:0px;
+    }
+    .grades_filter::after {
+        content: "";
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 4px;
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        margin-top: -3px;
+        transform: translateY(-50%) rotate(45deg);
+        transition: transform 0.3s ease;
+    }
+    .grades_filter.grades_filter_active {
+        border-radius: 7px 7px 0 0 !important;
+    }
+    .grades_filter.grades_filter_active::after {
+        transform: translateY(-50%) rotate(-135deg);
+        margin-top: 0px;
+    }
+    #event-slider.owl-carousel {
+        padding-top: 0px;
+    }
+    .cta-bar-sec {
+        background-position: 100% 0px;
+    }
+    .floating-image{
+        display:block !important;
+    }
+
+    .alumni-profile img {
+        width: 60px;
+        height: 60px;
+    }
+    .alumni-right-card {
+        padding: 20px;
+    }
+    blockquote {
+        font-size: 16px;
+    }
+    .connect-btn {
+        font-size: 0.85rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 700px) {
+    img.nav-rit-logos {
+        display: none;
+    }
+    .container.nav-container {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+
+     h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    .container {
+        max-width: 100vw;
+        padding: 30px;
+    }
+    .prog-high-sec {
+        padding: 20px 0px 0px;
+    }
+    .ph-title h2 {
+        font-size: 28px;
+        text-align: left;
+    }
+    .hilit-boxes {
+        display: block;
+        margin-bottom: 0px;
+    }
+    .hilit-single-box {
+        width: 100%;   
+        margin-bottom: 30px;
+    }
+    .hilit-single-box:last-child {
+        margin-bottom: 0px;
+    }
+    .hilit-single-box p {
+        font-size: 18px;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .wrap-form-featr {
+        flex-flow: column;
+    }
+    aside.card {
+        width: 100%;
+    }
+    .features-wrap {
+        width: 100%;
+        flex-flow: column;
+        padding-top: 0px;
+    }
+    .feature {
+        width: 90%;
+        padding-bottom: 20px;
+    }
+    .feature:last-child:before {
+        display: block;
+    }
+    .feature.no-line-mbil:last-child:before {
+        display: none;
+    }
+    .pi-info-wrap {
+        flex-flow: column;
+    }
+    .pi-title {
+        text-align: left;
+    }
+    .pi-info {
+        width: 100%;
+        border-right: none;
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+    .faculty-outer-wrap {
+        display: block !important;
+    }
+    .faculty-slider, .faculty-video-panel {
+        width: 100%;
+    }
+    .faculty-slider {
+        border-right: none;
+        border-bottom: 1px solid #70707060;
+        padding-right: 0px;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+    }
+    .faculty-quote-text blockquote {
+        padding: 30px 0px 0px 0px;
+    }
+    .faculty-section {
+        padding: 20px 0px 0px;
+        background: linear-gradient(to bottom, #f0f0f0 80%, #ffffff 20%, #ffffff 20%);
+    }
+    .faculty-wrapper {
+        padding: 0px;
+        background-color: transparent;
+    }
+    .faculty-profile-panel {
+        padding-right: 0px;
+        gap: 20px;
+    }
+    blockquote:before {
+        top: 0px;
+    }
+    p.faculty-title {
+        font-size: 16px;
+    }
+    .faculty-slider .owl-dots {
+        text-align: left;
+    }
+    .faqs-section .section-title {
+        margin-bottom: 30px;
+    }
+    .bnr-copy-part {
+        left: 30px;
+        top: 75%;
+    }
+    .mobile-banner {
+        display: block;
+        margin-top: -40px;
+    }
+    .mobile-banner img {
+        width: 100%;
+    }
+    .banner-cta {
+        display: none;
+    }
+    .desktop-banner {
+        display: none;
+    }
+    section.iim-banner-sec {
+        background: #F2EFE1;
+    }
+    .logo-group {
+        display: none;
+    }
+    .logo-group-mobile {
+        display: flex;
+        overflow: scroll;
+        background: #fff;
+        padding: 0px;
+    }
+    .logo-group-mobile img {
+        width: 100%;
+        padding: 10px 0px;
+    }
+    .bnr-copy-part p {
+        font-size: 20px;
+    }
+    .address-wrap {
+        display: inline-flex;
+        text-align: left;
+        flex-direction: column;
+        width: 100%;
+    }
+    footer {
+        padding: 0px;
+        margin-bottom: 50px;
+    }
+    .faqs-section {
+        padding: 0px 30px 50px;
+    }
+    .cta-bar-sec {
+        padding: 0px 0px 20px;
+    }
+    .phone-numbers {
+        display: flex;
+        justify-content: start;
+        text-align: left;
+    }
+    .prg-info-sec {
+        padding: 20px 0px 0px;
+    }
+    nav.navbar {
+        flex-wrap: nowrap;
+    }
+    /*.nav-right {*/
+    /*    margin-right: 20px;*/
+    /*}*/
+    
+     /* Alumni Mobile Res By Sam*/
+    
+    
+    .alumni-left-card {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .alumni-info p {
+        width: 100%;
+    }
+    .alumni-sec .alumni-right-carousel .owl-dots {
+        bottom: 50px;
+    }
+    button.connect-link.connect-btn {
+        bottom: 35px;
+    }
+    .alumni-right-card {
+        padding: 0px;
+    }
+    .alumni-right-card {
+        gap: 10px;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .alumni-profile img{
+      width: 100% !important;
+    }
+    .alumni-profile div{
+        width: 70%;
+    }
+    .alumni-profile img {
+        height:unset;
+    }
+    .alumni-profile h4,.alumni-profile .year{
+        font-size: 24px;
+    }
+    .alumni-profile .year {
+     margin-bottom:10px; 
+    }
+    blockquote {
+        margin-left:45px
+    }
+    blockquote:before {
+    left:-35px;
+    }
+    .alumni-profile {
+        padding-bottom: 0px;
+        flex-flow: column;
+        align-items: flex-start;
+    }
+    .owl-stage-outer, .owl-stage {
+        padding-bottom: 15px;
+    }
+    .connect-btn {
+      width:85%;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 0px;
+    }
+    .mobile-sticky-cta {
+        position: fixed;
+        background: #F6821F;
+        padding: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        border-top: 1px solid #70707060;
+        border-bottom: 1px solid #70707060;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 999;
+    }
+    /*.mobile-sticky-cta:after {*/
+    /*    position: absolute;*/
+    /*    content: "";*/
+    /*    width: 10px;*/
+    /*    height: 10px;*/
+    /*    border-top: 2px solid #000;*/
+    /*    border-right: 2px solid #000;*/
+    /*    transform: translateY(-50%) rotate(45deg);*/
+    /*    bottom: 10px;*/
+    /*    right: 12px;*/
+    /*    top: 50%;*/
+    /*}*/
+    
+    .faculty-slider h4 {
+        font-size: 18px;
+    }
+    .alumni-profile .role {
+        font-size: 20px;
+    }
+    .prg-date-wrap {
+        display: block;
+    }
+    .prg-date-step {
+        width: 100%;
+        margin: 0px 0px 40px 0px;
+    }
+    .prg-date-sec {
+        padding: 0px;
+    }
+    .prg-date-sec .container {
+        padding-top: 0px;
+    }
+    .social_block {
+        order: 3;
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 15px;
+        margin-top: 15px;
+        margin-bottom:0px;
+    } 
+    .prog-high-sec .container {
+        padding-bottom: 0px;
+    }
+    .alumni-quote blockquote {
+        margin: 20px 0px 0px 35px;
+    }
+    p.acchiv {
+        margin-bottom: 0px;
+        line-height: 32px;
+    }
+    .alumni-quote blockquote:before {
+        top: 7px;
+    }
+    .phone-numbers p:first-child {
+        padding-right: 20px;
+        border-right: 1px solid #70707070;
+    }
+    .phone-numbers p:nth-child(2) {
+        padding-left: 20px;
+    }
+    img.nav-rit-logos {
+        display: none;
+    }
+
+    .faculty-profile-panel {
+        display: block;
+    }
+    .faculty-photo-container {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .faculty-quote-text {
+        display: flex;
+        flex-flow: column;
+    }
+    .faculty-quote-text blockquote {
+        order: 2;
+        margin-bottom: 0px;
+    }
+    .faculty-slider .owl-stage-outer, .faculty-slider .owl-stage {
+        padding-bottom: 0px;
+    }
+    .faculty-quote-text blockquote:before {
+        left: 0px;
+    }
+    .phone-numbers br {
+        display: block;
+    }
+    .alumni-right-carousel .owl-stage-outer, .alumni-right-carousel .owl-stage {
+        padding-bottom: 0px;
+    }
+
+     .cta-bar-sec {
+        background-position: 125% 0px;
+    }
+}
+
+@media (max-width: 380px) {
+    .grades_filter_container {
+        margin: 10px;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-only{
+        display: none;
+    }
+    .grades_filter_container {
+        padding: 30px 0px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    ul.grades_filter_menu {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    ul.grades_filter_menu li{
+        list-style:none;
+        font-weight:500;
+        font-size: 20px;
+        position: relative;
+        padding-right:20px;
+        border-right: 1px solid #70707070;
+        cursor: pointer;
+    }
+    .grades_filter {
+        pointer-events: none;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .grades_filter_menu li:last-child {
+        border-right: none;
+        border-bottom:none;
+    }
+  
+    ul.grades_filter_menu li::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        width: calc(100% - 20px);
+        height: 2px;
+        background-color: #FF9D17;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+        transition: transform 0.3s ease;
+    }
+    ul.grades_filter_menu li.active::after {
+        transform: translateX(-98%) scaleX(1);
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .timeline {
+        width: 100%;
+        column-gap: 20px;
+    }
+    .cta-bar-sec {
+        background-position: bottom right;
+        background-size: 12%;
+    }
+}
+
+@media (min-width: 1500px) {
+    .prg-date-step {
+        width: 20%;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+    .alumni-left-carousel.owl-carousel .owl-item .event-image img {
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+    .timeline {
+        width: 90%;
+    }
+}

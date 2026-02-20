@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You – The Nest School</title>
+
+  <!-- Facebook Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '806859804266109');
+  fbq('track', 'SubmitApplication'); /* Best: track conversion on thank-you page */
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f3f8ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      color: #1d3557;
+    }
+
+    .box {
+      background: #ffffff;
+      padding: 40px 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      max-width: 450px;
+      width: 90%;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .tick {
+      width: 80px;
+      height: 80px;
+      background: #4caf50;
+      color: white;
+      font-size: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      animation: pop 0.4s ease-out;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <div class="tick">✓</div>
+
+    <h1>Thank You!</h1>
+
+    <p>Your enquiry was submitted successfully.<br>
+       Redirecting you to the home page...</p>
+  </div>
+
+  <script>
+    setTimeout(function() {
+      window.location.href = "/";  // Change to /home if needed
+    }, 3000);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Do nothing for the real 404 page itself
+RewriteRule ^404\.html$ - [L]
+
+# If it’s NOT a real file or folder, redirect to /404.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /404.html [R=302,L]
+</IfModule>
+
+# Optional: you can drop this or keep it
+ErrorDocument 404 /404.html

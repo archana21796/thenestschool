@@ -1,0 +1,21 @@
+# .cpanel.yml — Deploy from repo_public_html to live public_html
+---
+deployment:
+  tasks:
+    # 1️⃣ Set the destination folder (your live site)
+    - export DEST=/home1/theneo1n/public_html
+
+    # 2️⃣ Sync the cloned repo (from /repo_public_html) to live site safely
+    #    --delete ensures old files removed, but excludes important folders/logs
+    - /usr/bin/rsync -av --delete \
+        --exclude 'uploads/' \
+        --exclude 'public_html_old/' \
+        --exclude '*.log' \
+        ./ "$DEST"/
+
+    # 3️⃣ Normalize permissions for all files and folders
+    - /bin/find "$DEST" -type d -exec chmod 755 {} \;
+    - /bin/find "$DEST" -type f -exec chmod 644 {} \;
+
+    # 4️⃣ Done message for log clarity
+    - echo "✅ Deployment to $DEST completed successfully."

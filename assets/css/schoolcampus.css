@@ -1,0 +1,18 @@
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background-color: black;
+}
+.carousel-control-next, .carousel-control-prev {
+    width: 5%;
+}
+.contentstyle{
+    margin: auto;
+    max-width: 700px;
+}
+.stylebtnenquire{
+    border:1px solid #224b99;
+    color:#224b99;
+    background-color: white;
+}
+.setbordertop{
+    border-top: 5px solid #73dff8;
+}
