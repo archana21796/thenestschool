@@ -76,7 +76,34 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/standard.min.css" />
   <link rel="stylesheet" href="./assets/css/contact.css" />
- 
+ <style>
+  .hero-admission {
+  position: relative;
+  background: url('./assets/img/intermob.webp') center/contain no-repeat;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 760px) {
+   .hero-admission {
+    background-size: cover;
+   }
+}
+/* Desktop Image */
+@media (min-width: 992px) {
+  .hero-admission {
+    background: url('./assets/img/inter.webp') center/contain no-repeat;
+      height: 60vh;
+
+  }
+}
+
+ </style>
 </head>
 
 <body>
@@ -134,18 +161,11 @@
     </div>
 
   </header>
-  <div class="header-banner">
-  <picture>
-    <!-- Mobile -->
-    <source media="(max-width: 991px)" srcset="assets/img/ad26.jpeg">
+<!-- HERO -->
+<section class="hero-admission rounded-5 shadow-lg my-3 w-75 mx-auto">
 
-    <!-- Tablet -->
-    <!-- <source media="(max-width: 991px)" srcset="assets/img/banner-tablet.jpg"> -->
 
-    <!-- Desktop -->
-    <img src="assets/img/ad26desk.jpeg" alt="Admissions Open 2026-27" class="img-fluid w-100">
-  </picture>
-</div>
+</section>
 
 <section class="container">
 

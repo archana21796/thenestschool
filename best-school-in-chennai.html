@@ -38,6 +38,32 @@
     .listcheck li i {
     color: #ff7a00;
 }
+  .hero-admission {
+  position: relative;
+  background: url('./assets/img/bestschoolmob.webp') center/contain no-repeat;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 760px) {
+   .hero-admission {
+    background-size: cover;
+   }
+}
+/* Desktop Image */
+@media (min-width: 992px) {
+  .hero-admission {
+    background: url('./assets/img/bestschool.webp') center/contain no-repeat;
+      height: 60vh;
+
+  }
+}
+
 </style>
 </head>
 <body>
@@ -85,18 +111,11 @@
     </div>
 
   </header>
-  <div class="header-banner">
-  <picture>
-    <!-- Mobile -->
-    <source media="(max-width: 991px)" srcset="assets/img/ad26.jpeg">
+<!-- HERO -->
+<section class="hero-admission rounded-5 shadow-lg my-3 w-75 mx-auto">
 
-    <!-- Tablet -->
-    <!-- <source media="(max-width: 991px)" srcset="assets/img/banner-tablet.jpg"> -->
 
-    <!-- Desktop -->
-    <img src="assets/img/ad26desk.jpeg" alt="Admissions Open 2026-27" class="img-fluid w-100">
-  </picture>
-</div>
+</section>
 <section class="container">
 
 <h1 class="text-center fw-bold my-5" style="color:#ff7a00;">

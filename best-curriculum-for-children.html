@@ -34,6 +34,93 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/standard.min.css" />
+    <style>
+    .hero-admission {
+  position: relative;
+  background: url('./assets/img/bestmob.webp') center/contain no-repeat;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 760px) {
+   .hero-admission {
+    background-size: cover;
+   }
+}
+/* Desktop Image */
+@media (min-width: 992px) {
+  .hero-admission {
+    background: url('./assets/img/bestdesk.webp') center/contain no-repeat;
+      height: 60vh;
+
+  }
+  /* FAQ Section Background */
+.faq-section {
+    background: linear-gradient(135deg, #f8f9fa, #eef2f7);
+}
+
+/* Title Styling */
+.faq-title {
+    color: #023e8a;
+}
+
+/* Custom Accordion */
+.custom-accordion .accordion-item {
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: 0.4s ease;
+}
+
+/* Button Style */
+.custom-accordion .accordion-button {
+    background: white;
+    font-weight: 600;
+    color: #023e8a;
+    padding: 20px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.custom-accordion .accordion-button:hover {
+    background: rgba(2, 62, 138, 0.05);
+}
+
+/* Active state */
+.custom-accordion .accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #023e8a, #011d41);
+    color: white;
+    box-shadow: inset 0 -3px 0 #ff9f1c;
+}
+
+/* Remove default arrow */
+.custom-accordion .accordion-button::after {
+    filter: brightness(0) invert(1);
+}
+
+/* Body Styling */
+.custom-accordion .accordion-body {
+    background: white;
+    padding: 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Glow effect on hover */
+.custom-accordion .accordion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(2, 62, 138, 0.15);
+}
+}
+  </style>
 </head>
 <body>
       <header class="top-header">
@@ -80,18 +167,11 @@
     </div>
 
   </header>
-  <div class="header-banner">
-  <picture>
-    <!-- Mobile -->
-    <source media="(max-width: 991px)" srcset="assets/img/ad26.jpeg">
+<!-- HERO -->
+<section class="hero-admission rounded-5 shadow-lg my-3 w-75 mx-auto">
 
-    <!-- Tablet -->
-    <!-- <source media="(max-width: 991px)" srcset="assets/img/banner-tablet.jpg"> -->
 
-    <!-- Desktop -->
-    <img src="assets/img/ad26desk.jpeg" alt="Admissions Open 2026-27" class="img-fluid w-100">
-  </picture>
-</div>
+</section>
 <section class="container">
 
 <h1 class="text-center fw-bold my-5" style="color:#ff7a00;">
@@ -153,12 +233,12 @@ Read more:
 
 <h2 class="fw-bold mt-5">International Curriculum Pathway at The NEST School</h2>
 
-<ul class="fs-5">
-<li><a href="ib-eyp.html">IB Early Years Programme</a></li>
-<li><a href="ib-pyp.html">IB Primary Years Programme</a></li>
-<li><a href="cambridge-lower-secondary.html">Cambridge Lower Secondary</a></li>
-<li><a href="cambridge-igcse-9-10.html">Cambridge IGCSE</a></li>
-<li><a href="ib-dp-candidacy.html">IB Diploma Programme – Candidacy</a></li>
+<ul style="list-style-type: none;" class="fs-5">
+<li class="my-4"><a class="my-2 bg-warning rounded-4 p-2 fw-bold" href="ib-eyp.html">IB Early Years Programme</a></li>
+<li class="my-4"><a class="my-2 bg-warning rounded-4 p-2 fw-bold" href="ib-pyp.html">IB Primary Years Programme</a></li>
+<li class="my-4"><a class="my-2 bg-warning rounded-4 p-2 fw-bold" href="cambridge-lower-secondary.html">Cambridge Lower Secondary</a></li>
+<li class="my-4"><a class="my-2 bg-warning rounded-4 p-2 fw-bold" href="cambridge-igcse-9-10.html">Cambridge IGCSE</a></li>
+<li class="my-4"><a class="my-2 bg-warning rounded-4 p-2 fw-bold" href="ib-dp-candidacy.html">IB Diploma Programme – Candidacy</a></li>
 </ul>
 
 <h2 class="fw-bold mt-5">Helping Children Grow into Global Learners</h2>
@@ -174,11 +254,15 @@ Learn more about our
 
 </section>
 
-<section class="container my-5">
+<section class="faq-section py-5">
+<div class="container">
 
-<h2 class="fw-bold text-center mb-4">Frequently Asked Questions</h2>
+<div class="text-center mb-5">
+    <h2 class="fw-bold display-6 faq-title">Frequently Asked Questions</h2>
+    <p class="text-muted">Everything You Need to Know</p>
+</div>
 
-<div class="accordion" id="faqAccordion">
+<div class="accordion custom-accordion" id="faqAccordion">
 
 <div class="accordion-item">
 <h2 class="accordion-header">
@@ -233,7 +317,7 @@ Consider your child’s interests, learning style, and long-term goals. Internat
 </div>
 
 </div>
-
+</div>
 </section>
 <footer class="site-footer pt-5 mt-3" style="background:#dff7f6;">
   <div class="container-fluid">

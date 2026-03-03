@@ -17,6 +17,19 @@ function clean($val){
     return htmlspecialchars(trim($val), ENT_QUOTES);
 }
 
+// Google reCAPTCHA validation
+$recaptcha_secret = '6LdQWEosAAAAAIN0kcfk4tSoXGjjPorsd-sOskSj';
+$recaptcha_response = $_POST['g-recaptcha-response'];
+$recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+
+$recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
+$recaptcha_result = json_decode($recaptcha);
+
+if (!$recaptcha_result->success) {
+    respond("error", "Invalid reCAPTCHA.");
+}
+
+
 $sender_name = isset($_POST['name']) ? clean($_POST['name']) : "" ;
 
 $sender_mobile = isset($_POST['mobile']) ? clean($_POST['mobile']) : "" ;

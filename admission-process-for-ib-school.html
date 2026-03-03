@@ -64,11 +64,47 @@
 <style>
 .hero-admission {
   position: relative;
-  background: url('./assets/img/aboutdesktop.webp') center/cover no-repeat;
+  background: url('./assets/img/admob.webp') center/contain no-repeat;
   color: white;
   padding: 120px 20px;
   text-align: center;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 760px) {
+   .hero-admission {
+    background-size: cover;
+   }
+}
+/* Desktop Image */
+@media (min-width: 992px) {
+  .hero-admission {
+    background: url('./assets/img/admissiondesk.webp') center/contain no-repeat;
+      height: 60vh;
+
+  }
+}
+
+/* Button positioning */
+.hero-btn {
+  position: absolute;
+  bottom: -90px; /* distance from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+/* Optional: smooth hover */
+.hero-btn .btn {
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.hero-btn .btn:hover {
+  transform: translateY(-3px);
 }
 
 /* Gradient Overlay */
@@ -76,7 +112,12 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(15, 32, 39, 0.842), rgba(32, 58, 67, 0.76), rgba(44,83,100,0.85));
+  /* background: linear-gradient(
+    135deg,
+    rgba(15, 32, 39, 0.842),
+    rgba(32, 58, 67, 0.76),
+    rgba(44, 83, 100, 0.85)
+  ); */
   z-index: 1;
 }
 
@@ -84,6 +125,7 @@
 .hero-admission * {
   position: relative;
   z-index: 2;
+  /* bottom: 0px; */
 }
 .step-card {
   border-radius: 20px;
@@ -183,14 +225,17 @@
   </header>
 <!-- HERO -->
 <section class="hero-admission rounded-5 shadow-lg my-3 w-75 mx-auto">
-  <h1 class="fw-bold">Admission Process for IB School in Chennai</h1>
+  <!-- <h1 class="fw-bold">Admission Process for IB School in Chennai</h1>
   <p class="fs-5 mt-3">
     Step-by-step guide to join one of the leading 
     <a href="best-ib-school-in-chennai.html" style="color:#ff7a00;">IB schools in Chennai</a>
-  </p>
+  </p> -->
+  <div class="hero-btn">
   <a href="./admissions/international-school-chennai/" class="btn btn-warning mt-4 px-4 py-2 rounded-4 fw-bold">
     Start Application
   </a>
+  </div>
+
 </section>
 
 
@@ -264,11 +309,11 @@ Students begin their international education journey under the globally recognis
 <!-- TRUST SECTION -->
 <section class="trust-band">
 <h2 class="fw-bold">Why Parents Trust Our IB Admission Process</h2>
-<p class="fs-5 mt-3">
-✔ Transparent communication  
-✔ Structured evaluation process  
-✔ Smooth documentation support  
-✔ Experienced IB educators  
+<p class="fs-5 mt-3 text-center text-danger fw-bold">
+✔ Transparent communication  <br/>
+✔ Structured evaluation process  <br/>
+✔ Smooth documentation support  <br/>
+✔ Experienced IB educators  <br/>
 ✔ Strong academic foundation  
 </p>
 

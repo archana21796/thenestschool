@@ -103,32 +103,76 @@
   transform: translateY(-10px);
 }
 
-/* FAQ */
+/* FAQ Section Background */
+.faq-section {
+    background: linear-gradient(135deg, #f8fbff, #eef4ff);
+    padding: 80px 0;
+}
+
+.faq-heading {
+    color: #023e8a;
+}
+
+/* Wrapper */
+.faq-wrapper {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* FAQ Box */
 .faq-box {
-  background: white;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  overflow: hidden;
+    background: #ffffff;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: 0.3s ease;
 }
 
+.faq-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(2,62,138,0.12);
+}
+
+/* Title */
 .faq-title {
-  padding: 20px;
-  font-weight: 600;
-  cursor: pointer;
-  background: #f8f9fa;
+    padding: 20px 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    color: #023e8a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+/* Icon */
+.faq-icon {
+    font-size: 1.5rem;
+    color: #ff9f1c;
+    transition: 0.3s ease;
+}
+
+/* Content */
 .faq-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 25px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    transition: all 0.4s ease;
+    color: #555;
 }
 
+/* Active State */
 .faq-box.active .faq-content {
-  max-height: 300px;
-  padding: 20px;
+    max-height: 200px;
+    padding: 15px 25px 25px;
+}
+
+.faq-box.active .faq-icon {
+    transform: rotate(45deg);
 }
 
 /* CTA */
@@ -137,6 +181,31 @@
   color: white;
   padding: 90px 20px;
   text-align: center;
+}
+    .hero-admission {
+  position: relative;
+  background: url('./assets/img/bestibmob.webp') center/contain no-repeat;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 760px) {
+   .hero-admission {
+    background-size: cover;
+   }
+}
+/* Desktop Image */
+@media (min-width: 992px) {
+  .hero-admission {
+    background: url('./assets/img/bestibdesk.webp') center/contain no-repeat;
+      height: 60vh;
+
+  }
 }
 
 </style>
@@ -200,21 +269,8 @@
 
   </header>
 <!-- HERO -->
-<section class="hero-best-ib">
+<section class="hero-admission rounded-5 shadow-lg my-3 w-75 mx-auto">
 
-<h1>Best IB School in Chennai</h1>
-
-<p class="fs-5 mt-4">
-International Baccalaureate Education from Early Years to Diploma
-</p>
-
-<p>
-The NEST School offers globally recognized IB programmes with academic excellence and holistic development.
-</p>
-
-<a href="international-school-admission-guide.html" class="btn btn-warning px-4 py-2 rounded-4 mt-4 fw-bold">
-Apply for Admission
-</a>
 
 </section>
 
@@ -308,7 +364,7 @@ When selecting an IB school, parents should consider academic standards, faculty
 
 <p>
 Read our detailed guide:
-<a href="how-to-choose-best-ib-school-in-chennai.html">
+<a class="my-2 bg-danger  rounded-4 p-2 text-white fw-bold" href="how-to-choose-best-ib-school-in-chennai.html">
 How to Choose an IB School
 </a>
 </p>
@@ -316,31 +372,49 @@ How to Choose an IB School
 </section>
 
 <!-- FAQ -->
-<section class="container section-space">
+<section class="faq-section section-space">
+<div class="container">
 
-<h2 class="fw-bold text-center mb-4">Frequently Asked Questions</h2>
-
-<div class="faq-box">
-<div class="faq-title">Which is the best IB school in Chennai?</div>
-<div class="faq-content">
-The NEST School offers IB curriculum from Early Years to Diploma with global standards and holistic education.
-</div>
+<div class="text-center mb-5">
+    <h2 class="fw-bold display-6 faq-heading">Frequently Asked Questions</h2>
+    <p class="text-muted">Everything parents want to know about IB education</p>
 </div>
 
-<div class="faq-box">
-<div class="faq-title">Is IB better than CBSE?</div>
-<div class="faq-content">
-IB focuses more on research, global perspective, and conceptual learning compared to traditional exam-oriented systems.
-</div>
+<div class="faq-wrapper">
+
+    <div class="faq-box">
+        <div class="faq-title">
+            Which is the best IB school in Chennai?
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+            The NEST School offers IB curriculum from Early Years to Diploma with global standards and holistic education.
+        </div>
+    </div>
+
+    <div class="faq-box">
+        <div class="faq-title">
+            Is IB better than CBSE?
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+            IB focuses more on research, global perspective, and conceptual learning compared to traditional exam-oriented systems.
+        </div>
+    </div>
+
+    <div class="faq-box">
+        <div class="faq-title">
+            Does IB help in studying abroad?
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-content">
+            Yes. The IB Diploma Programme is widely recognized by international universities.
+        </div>
+    </div>
+
 </div>
 
-<div class="faq-box">
-<div class="faq-title">Does IB help in studying abroad?</div>
-<div class="faq-content">
-Yes. The IB Diploma Programme is widely recognized by international universities.
 </div>
-</div>
-
 </section>
 
 <!-- CTA -->
@@ -352,7 +426,7 @@ Yes. The IB Diploma Programme is widely recognized by international universities
 Start your child’s global education journey today.
 </p>
 
-<a href="contactus.html" class="btn btn-dark px-4 py-2 rounded-4 fw-bold mt-3">
+<a href="./admissions/" class="btn btn-dark px-4 py-2 rounded-4 fw-bold mt-3">
 Book a Campus Visit
 </a>
 
@@ -778,13 +852,17 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <script>
-document.querySelectorAll(".faq-title").forEach(item => {
-  item.addEventListener("click", () => {
-    const parent = item.parentElement;
-    parent.classList.toggle("active");
-  });
+document.querySelectorAll(".faq-title").forEach(title => {
+    title.addEventListener("click", function() {
+        const parent = this.parentElement;
+
+        document.querySelectorAll(".faq-box").forEach(box => {
+            if (box !== parent) box.classList.remove("active");
+        });
+
+        parent.classList.toggle("active");
+    });
 });
 </script>
-
 </body>
 </html>

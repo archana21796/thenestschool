@@ -134,7 +134,31 @@
   padding:80px 20px;
   text-align:center;
 }
+  .hero-admission {
+  position: relative;
+  background: url('./assets/img/ibcambridgemob.webp') center/contain no-repeat;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+@media (min-width: 760px) {
+   .hero-admission {
+    background-size: cover;
+   }
+}
+/* Desktop Image */
+@media (min-width: 992px) {
+  .hero-admission {
+    background: url('./assets/img/ibcambridge.webp') center/contain no-repeat;
+      height: 60vh;
+
+  }
+}
 </style>
 
 </head>
@@ -196,16 +220,11 @@
 
   </header>
 <!-- HERO -->
-<section class="hero-compare">
 
-<h1 class="fw-bold">Difference Between IB, CBSE & Cambridge Curriculum</h1>
+<section class="hero-admission rounded-5 shadow-lg my-3 w-75 mx-auto">
 
-<p class="fs-5 mt-4">
-A Complete Guide for Parents Choosing the Right Education Pathway
-</p>
 
 </section>
-
 
 <!-- INTRO -->
 <section class="container my-5 text-center">
@@ -324,7 +343,7 @@ If your child aims for global university education, IB or Cambridge may offer st
 
 <p>
 Read more here:
-<a href="which-curriculum-is-best-for-children-in-india.html">Which Curriculum Is Best?</a>
+<a class="bg-danger p-3 rounded-3 text-white fw-bold" href="which-curriculum-is-best-for-children-in-india.html">Which Curriculum Is Best?</a>
 </p>
 
 </section>
@@ -368,7 +387,7 @@ Yes, Cambridge offers strong academic foundation and global recognition.
 Speak with our academic advisors to understand which pathway suits your child best.
 </p>
 
-<a href="contactus.html" class="btn btn-dark px-4 py-2 rounded-4 fw-bold mt-3">
+<a href="./admissions/" class="btn btn-dark px-4 py-2 rounded-4 fw-bold mt-3">
 Book a Consultation
 </a>
 
@@ -527,7 +546,7 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
           <a href="ib-pyp.html">IB Primary Years Programme (PYP)</a>
           <a href="cambridge-lower-secondary.html">Cambridge Lower Secondary</a>
           <a href="cambridge-igcse-9-10.html">Cambridge IGCSE (Grades 9–10)</a>
-          <a href="ib-dp-candidacy.html">IB Diploma Programme – Candidacy (Grades 11–12)</a>
+          <a href="ib-dp-candidacy.html">IB DP | AS/A Level (Grades 11–12)</a>
           <a href="usdp.html">University & Student Development Programme (USDP)</a>
       </div>
     </li>

@@ -149,7 +149,31 @@
   padding:90px 20px;
   text-align:center;
 }
+ .hero-admission {
+  position: relative;
+  background: url('./assets/img/futurereadymob.webp') center/contain no-repeat;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+@media (min-width: 760px) {
+   .hero-admission {
+    background-size: cover;
+   }
+}
+/* Desktop Image */
+@media (min-width: 992px) {
+  .hero-admission {
+    background: url('./assets/img/futureready.webp') center/contain no-repeat;
+      height: 60vh;
+
+  }
+}
 </style>
 
 </head>
@@ -211,21 +235,9 @@
 
   </header>
 <!-- HERO -->
-<section class="hero-future">
 
-<h1>Future Ready Education in Chennai</h1>
+<section class="hero-admission rounded-5 shadow-lg my-3 w-75 mx-auto">
 
-<p>
-Preparing Students for Innovation, Leadership & Global Success
-</p>
-
-<p>
-At The NEST School, we combine academic excellence with 21st century skills through the IB and Cambridge curriculum.
-</p>
-
-<a href="best-international-school-in-chennai.html" class="btn btn-warning px-4 py-2 rounded-4 mt-4 fw-bold">
-Explore Our International Curriculum
-</a>
 
 </section>
 
@@ -323,7 +335,7 @@ Future-ready education bridges academics with real-world application. Through re
 
 <p>
 Learn how we support holistic growth:
-<a href="holistic-development-school-in-chennai.html">
+<a class="fw-bold bg-danger p-2 rounded-3 text-white" href="holistic-development-school-in-chennai.html">
 Holistic Development School in Chennai
 </a>
 </p>
@@ -371,7 +383,7 @@ Yes. With rapid technological advancement, students need adaptable skills to suc
 Choose a future-ready education pathway at The NEST School.
 </p>
 
-<a href="contactus.html" class="btn btn-dark px-4 py-2 rounded-4 fw-bold mt-3">
+<a href="./admissions/" class="btn btn-dark px-4 py-2 rounded-4 fw-bold mt-3">
 Book a Campus Visit
 </a>
 
@@ -521,7 +533,7 @@ width="250" height="300" style="border:0;" allowfullscreen="" loading="lazy" ref
           <a href="ib-pyp.html">IB Primary Years Programme (PYP)</a>
           <a href="cambridge-lower-secondary.html">Cambridge Lower Secondary</a>
           <a href="cambridge-igcse-9-10.html">Cambridge IGCSE (Grades 9–10)</a>
-          <a href="ib-dp-candidacy.html">IB Diploma Programme – Candidacy (Grades 11–12)</a>
+          <a href="ib-dp-candidacy.html">IB DP | AS/A Level (Grades 11–12)</a>
           <a href="usdp.html">University & Student Development Programme (USDP)</a>
       </div>
     </li>

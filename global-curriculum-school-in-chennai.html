@@ -146,6 +146,31 @@
   padding:90px 20px;
   text-align:center;
 }
+ .hero-admission {
+  position: relative;
+  background: url('./assets/img/globlmob.webp') center/contain no-repeat;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 760px) {
+   .hero-admission {
+    background-size: cover;
+   }
+}
+/* Desktop Image */
+@media (min-width: 992px) {
+  .hero-admission {
+    background: url('./assets/img/global.webp') center/contain no-repeat;
+      height: 60vh;
+
+  }
+}
 
 </style>
 
@@ -208,21 +233,9 @@
 
   </header>
 <!-- HERO -->
-<section class="hero-global">
 
-<h1>Global Curriculum School in Chennai</h1>
+<section class="hero-admission rounded-5 shadow-lg my-3 w-75 mx-auto">
 
-<p>
-Empowering Students with International Education & Global Perspectives
-</p>
-
-<p>
-The NEST School offers IB and Cambridge curriculum designed to prepare students for a connected world.
-</p>
-
-<a href="best-international-school-in-chennai.html" class="btn btn-warning px-4 py-2 rounded-4 mt-4 fw-bold">
-Explore Our Global Curriculum
-</a>
 
 </section>
 
@@ -328,7 +341,7 @@ Explore our
 </div>
 
 <div class="col-md-6">
-<img src="assets/img/global-education.jpg" class="img-fluid rounded-4 shadow" alt="Global Curriculum Education">
+<img src="assets/img/sustain.jpg" class="img-fluid rounded-4 shadow" alt="Global Curriculum Education">
 </div>
 
 </div>
@@ -376,7 +389,7 @@ Yes. The NEST School offers IB and Cambridge curriculum from Early Years to Grad
 Join a leading global curriculum school in Chennai.
 </p>
 
-<a href="contactus.html" class="btn btn-dark px-4 py-2 rounded-4 fw-bold mt-3">
+<a href="./admissions/" class="btn btn-dark px-4 py-2 rounded-4 fw-bold mt-3">
 Schedule a Visit
 </a>
 

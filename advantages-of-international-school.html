@@ -137,7 +137,52 @@
   padding:90px 20px;
   text-align:center;
 }
+.hero-advantage {
+  position: relative;
+  overflow: hidden;
+}
 
+.hero-img {
+  height: 90vh;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  max-width: 800px;
+  padding: 20px;
+  z-index: 2;
+}
+
+.hero-admission {
+  position: relative;
+  background: url('./assets/img/Advantanges.webp') center/contain no-repeat;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 760px) {
+   .hero-admission {
+    background-size: cover;
+   }
+}
+/* Desktop Image */
+@media (min-width: 992px) {
+  .hero-admission {
+    background: url('./assets/img/adv\ desktop.webp') center/contain no-repeat;
+      height: 60vh;
+
+  }
+}
 </style>
 
 </head>
@@ -199,21 +244,8 @@
 
   </header>
 <!-- HERO -->
-<section class="hero-advantage">
+<section class="hero-admission rounded-5 shadow-lg my-3 w-75 mx-auto">
 
-<h1 class="fw-bold">Advantages of International School Education</h1>
-
-<p class="fs-5 mt-4">
-Global Curriculum. Critical Thinking. University Readiness.
-</p>
-
-<p class="mt-3">
-Discover why more parents in India are choosing international schools for their children.
-</p>
-
-<a href="international-school-in-chennai.html" class="btn btn-warning px-4 py-2 rounded-4 mt-4 fw-bold">
-Explore Our International School
-</a>
 
 </section>
 
@@ -325,7 +357,7 @@ Compare systems in detail here:
 </div>
 
 <div class="col-md-6">
-<img src="assets/img/global-education.jpg" class="img-fluid rounded-4 shadow" alt="International Education">
+<img src="assets/img/ibandtrd.webp" class="img-fluid rounded-4 shadow" alt="International Education">
 </div>
 
 </div>
@@ -373,7 +405,7 @@ IB and Cambridge curriculum are widely recognized by top universities worldwide.
 Discover how The NEST School blends IB and Cambridge curriculum for holistic growth.
 </p>
 
-<a href="contactus.html" class="btn btn-dark px-4 py-2 rounded-4 fw-bold mt-3">
+<a href="./admissions/" class="btn btn-dark px-4 py-2 rounded-4 fw-bold mt-3">
 Book a Campus Visit
 </a>
 

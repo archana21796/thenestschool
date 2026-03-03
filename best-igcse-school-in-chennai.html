@@ -95,7 +95,34 @@
   align-items:center;
   justify-content:center;
 }
+.hero-right {
+    position: relative;
+    background: url('./assets/img/bestigcse.webp') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
+/* Dark overlay for readability */
+.hero-right::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45); /* adjust opacity */
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+}
+
+.hero-overlay h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
 @keyframes slideLeft {
   from {opacity:0; transform:translateX(-50px);}
   to {opacity:1; transform:translateX(0);}
@@ -120,34 +147,70 @@
   padding:80px 20px;
 }
 
-/* FAQ Advanced Cards */
+.faq-section {
+  background: #f8fbff;
+}
+
+.faq-wrapper {
+  max-width: 850px;
+  margin: auto;
+}
+
 .faq-card {
-  background:white;
-  margin-bottom:20px;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  background: white;
+  border-radius: 14px;
+  padding: 0;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
-.faq-title {
-  padding:20px;
-  cursor:pointer;
-  font-weight:600;
-  background:#f8f9fa;
+.faq-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
 }
 
-.faq-content {
-  max-height:0;
-  overflow:hidden;
-  transition:max-height 0.4s ease;
-  padding:0 20px;
+.faq-header {
+  padding: 20px 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.faq-card.active .faq-content {
-  max-height:200px;
-  padding:20px;
+.faq-header h6 {
+  margin: 0;
+  font-weight: 600;
 }
 
+.faq-icon {
+  font-size: 22px;
+  font-weight: bold;
+  color: #023e8a;
+  transition: 0.3s ease;
+}
+
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  padding: 0 25px;
+}
+
+.faq-body p {
+  padding-bottom: 20px;
+  color: #555;
+}
+
+.faq-card.active .faq-body {
+  max-height: 200px;
+}
+
+.faq-card.active .faq-icon {
+  transform: rotate(45deg);
+}
 /* CTA */
 .cta-section {
   background:#002f4b;
@@ -155,6 +218,7 @@
   padding:90px 20px;
   text-align:center;
 }
+
 
 </style>
 
@@ -227,15 +291,17 @@ Cambridge IGCSE Curriculum | Academic Excellence | Global Pathways
 <p class="mt-3">
 The NEST School offers internationally recognized Cambridge IGCSE education for Grades 9–10.
 </p>
-<a href="international-school-admission-guide.html" class="btn btn-warning mt-4 px-4 py-2 rounded-4 fw-bold">
+<a href="./admissions/" class="btn w-md-25 btn-warning mt-4 px-4 py-2 rounded-4 fw-bold">
 Explore Admissions
 </a>
 </div>
 
 <div class="hero-right">
-<h2 class="fw-bold text-center">
-Preparing Students for Global Success
-</h2>
+    <div class="hero-overlay">
+        <h2 class="fw-bold text-center">
+            Preparing Students for Global Success
+        </h2>
+    </div>
 </div>
 
 </section>
@@ -315,7 +381,7 @@ After IGCSE, students may continue into:
 </p>
 
 <ul class="list-unstyled fs-5">
-<li><a href="ib-dp-school-in-chennai.html">IB Diploma Programme</a></li>
+<li class="my-2"><a class="bg-warning fw-bold p-2 rounded-4 my-2" href="ib-dp-school-in-chennai.html">IB Diploma Programme</a></li>
 <li>Cambridge AS & A Levels</li>
 <li>Global University Preparation</li>
 </ul>
@@ -323,32 +389,55 @@ After IGCSE, students may continue into:
 </section>
 
 
-<!-- FAQ -->
-<section class="container my-5">
+<section class="faq-section py-5">
+  <div class="container">
+    
+    <div class="text-center mb-5">
+      <h2 class="fw-bold display-6">Frequently Asked Questions</h2>
+      <p class="text-muted">Everything You Need to Know About IGCSE</p>
+    </div>
 
-<h2 class="fw-bold text-center mb-4">Frequently Asked Questions</h2>
+    <div class="faq-wrapper">
 
-<div class="faq-card">
-<div class="faq-title">Is IGCSE suitable for Indian students?</div>
-<div class="faq-content">
-Yes. IGCSE builds conceptual clarity and international exposure while preparing students for Indian and global higher education.
-</div>
-</div>
+      <div class="faq-card">
+        <div class="faq-header">
+          <h6>Is IGCSE suitable for Indian students?</h6>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-body">
+          <p>
+            Yes. IGCSE builds strong conceptual clarity, analytical skills, and global exposure while preparing students for both Indian and international higher education pathways.
+          </p>
+        </div>
+      </div>
 
-<div class="faq-card">
-<div class="faq-title">What subjects are offered in IGCSE?</div>
-<div class="faq-content">
-Subjects include Mathematics, English, Physics, Chemistry, Biology, Global Perspectives, and more.
-</div>
-</div>
+      <div class="faq-card">
+        <div class="faq-header">
+          <h6>What subjects are offered in IGCSE?</h6>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-body">
+          <p>
+            Subjects include Mathematics, English, Physics, Chemistry, Biology, Global Perspectives, Business Studies, ICT, and more depending on grade levels.
+          </p>
+        </div>
+      </div>
 
-<div class="faq-card">
-<div class="faq-title">Is IGCSE better than CBSE?</div>
-<div class="faq-content">
-IGCSE offers international benchmarking and analytical learning, making it ideal for global university pathways.
-</div>
-</div>
+      <div class="faq-card">
+        <div class="faq-header">
+          <h6>Is IGCSE better than CBSE?</h6>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-body">
+          <p>
+            IGCSE offers international benchmarking, inquiry-based learning, and strong university recognition globally — ideal for students aiming for international exposure.
+          </p>
+        </div>
+      </div>
 
+    </div>
+
+  </div>
 </section>
 
 
@@ -360,7 +449,7 @@ IGCSE offers international benchmarking and analytical learning, making it ideal
 Join one of the best Cambridge IGCSE schools in Chennai.
 </p>
 
-<a href="contactus.html" class="btn btn-warning px-4 py-2 rounded-4 fw-bold mt-3">
+<a href="./admissions/" class="btn btn-warning px-4 py-2 rounded-4 fw-bold mt-3">
 Book a Campus Visit
 </a>
 
@@ -789,12 +878,20 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <script>
-document.querySelectorAll(".faq-title").forEach(item => {
-  item.addEventListener("click", () => {
-    const parent = item.parentElement;
-    parent.classList.toggle("active");
+  const faqCards = document.querySelectorAll('.faq-card');
+
+  faqCards.forEach(card => {
+    card.querySelector('.faq-header').addEventListener('click', () => {
+
+      faqCards.forEach(item => {
+        if(item !== card){
+          item.classList.remove('active');
+        }
+      });
+
+      card.classList.toggle('active');
+    });
   });
-});
 </script>
 </body>
 </html>

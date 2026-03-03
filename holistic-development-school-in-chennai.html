@@ -144,7 +144,31 @@
   padding:90px 20px;
   text-align:center;
 }
+ .hero-admission {
+  position: relative;
+  background: url('./assets/img/holisticmob.webp') center/contain no-repeat;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+@media (min-width: 760px) {
+   .hero-admission {
+    background-size: cover;
+   }
+}
+/* Desktop Image */
+@media (min-width: 992px) {
+  .hero-admission {
+    background: url('./assets/img/Holistic.webp') center/contain no-repeat;
+      height: 60vh;
+
+  }
+}
 </style>
 
 </head>
@@ -206,21 +230,9 @@
 
   </header>
 <!-- HERO -->
-<section class="hero-holistic">
 
-<h1 class="fw-bold">Holistic Development School in Chennai</h1>
+<section class="hero-admission rounded-5 shadow-lg my-3 w-75 mx-auto">
 
-<p class="fs-5 mt-4">
-Where Academic Excellence Meets Personal Growth
-</p>
-
-<p class="mt-3">
-The NEST School nurtures confident, compassionate, and globally aware learners.
-</p>
-
-<a href="best-international-school-in-chennai.html" class="btn btn-warning px-4 py-2 rounded-4 mt-4 fw-bold">
-Discover Our International School
-</a>
 
 </section>
 
@@ -321,7 +333,7 @@ our academic structure ensures balanced development at every stage.
 </div>
 
 <div class="col-md-6">
-<img src="assets/img/holistic-education.jpg" class="img-fluid rounded-4 shadow" alt="Holistic Education">
+<img src="assets/img/ticker2.jpg" class="img-fluid rounded-4 shadow" alt="Holistic Education">
 </div>
 
 </div>
@@ -369,7 +381,7 @@ Yes. Balanced development helps students adapt to global challenges and career o
 Join one of the leading holistic development schools in Chennai.
 </p>
 
-<a href="contactus.html" class="btn btn-dark px-4 py-2 rounded-4 fw-bold mt-3">
+<a href="./admissions/" class="btn btn-dark px-4 py-2 rounded-4 fw-bold mt-3">
 Schedule a Campus Visit
 </a>
 

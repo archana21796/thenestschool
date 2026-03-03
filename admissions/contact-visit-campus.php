@@ -16,24 +16,19 @@ function respond($status, $message){
 function clean($val){
     return htmlspecialchars(trim($val), ENT_QUOTES);
 }
-/*
-if ($_POST['g-recaptcha-response']) {
-    $recaptcha_secret = '6LdQWEosAAAAAIN0kcfk4tSoXGjjPorsd-sOskSj';
-    $recaptcha_response = clean($_POST['g-recaptcha-response']);
 
-    // Verify reCAPTCHA response with Google
-    $response = file_get_contents(
-        "https://www.google.com/recaptcha/api/siteverify?secret={$recaptcha_secret}&response={$recaptcha_response}"
-    );
-    $response_data = json_decode($response);
+// Google reCAPTCHA validation
+$recaptcha_secret = '6LdQWEosAAAAAIN0kcfk4tSoXGjjPorsd-sOskSj';
+$recaptcha_response = $_POST['g-recaptcha-response'];
+$recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
 
-    if ($response_data->success) {
-       
-    } else {
-         respond("error", "reCAPTCHA verification failed. Please try again.");
-    }
+$recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
+$recaptcha_result = json_decode($recaptcha);
+
+if (!$recaptcha_result->success) {
+    respond("error", "Invalid reCAPTCHA.");
 }
-*/
+
 $sender_name = isset($_POST['name']) ? clean($_POST['name']) : "" ;
 
 $sender_mobile = isset($_POST['mobile']) ? clean($_POST['mobile']) : "" ;

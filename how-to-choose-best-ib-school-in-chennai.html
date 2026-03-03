@@ -102,6 +102,31 @@
   padding:70px 20px;
   text-align:center;
 }
+ .hero-admission {
+  position: relative;
+  background: url('./assets/img/howtochoseibmob.webp') center/contain no-repeat;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 760px) {
+   .hero-admission {
+    background-size: cover;
+   }
+}
+/* Desktop Image */
+@media (min-width: 992px) {
+  .hero-admission {
+    background: url('./assets/img/howtochoseib.webp') center/contain no-repeat;
+      height: 60vh;
+
+  }
+}
 </style>
 
 </head>
@@ -163,11 +188,10 @@
 
   </header>
 <!-- HERO -->
-<section class="hero-guide">
-<h1 class="fw-bold">How to Choose the Best IB School in Chennai</h1>
-<p class="fs-5 mt-3">
-A Complete Parent’s Guide to Selecting the Right IB Curriculum School
-</p>
+
+<section class="hero-admission rounded-5 shadow-lg my-3 w-75 mx-auto">
+
+
 </section>
 
 

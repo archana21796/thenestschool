@@ -141,7 +141,31 @@
   padding:90px 20px;
   text-align:center;
 }
+  .hero-admission {
+  position: relative;
+  background: url('./assets/img/bestschmob.webp') center/contain no-repeat;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+@media (min-width: 760px) {
+   .hero-admission {
+    background-size: cover;
+   }
+}
+/* Desktop Image */
+@media (min-width: 992px) {
+  .hero-admission {
+    background: url('./assets/img/bestschnearme.webp') center/contain no-repeat;
+      height: 60vh;
+
+  }
+}
 </style>
 
 </head>
@@ -203,21 +227,8 @@
 
   </header>
 <!-- HERO -->
-<section class="hero-nearme">
+<section class="hero-admission rounded-5 shadow-lg my-3 w-75 mx-auto">
 
-<h1>Best School Near Me in Chennai</h1>
-
-<p class="fs-5 mt-4">
-Looking for a Top International School Near You?
-</p>
-
-<p>
-The NEST School in Kodambakkam offers IB and Cambridge curriculum from Early Years to Grade 12.
-</p>
-
-<a href="contactus.html" class="btn btn-warning px-4 py-2 rounded-4 mt-4 fw-bold">
-Book a Campus Visit
-</a>
 
 </section>
 
