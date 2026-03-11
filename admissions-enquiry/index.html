@@ -3732,7 +3732,7 @@ function getUTMCampaignFromURL() {
     fd.append("campaign_name", campaignName);
 
     try {
-      const res = await fetch("admission.php", {
+      const res = await fetch("./admission.php", {
         method: "POST",
         body: fd,
         credentials: "same-origin"
