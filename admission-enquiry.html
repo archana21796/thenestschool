@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+  <meta http-equiv="refresh" content="0; url=https://thenest.school/admissions-enquiry/">
  <script>
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -3742,7 +3744,7 @@ function getUTMCampaignFromURL() {
       let data = null;
       try { data = raw ? JSON.parse(raw) : null; } catch {}
 
-      console.log("admission.php response:", raw);
+      console.log("admissions-enquiry/admission.php response:", raw);
 
       if (data && data.success === true) {
         alert("✅ " + (data.message || "Submitted successfully"));
@@ -3881,6 +3883,8 @@ function getUTMCampaignFromURL() {
     }
   });
 </script>
-
+<script>
+window.location.href = "https://thenest.school/admissions-enquiry/";
+</script>
 </body>
 </html>

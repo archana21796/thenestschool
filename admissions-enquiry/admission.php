@@ -90,6 +90,9 @@ $phone = safe_trim($input['phone'] ?? '');
 $grade = safe_trim($input['grade'] ?? '');
 $source = safe_trim($input['source'] ?? '');
 $page_url = safe_trim($input['page_url'] ?? '');
+$area   = safe_trim($input['area'] ?? '');
+$school = safe_trim($input['current_school'] ?? '');
+$reason = safe_trim($input['reason_for_change'] ?? '');
 
 // NEW: UTM / campaign values (do NOT store these in DB per request)
 $utm_campaign_raw = safe_trim($input['utm_campaign_raw'] ?? $input['utm_campaign'] ?? '');
@@ -108,6 +111,13 @@ $phone_clean = clean_phone($phone);
 if ($phone_clean === '' || strlen($phone_clean) < 7) $errors[] = 'Valid phone is required';
 if ($grade === '' || $grade === 'Select Your Option') $errors[] = 'Please choose grade';
 if ($source === '' || $source === 'Select Your Option') $errors[] = 'Please choose source';
+if ($area === '') $errors[] = 'Area & City is required';
+
+$gradeNumber = intval(preg_replace('/\D+/', '', $grade));
+if ($gradeNumber >= 1) {
+    if ($school === '') $errors[] = 'Current school is required';
+    if ($reason === '') $errors[] = 'Reason for changing school is required';
+}
 
 if (!empty($errors)) {
     dbg('Validation failed: ' . implode('; ', $errors) . ' | input: ' . json_encode($input));
@@ -140,8 +150,11 @@ $create_sql = "CREATE TABLE IF NOT EXISTS admissions (
   name VARCHAR(150) NOT NULL,
   email VARCHAR(150) NOT NULL,
   phone VARCHAR(50) NOT NULL,
+  area VARCHAR(150) NOT NULL,
   grade VARCHAR(50) NOT NULL,
   source VARCHAR(100) NOT NULL,
+  current_school VARCHAR(150),
+  reason_for_change TEXT,
   submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;";
 if (!$mysqli->query($create_sql)) {
@@ -150,7 +163,12 @@ if (!$mysqli->query($create_sql)) {
 }
 
 // ---------- insert record (DB does NOT store page_url / campaign) ----------
-$stmt = $mysqli->prepare("INSERT INTO admissions (name, email, phone, grade, source) VALUES (?, ?, ?, ?, ?)");
+$stmt = $mysqli->prepare("
+  INSERT INTO admissions
+  (name, email, phone, area, grade, source, current_school, reason_for_change)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+");
+
 if (!$stmt) {
     dbg("Prepare failed: " . $mysqli->error);
     http_response_code(500);
@@ -158,12 +176,28 @@ if (!$stmt) {
     $mysqli->close();
     exit;
 }
+
 $name_db = mb_substr($name, 0, 150);
 $email_db = mb_substr($email, 0, 150);
 $phone_db = mb_substr($phone_clean, 0, 50);
 $grade_db = mb_substr($grade, 0, 50);
 $source_db = mb_substr($source, 0, 100);
-$stmt->bind_param('sssss', $name_db, $email_db, $phone_db, $grade_db, $source_db);
+$area_db   = mb_substr($area, 0, 150);
+$school_db = mb_substr($school, 0, 150);
+$reason_db = mb_substr($reason, 0, 1000);
+
+$stmt->bind_param(
+    'ssssssss',
+    $name_db,
+    $email_db,
+    $phone_db,
+    $area_db,
+    $grade_db,
+    $source_db,
+    $school_db,
+    $reason_db
+);
+
 
 if (!$stmt->execute()) {
     dbg("Insert failed: " . $stmt->error);
@@ -189,9 +223,12 @@ if (!empty($GSHEET_WEBAPP_URL) && !empty($GSHEET_SHARED_SECRET)) {
         'secret' => $GSHEET_SHARED_SECRET,
         'id' => $insert_id,
         'name' => $name_db,
+        'area' => $area_db,
         'email' => $email_db,
         'phone' => $phone_db,
         'grade' => $grade_db,
+        'current_school' => $school_db,
+        'reason_for_change' => $reason_db,
         'source' => $source_db,
         'page_url' => $page_url,
         'utm_campaign_raw' => $utm_campaign_raw,
@@ -236,14 +273,27 @@ if (!empty($email_db)) {
     $body .= "<ul>";
     $body .= "<li><strong>Name:</strong> " . htmlspecialchars($name_db, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . "</li>";
     $body .= "<li><strong>Grade of interest:</strong> " . htmlspecialchars($grade_db, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . "</li>";
+    $body .= "<li><strong>Area:</strong> " . htmlspecialchars($area_db, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . "</li>";
     $body .= "<li><strong>Phone:</strong> " . htmlspecialchars($phone_db, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . "</li>";
     $body .= "<li><strong>Source:</strong> " . htmlspecialchars($source_db, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . "</li>";
-    // Optionally include campaign information in confirmation email (commented out)
-    // $body .= "<li><strong>Campaign:</strong> " . htmlspecialchars($campaign_for_sheet, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . "</li>";
+    
+    if (!empty($school_db)) {
+        $body .= "<li><strong>Current School:</strong> " . htmlspecialchars($school_db, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . "</li>";
+    }
+    if (!empty($reason_db)) {
+        $body .= "<li><strong>Reason for Change:</strong> " . htmlspecialchars($reason_db, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . "</li>";
+    }
+    
     $body .= "</ul>";
     $body .= "<p>Our admissions team will contact you shortly to discuss the next steps. If you need immediate assistance, please call us.</p>";
     $body .= "<p>Warm regards,<br>" . htmlspecialchars($EMAIL_FROM_NAME, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . "</p>";
     $body .= "</body></html>";
+    if (!empty($school_db)) {
+    $body .= "<li><strong>Current School:</strong> " . htmlspecialchars($school_db, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . "</li>";
+    }
+    if (!empty($reason_db)) {
+        $body .= "<li><strong>Reason for Change:</strong> " . htmlspecialchars($reason_db, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . "</li>";
+    }
 
     // Attempt PHPMailer SMTP send
     try {

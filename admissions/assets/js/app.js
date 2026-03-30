@@ -88,6 +88,7 @@ jQuery(document).ready(function($) {
     	        const { proceed, firstErrorField } = validateForm($form);
     	        const $submitBtn = $form.find('button[type="submit"], input[type="submit"]');
     	        const $loadingIcon = $form.find(".loading-icon");
+    	        const $recaptcha = $form.find(".g-recaptcha");
     	        let $message = $form.find('.form-message');
     	         
     	        if($message.length === 0){
@@ -443,6 +444,12 @@ jQuery(document).ready(function($) {
                 .always(function(){
                     $submitBtn.prop('disabled', false);
                     $loadingIcon.removeClass('show-loading');
+                    if ($recaptcha) {
+                           // Reset captcha
+                            if (recaptchaWidgets[formIda] !== undefined) {
+                                grecaptcha.reset(recaptchaWidgets[formIda]);
+                            }
+                        }
                 });
     	    });
     	}
