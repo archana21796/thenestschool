@@ -12,7 +12,7 @@ ob_start();
 $DEBUG_MODE = false; // set true for local debugging (shows PHP errors) — set false in production
 
 // Google Sheet WebApp (kept here per your request)
-$GSHEET_WEBAPP_URL    = 'https://script.google.com/macros/s/AKfycby9F6uBDycYQDlCY7v0HbXnqiS15HekXM0rR5nttyXNL2tbnGKPwtDs8kJ7VvAnDgFLAw/exec';
+$GSHEET_WEBAPP_URL    = 'https://script.google.com/macros/s/AKfycby4kGZLqpF_AhdJ96-8w6Qu4VoK6qHsl2GoBLxDhYkqQnY_eGLd7YAN2eHS5Nv76CfE/exec';
 $GSHEET_SHARED_SECRET = 'MyVerySecureSecret2025!';
 
 // Email "From" address (set to a domain-verified email on your server)
@@ -230,9 +230,9 @@ if (!empty($GSHEET_WEBAPP_URL) && !empty($GSHEET_SHARED_SECRET)) {
         'current_school' => $school_db,
         'reason_for_change' => $reason_db,
         'source' => $source_db,
-        'page_url' => $page_url,
         'utm_campaign_raw' => $utm_campaign_raw,
         'campaign' => $campaign_for_sheet,
+        'page_url' => $page_url,
         'submitted_at' => date('Y-m-d H:i:s')
     ];
     $ch = curl_init($GSHEET_WEBAPP_URL);

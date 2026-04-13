@@ -617,7 +617,7 @@
 .event-img {
   max-width: 300px;
   width: 100%;
-  height: 200px;
+  height: 400px;
   object-fit: cover;
   display: block;
 }
@@ -692,7 +692,7 @@
     flex: 0 0 100%;
   }
   .event-img {
-    height: 200px;
+    height: 300px;
   }
 }
 
